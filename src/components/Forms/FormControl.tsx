@@ -7,6 +7,12 @@ const Example = () => {
       <Box w="100%" maxWidth="300px">
         <FormControl isRequired>
           <Stack mx="4">
+            <FormControl.Label>Email</FormControl.Label>
+            <Input type="text" defaultValue="name@company.com" placeholder="email"></Input>
+            <FormControl.Label>Password</FormControl.Label>
+            <Input type="password" defaultValue="12345" placeholder="password" />
+            <FormControl.HelperText>Must be atleast 6 characters.</FormControl.HelperText>
+            <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>Atleast 6 characters are required.</FormControl.ErrorMessage>
             <FormControl.Label>Password</FormControl.Label>
             <Input type="password" defaultValue="12345" placeholder="password" />
             <FormControl.HelperText>Must be atleast 6 characters.</FormControl.HelperText>
