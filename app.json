@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "QR",
+    "slug": "qr",
+    "version": "1.0.0",
+    "sdkVersion": "49.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.anonymous.qr"
+    }
+  }
+}
