@@ -1,4 +1,4 @@
-import { WelcomeScreen } from 'app/views'
+import { LoginScreen } from 'app/views'
 import Head from 'next/head'
 
 export default function Page() {
@@ -7,7 +7,7 @@ export default function Page() {
       <Head>
         <title>Home</title>
       </Head>
-      <WelcomeScreen />
+      <LoginScreen />
     </>
   )
 }

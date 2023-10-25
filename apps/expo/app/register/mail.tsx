@@ -1,4 +1,4 @@
-import { UserDetailScreen } from 'app/features/user/detail-screen'
+import { MailRegisterScreen } from 'app/views'
 import { Stack } from 'expo-router'
 
 export default function Screen() {
@@ -6,10 +6,11 @@ export default function Screen() {
     <>
       <Stack.Screen
         options={{
-          title: 'User',
+          headerShown: false,
+          title: 'Register',
         }}
       />
-      <UserDetailScreen />
+      <MailRegisterScreen />
     </>
   )
 }

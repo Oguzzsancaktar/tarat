@@ -9,6 +9,7 @@ import { animations } from './animations'
 const headingFont = createInterFont({
   size: {
     6: 15,
+    40: 400,
   },
   transform: {
     6: 'uppercase',

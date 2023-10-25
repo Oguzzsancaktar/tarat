@@ -1,4 +1,4 @@
-import { WelcomeScreen } from 'app/views'
+import { LoginScreen } from 'app/views'
 import { Stack } from 'expo-router'
 
 export default function Screen() {
@@ -10,7 +10,7 @@ export default function Screen() {
           title: 'Home',
         }}
       />
-      <WelcomeScreen />
+      <LoginScreen />
     </>
   )
 }
