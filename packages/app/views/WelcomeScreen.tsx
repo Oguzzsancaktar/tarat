@@ -5,7 +5,7 @@ import { useLink } from 'solito/link'
 
 export default function WelcomeScreen() {
   const loginLinkProps = useLink({
-    href: '/login',
+    href: '/settings',
   })
 
   const registerLinkProps = useLink({
