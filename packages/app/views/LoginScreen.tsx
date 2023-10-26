@@ -1,19 +1,7 @@
-import {
-  Anchor,
-  H1,
-  Image,
-  Paragraph,
-  Separator,
-  Sheet,
-  useToastController,
-  View,
-  XStack,
-  YStack,
-} from '@my/ui'
-import { ChevronDown, ChevronUp, Facebook, MailPlus } from '@tamagui/lucide-icons'
+import { Image, Paragraph, YStack } from '@my/ui'
+import { Apple, Facebook, MailPlus } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
-import { Apple } from '@tamagui/lucide-icons'
 import { Button } from '@my/ui/src/components'
 
 export default function LoginScreen() {
@@ -30,7 +18,7 @@ export default function LoginScreen() {
   })
 
   return (
-    <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
+    <YStack backgroundColor={'#1c1c23'} f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack maw={600}>
         <Image h={'$2'} w={'$15'} source={require('../assets/logo.png')} resizeMode="contain" />
       </YStack>
@@ -50,7 +38,7 @@ export default function LoginScreen() {
           {...loginLinkProps}
           mb="$2.5"
           size="large"
-          background="white"
+          background="red"
           icon={<MailPlus size="$1" />}
         >
           Google ile giriş yap
@@ -60,16 +48,23 @@ export default function LoginScreen() {
           Facebook ile giriş yap
         </Button>
 
-        <Paragraph my="$5" maw={'$20'} ta="center">
-          OR
+        <Paragraph size={'$2'} maxWidth={'$25'} my="$5" maw={'$20'} ta="center">
+          yada
         </Paragraph>
 
         <Button {...mailLoginLinkProps} mb="$4" size="large" background="gray">
           E-posta ile giriş yap
         </Button>
 
-        <Paragraph maw={'$20'} color="gray" fontSize={12} ta="center">
-          Uygulamaya giriş yaparak kullanım şartlarını kabul etmiş sayılırısınız.
+        <Paragraph
+          size={'$2'}
+          bottom={-10}
+          color={'$gray8'}
+          maxWidth={'$25'}
+          maw={'$20'}
+          ta="center"
+        >
+          Uygulamaya giriş yaparak kullanım şartlarını kabul etmiş sayılırsınız.
         </Paragraph>
       </YStack>
     </YStack>
