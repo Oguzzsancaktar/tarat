@@ -13,10 +13,24 @@ export default function WelcomeScreen() {
   })
 
   return (
-    <YStack f={1} jc="space-between" ai="center" py="$10" px="$4">
+    <YStack backgroundColor={'#1c1c23'} f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack maw={600}>
         <Image h={'$2'} w={'$15'} source={require('../assets/logo.png')} resizeMode="contain" />
       </YStack>
+      <Image
+        position="absolute"
+        left={'$0'}
+        top={'$15'}
+        source={require('../assets/welcome-bubble-left.png')}
+        resizeMode="contain"
+      />
+      <Image
+        position="absolute"
+        right={'$0'}
+        bottom={'$11'}
+        source={require('../assets/welcome-bubble-right.png')}
+        resizeMode="contain"
+      />
 
       <Image mb={'$-8'} source={require('../assets/welcome-tumbnail.png')} resizeMode="contain" />
 
@@ -24,11 +38,11 @@ export default function WelcomeScreen() {
         <Paragraph maxWidth={'$25'} mb="$4" maw={'$20'} ta="center">
           Congue malesuada in ac justo, a tristique leo massa. Arcu leo leo urna.
         </Paragraph>
-        <Button {...loginLinkProps} mb="$2.5" size="large" background="white">
-          Giriş Yap
-        </Button>
-        <Button {...registerLinkProps} size="large" background="blue">
+        <Button {...registerLinkProps} mb="$2.5" size="large" background="red">
           Kayıt Ol
+        </Button>
+        <Button {...loginLinkProps} size="large" background="gray">
+          Zaten hesabın var mı?
         </Button>
       </YStack>
     </YStack>
