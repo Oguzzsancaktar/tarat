@@ -5,7 +5,7 @@ export default function Screen() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Login</title>
       </Head>
       <LoginScreen />
     </>
