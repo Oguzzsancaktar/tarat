@@ -1,13 +1,13 @@
-import { RegisterScreen } from 'app/views'
+import { SettingsScreen } from 'app/views'
 import Head from 'next/head'
 
 export default function Screen() {
   return (
     <>
       <Head>
-        <title>Register</title>
+        <title>Settings</title>
       </Head>
-      <RegisterScreen />
+      <SettingsScreen />
     </>
   )
 }
