@@ -45,6 +45,18 @@ const Input = styled(TamaguiInput, {
           backgroundColor: '$blue2',
         },
       },
+      lightBlue: {
+        backgroundColor: '$blue5Light',
+        borderColor: '$blue8',
+        color: 'black',
+        hoverStyle: {
+          backgroundColor: '$blue7',
+        },
+
+        focusStyle: {
+          backgroundColor: 'gray',
+        },
+      },
       green: {
         backgroundColor: '$green4',
         borderColor: '$green7',

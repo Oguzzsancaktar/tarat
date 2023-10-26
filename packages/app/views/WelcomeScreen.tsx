@@ -1,20 +1,7 @@
-import {
-  Anchor,
-  H1,
-  Image,
-  Paragraph,
-  Separator,
-  Sheet,
-  useToastController,
-  View,
-  XStack,
-  YStack,
-} from '@my/ui'
-import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
+import { Image, Paragraph, YStack } from '@my/ui'
+import { Button } from '@my/ui/src/components'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
-
-import { Button } from '@my/ui/src/button'
 
 export default function WelcomeScreen() {
   const loginLinkProps = useLink({
@@ -37,7 +24,7 @@ export default function WelcomeScreen() {
         <Paragraph maxWidth={'$25'} mb="$4" maw={'$20'} ta="center">
           Congue malesuada in ac justo, a tristique leo massa. Arcu leo leo urna.
         </Paragraph>
-        <Button {...loginLinkProps} mb="$2.5" size="large" background="green">
+        <Button {...loginLinkProps} mb="$2.5" size="large" background="white">
           Giriş Yap
         </Button>
         <Button {...registerLinkProps} size="large" background="blue">

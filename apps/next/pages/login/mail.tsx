@@ -1,4 +1,4 @@
-import { RegisterScreen } from 'app/views'
+import { MailLoginScreen } from 'app/views'
 import Head from 'next/head'
 
 export default function Page() {
@@ -7,7 +7,7 @@ export default function Page() {
       <Head>
         <title>Register</title>
       </Head>
-      <RegisterScreen />
+      <MailLoginScreen />
     </>
   )
 }

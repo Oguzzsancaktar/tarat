@@ -1,20 +1,8 @@
-import {
-  Anchor,
-  H1,
-  Image,
-  Paragraph,
-  Separator,
-  Sheet,
-  useToastController,
-  View,
-  XStack,
-  YStack,
-} from '@my/ui'
-import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
+import { Image, Paragraph, YStack } from '@my/ui'
+import { Button } from '@my/ui/src/components'
+import { Apple, Facebook, MailPlus } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
-
-import { Button } from '@my/ui/src/button'
 
 export default function LoginScreen() {
   const mailRegisterLinkProps = useLink({
@@ -28,28 +16,28 @@ export default function LoginScreen() {
       </YStack>
 
       <YStack alignItems="center">
-        <Button mb="$2.5" size="large" background="green">
-          Sign up with Apple
+        <Button mb="$2.5" size="large" background="black" icon={<Apple size="$1" />}>
+          Apple ile kaydol
         </Button>
 
-        <Button mb="$2.5" size="large" background="green">
-          Sign up with Google
+        <Button mb="$2.5" size="large" background="white" icon={<MailPlus size="$1" />}>
+          Google ile kaydol
         </Button>
 
-        <Button size="large" background="blue">
-          Sign up with Facebook
+        <Button size="large" background="blue" icon={<Facebook size="$1" />}>
+          Facebook ile kaydol
         </Button>
 
-        <Paragraph maxWidth={'$25'} my="$5" maw={'$20'} ta="center">
+        <Paragraph my="$5" maw={'$20'} ta="center">
           OR
         </Paragraph>
 
-        <Button {...mailRegisterLinkProps} mb="$4" size="large" background="blue">
-          Sign up with E-mail
+        <Button {...mailRegisterLinkProps} mb="$4" size="large" background="gray">
+          E-posta ile kaydol
         </Button>
 
-        <Paragraph maxWidth={'$25'} maw={'$20'} ta="center">
-          Congue malesuada in ac justo, a tristique leo massa. Arcu leo leo urna.
+        <Paragraph maw={'$20'} color="gray" fontSize={12} ta="center">
+          Uygulamaya kaydolarak kullanım şartlarını kabul etmiş sayılırısınız.
         </Paragraph>
       </YStack>
     </YStack>

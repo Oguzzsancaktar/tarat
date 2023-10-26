@@ -10,13 +10,17 @@ import {
   XStack,
   YStack,
 } from '@my/ui'
-import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
+import { ChevronDown, ChevronUp, Facebook, MailPlus } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
-
-import { Button } from '@my/ui/src/button'
+import { Apple } from '@tamagui/lucide-icons'
+import { Button } from '@my/ui/src/components'
 
 export default function LoginScreen() {
+  const mailLoginLinkProps = useLink({
+    href: '/login/mail',
+  })
+
   const loginLinkProps = useLink({
     href: '/login',
   })
@@ -32,28 +36,40 @@ export default function LoginScreen() {
       </YStack>
 
       <YStack alignItems="center">
-        <Button {...loginLinkProps} mb="$2.5" size="large" background="green">
-          Sign up with Apple
+        <Button
+          {...loginLinkProps}
+          mb="$2.5"
+          size="large"
+          background="black"
+          icon={<Apple size="$1" />}
+        >
+          Apple ile giriş yap
         </Button>
 
-        <Button {...loginLinkProps} mb="$2.5" size="large" background="green">
-          Sign up with Google
+        <Button
+          {...loginLinkProps}
+          mb="$2.5"
+          size="large"
+          background="white"
+          icon={<MailPlus size="$1" />}
+        >
+          Google ile giriş yap
         </Button>
 
-        <Button {...registerLinkProps} size="large" background="blue">
-          Sign up with Facebook
+        <Button {...registerLinkProps} size="large" background="blue" icon={<Facebook size="$1" />}>
+          Facebook ile giriş yap
         </Button>
 
-        <Paragraph maxWidth={'$25'} my="$5" maw={'$20'} ta="center">
+        <Paragraph my="$5" maw={'$20'} ta="center">
           OR
         </Paragraph>
 
-        <Button {...registerLinkProps} mb="$4" size="large" background="blue">
-          Sign up with E-mail
+        <Button {...mailLoginLinkProps} mb="$4" size="large" background="gray">
+          E-posta ile giriş yap
         </Button>
 
-        <Paragraph maxWidth={'$25'} maw={'$20'} ta="center">
-          Congue malesuada in ac justo, a tristique leo massa. Arcu leo leo urna.
+        <Paragraph maw={'$20'} color="gray" fontSize={12} ta="center">
+          Uygulamaya giriş yaparak kullanım şartlarını kabul etmiş sayılırısınız.
         </Paragraph>
       </YStack>
     </YStack>

@@ -1,13 +1,13 @@
-import { UserDetailScreen } from 'app/views/user/detail-screen'
+import { MailRegisterScreen } from 'app/views'
 import Head from 'next/head'
 
 export default function Page() {
   return (
     <>
       <Head>
-        <title>User</title>
+        <title>Register</title>
       </Head>
-      <UserDetailScreen />
+      <MailRegisterScreen />
     </>
   )
 }

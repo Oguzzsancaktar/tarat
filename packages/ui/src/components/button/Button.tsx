@@ -6,6 +6,7 @@ const Button = styled(TamaguiButton, {
   borderRadius: 100_000_000,
   borderStyle: 'solid',
   overflow: 'hidden',
+  paddingHorizontal: '$1.5',
 
   variants: {
     size: {
@@ -18,8 +19,10 @@ const Button = styled(TamaguiButton, {
       medium: {
         width: '$15',
       },
+      // @todo Oğuz
       large: {
-        width: '$20',
+        width: 400,
+        height: 50,
       },
     },
     background: {
@@ -34,11 +37,45 @@ const Button = styled(TamaguiButton, {
           backgroundColor: '$red2',
         },
       },
-      blue: {
-        backgroundColor: '$blue4',
-        borderColor: '$blue7',
+      white: {
+        backgroundColor: 'white',
+        color: 'black',
         hoverStyle: {
-          backgroundColor: '$blue5',
+          backgroundColor: '$red1',
+        },
+
+        focusStyle: {
+          backgroundColor: '$red2',
+        },
+      },
+
+      gray: {
+        backgroundColor: 'gray',
+        color: 'white',
+        hoverStyle: {
+          backgroundColor: 'gray',
+        },
+
+        focusStyle: {
+          backgroundColor: 'gray',
+        },
+      },
+
+      black: {
+        backgroundColor: 'black',
+        color: 'white',
+        hoverStyle: {
+          backgroundColor: 'gray',
+        },
+
+        focusStyle: {
+          backgroundColor: '$red2',
+        },
+      },
+      blue: {
+        backgroundColor: '$blue6',
+        hoverStyle: {
+          backgroundColor: '$blue4',
         },
 
         focusStyle: {
