@@ -1,5 +1,5 @@
 import { WelcomeScreen } from 'app/views'
-import { Redirect, Stack } from 'expo-router'
+import { Stack } from 'expo-router'
 
 export default function Screen() {
   return (
@@ -7,11 +7,10 @@ export default function Screen() {
       <Stack.Screen
         options={{
           headerShown: false,
-          title: 'Home',
+          title: 'Welcome',
         }}
       />
       <WelcomeScreen />
-      <Redirect href="/welcome" />
     </>
   )
 }
