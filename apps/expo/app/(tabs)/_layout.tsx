@@ -4,10 +4,19 @@ import { View, Text } from 'react-native'
 
 const TabsLayout = () => {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarInactiveBackgroundColor: '#1c1c23',
+        tabBarActiveTintColor: '#FF7966',
+      }}
+    >
       <Tabs.Screen
         name="welcome"
         options={{
+          tabBarLabelStyle: {
+            marginBottom: 3,
+          },
           tabBarIcon: ({ color }) => (
             <View
               style={{
@@ -17,8 +26,7 @@ const TabsLayout = () => {
                 backgroundColor: 'transparent',
               }}
             >
-              <Home color={color} size={24} />
-              <Text style={{ marginTop: 5, fontSize: 10, opacity: 0.5 }}>Home</Text>
+              <Home color={color} size={24} style={{ marginBottom: 12 }} />
             </View>
           ),
         }}
@@ -26,6 +34,9 @@ const TabsLayout = () => {
       <Tabs.Screen
         name="register"
         options={{
+          tabBarLabelStyle: {
+            marginBottom: 3,
+          },
           tabBarIcon: ({ color }) => (
             <View
               style={{
@@ -35,8 +46,7 @@ const TabsLayout = () => {
                 backgroundColor: 'transparent',
               }}
             >
-              <KeyRound color={color} size={24} />
-              <Text style={{ marginTop: 5, fontSize: 10, opacity: 0.5 }}>Home</Text>
+              <KeyRound color={color} size={24} style={{ marginBottom: 12 }} />
             </View>
           ),
         }}
@@ -44,6 +54,9 @@ const TabsLayout = () => {
       <Tabs.Screen
         name="mailRegister"
         options={{
+          tabBarLabelStyle: {
+            marginBottom: 3,
+          },
           tabBarIcon: ({ color }) => (
             <View
               style={{
@@ -53,8 +66,7 @@ const TabsLayout = () => {
                 backgroundColor: 'transparent',
               }}
             >
-              <FileKey color={color} size={24} />
-              <Text style={{ marginTop: 5, fontSize: 10, opacity: 0.5 }}>Home</Text>
+              <FileKey color={color} size={24} style={{ marginBottom: 12 }} />
             </View>
           ),
         }}
@@ -62,6 +74,9 @@ const TabsLayout = () => {
       <Tabs.Screen
         name="login"
         options={{
+          tabBarLabelStyle: {
+            marginBottom: 3,
+          },
           tabBarIcon: ({ color }) => (
             <View
               style={{
@@ -71,8 +86,7 @@ const TabsLayout = () => {
                 backgroundColor: 'transparent',
               }}
             >
-              <LogIn color={color} size={24} />
-              <Text style={{ marginTop: 5, fontSize: 10, opacity: 0.5 }}>Home</Text>
+              <LogIn color={color} size={24} style={{ marginBottom: 12 }} />
             </View>
           ),
         }}
@@ -80,17 +94,18 @@ const TabsLayout = () => {
       <Tabs.Screen
         name="mailLogin"
         options={{
+          tabBarLabelStyle: {
+            marginBottom: 3,
+          },
           tabBarIcon: ({ color }) => (
             <View
               style={{
                 flexDirection: 'column',
                 alignItems: 'center',
                 marginTop: 17,
-                backgroundColor: '#1c1c23',
               }}
             >
-              <Mail color={color} size={24} />
-              <Text style={{ marginTop: 5, fontSize: 10, opacity: 0.5 }}>Home</Text>
+              <Mail color={color} size={24} style={{ marginBottom: 12 }} />
             </View>
           ),
         }}
