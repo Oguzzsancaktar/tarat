@@ -76,7 +76,6 @@ const Button = styled(TamaguiButton, {
       gray: {
         backgroundColor: '$gray6',
         borderColor: '$gray3',
-        color: 'white',
         hoverStyle: {
           backgroundColor: '$gray7',
         },
