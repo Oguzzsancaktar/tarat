@@ -1,15 +1,27 @@
 import { Image, Label, Paragraph, YStack } from '@my/ui'
 import { Button, Input } from '@my/ui/src/components'
+import { ArrowLeftCircle } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
+import { Dimensions } from 'react-native'
 import { useLink } from 'solito/link'
 
 export default function MailLoginScreen() {
   const registerLinkProps = useLink({
     href: '/register',
   })
+  const loginLinkProps = useLink({
+    href: '/login',
+  })
+  const settingsLinkProps = useLink({
+    href: '/settings',
+  })
   return (
     <YStack backgroundColor={'#1c1c23'} f={1} jc="space-between" ai="center" py="$10" px="$4">
-      <YStack maw={600}>
+      <YStack w={Dimensions.get('window').width} ai="center">
+        <YStack position="absolute" top={'$-2'} left={'$5'}>
+          <ArrowLeftCircle {...loginLinkProps} size={'$3'} color={'$gray11'} />
+        </YStack>
+
         <Image h={'$2'} w={'$15'} source={require('../assets/logo.png')} resizeMode="contain" />
       </YStack>
 
@@ -28,14 +40,16 @@ export default function MailLoginScreen() {
         </YStack>
 
         <YStack jc={'center'} ai={'center'}>
-          <Button mt="$5" background="red">
+          <Button {...settingsLinkProps} mt="$5" background="red">
             Giriş yap
           </Button>
         </YStack>
       </YStack>
 
       <YStack jc={'center'} ai={'center'}>
-        <Paragraph>Henüz bir hesabın yok mu?</Paragraph>
+        <Paragraph size={'$3'} mb={'$2'}>
+          Henüz bir hesabın yok mu?
+        </Paragraph>
         <Button {...registerLinkProps} background="gray">
           Kayıt ol
         </Button>
