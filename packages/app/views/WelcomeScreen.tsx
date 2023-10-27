@@ -13,7 +13,7 @@ export default function WelcomeScreen() {
   })
 
   return (
-    <YStack backgroundColor={'#1c1c23'} f={1} jc="space-between" ai="center" py="$10" px="$4">
+    <YStack f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack maw={600}>
         <Image h={'$2'} w={'$15'} source={require('../assets/logo.png')} resizeMode="contain" />
       </YStack>
