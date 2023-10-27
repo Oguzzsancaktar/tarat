@@ -1,4 +1,4 @@
-import { Avatar, Label, ListItem, Paragraph, XStack, YStack } from '@my/ui'
+import { Avatar, Paragraph, XStack, YStack } from '@my/ui'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
 import { Button, Card } from '@my/ui/src/components'
