@@ -1,11 +1,15 @@
 import React from 'react'
 import { Image, Paragraph, Text, YStack } from '@my/ui'
 import { Button } from '@my/ui/src/components'
+<<<<<<< HEAD
+import React from 'react'
+=======
+>>>>>>> 1e5c7f84ee56ee5279fa6030ba4403de9d6d513e
 import { useLink } from 'solito/link'
 
 export default function WelcomeScreen() {
   const loginLinkProps = useLink({
-    href: '/settings/edit',
+    href: '/login',
   })
 
   const registerLinkProps = useLink({
@@ -13,7 +17,7 @@ export default function WelcomeScreen() {
   })
 
   return (
-    <YStack f={1} jc="space-between" ai="center" py="$10" px="$4">
+    <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack maw={600}>
         {/* <Image
           // src={LogoImage}

@@ -1,4 +1,4 @@
-import { Home, LogIn, FileKey, Mail, KeyRound } from '@tamagui/lucide-icons'
+import { Home, LogIn, FileKey, Mail, KeyRound, QrCode, LayoutList } from '@tamagui/lucide-icons'
 import { Tabs } from 'expo-router'
 import { View, Text } from 'react-native'
 
@@ -105,6 +105,44 @@ const TabsLayout = () => {
               }}
             >
               <Mail color={color} size={24} style={{ marginBottom: 12 }} />
+            </View>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="qrPage"
+        options={{
+          tabBarLabelStyle: {
+            marginBottom: 3,
+          },
+          tabBarIcon: ({ color }) => (
+            <View
+              style={{
+                flexDirection: 'column',
+                alignItems: 'center',
+                marginTop: 17,
+              }}
+            >
+              <QrCode color={color} size={24} style={{ marginBottom: 12 }} />
+            </View>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="qrPageList"
+        options={{
+          tabBarLabelStyle: {
+            marginBottom: 3,
+          },
+          tabBarIcon: ({ color }) => (
+            <View
+              style={{
+                flexDirection: 'column',
+                alignItems: 'center',
+                marginTop: 17,
+              }}
+            >
+              <LayoutList color={color} size={24} style={{ marginBottom: 12 }} />
             </View>
           ),
         }}

@@ -14,7 +14,7 @@ export default function LoginScreen() {
   })
 
   return (
-    <YStack f={1} jc="space-between" ai="center" py="$10" px="$4">
+    <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack w={Dimensions.get('window').width} ai="center">
         <YStack position="absolute" top={'$-2'} left={'$5'}>
           {/* <ArrowLeftCircle {...welcomeLinkProps} size={'$3'} color={'$gray11'} /> */}
