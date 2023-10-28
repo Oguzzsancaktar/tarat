@@ -70,6 +70,7 @@ const Input = styled(TamaguiInput, {
         },
       },
       gray: {
+        backgroundColor: 'transparent',
         borderColor: '$gray8',
         hoverStyle: {
           backgroundColor: '$gray5',

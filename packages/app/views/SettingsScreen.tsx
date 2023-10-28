@@ -1,13 +1,17 @@
-import { Avatar, Label, Paragraph, XStack, YStack } from '@my/ui'
 import React, { useState } from 'react'
-import { useLink } from 'solito/link'
+import { Avatar, Label, Paragraph, XStack, YStack } from '@my/ui'
 import { Button, Card } from '@my/ui/src/components'
 import { Bell, Instagram, Facebook, X, Sun } from '@tamagui/lucide-icons'
 import { Switch } from '@my/ui/src/components/switch'
+import { useLink } from 'solito/link'
+import { Appearance } from 'react-native'
+import { useColorScheme } from 'react-native'
 
 export default function SettingScreen() {
+  const schema = useColorScheme()
+
   const settigsScreenProps = useLink({
-    href: '/settings/',
+    href: '/settings',
   })
 
   const [isChecked, setIsChecked] = useState({
@@ -16,7 +20,7 @@ export default function SettingScreen() {
     isCheckedFacebook: true,
     isCheckedX: true,
     isCheckedAppIcon: true,
-    isCheckedDarkTheme: true,
+    isCheckedDarkTheme: schema === 'dark',
   })
 
   const handleSwitchPress = (key) => {
@@ -26,10 +30,16 @@ export default function SettingScreen() {
     }))
   }
 
+  const handleDarkThemeToggle = () => {
+    handleSwitchPress('isCheckedDarkTheme')
+    const newTheme = schema === 'light' ? 'dark' : 'light'
+    Appearance.setColorScheme(newTheme)
+  }
+
   return (
-    <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
+    <YStack f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack maw={600}>
-        <YStack jc={'center'} ai={'center'}>
+        <YStack jc={'center'} mt={'$10'} ai={'center'}>
           <Avatar circular size="$10">
             <Avatar.Image
               accessibilityLabel="Cam"
@@ -38,7 +48,7 @@ export default function SettingScreen() {
             <Avatar.Fallback backgroundColor="$blue10" />
           </Avatar>
           <Paragraph>gokhandogulu@gmail.com</Paragraph>
-          <Button height={30} background={'gray'} width={130}>
+          <Button mt={'$2'} height={30} background={'blue'} width={130}>
             Profili Düzenle
           </Button>
         </YStack>
@@ -119,24 +129,8 @@ export default function SettingScreen() {
 
         <YStack mt={'$8'}>
           <Paragraph>Uygulama Ayarları</Paragraph>
-          <Card>
+          <Card mt={'$2'}>
             <XStack jc={'space-between'}>
-              <XStack ai={'center'}>
-                <Bell />
-                <Label ml={'$2'} htmlFor="appIcon">
-                  App Icon
-                </Label>
-              </XStack>
-              <Switch
-                checked={isChecked.isCheckedAppIcon}
-                onCheckedChange={() => handleSwitchPress('isCheckedAppIcon')}
-                name="appIconSwitch"
-              >
-                <Switch.Thumb animation="quick" />
-              </Switch>
-            </XStack>
-
-            <XStack mt={'$3'} jc={'space-between'}>
               <XStack ai={'center'}>
                 <Sun />
                 <Label ml={'$2'} htmlFor="darkTheme">
@@ -145,7 +139,7 @@ export default function SettingScreen() {
               </XStack>
               <Switch
                 checked={isChecked.isCheckedDarkTheme}
-                onCheckedChange={() => handleSwitchPress('isCheckedDarkTheme')}
+                onCheckedChange={() => handleDarkThemeToggle()}
                 name="darkThemeSwitch"
               >
                 <Switch.Thumb animation="quick" />

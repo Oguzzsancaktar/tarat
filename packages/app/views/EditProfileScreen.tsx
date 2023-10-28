@@ -25,7 +25,7 @@ export default function EditProfile() {
   }
 
   return (
-    <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
+    <YStack f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack maw={600}>
         <YStack jc={'center'}>
           <XStack jc={'space-between'} px={'$1'} ai={'center'}>
