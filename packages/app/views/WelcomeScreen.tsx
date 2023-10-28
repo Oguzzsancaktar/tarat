@@ -1,6 +1,6 @@
-import { Image, Paragraph, YStack } from '@my/ui'
+import React from 'react'
+import { Image, Paragraph, Text, YStack } from '@my/ui'
 import { Button } from '@my/ui/src/components'
-import React, { useState } from 'react'
 import { useLink } from 'solito/link'
 
 export default function WelcomeScreen() {
@@ -15,27 +15,34 @@ export default function WelcomeScreen() {
   return (
     <YStack f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack maw={600}>
-        <Image h={'$2'} w={'$15'} source={require('../assets/logo.png')} resizeMode="contain" />
+        {/* <Image
+          width={'$100'}
+          height={'$100'}
+          // src={LogoImage}
+          alt="Logo"
+          source={LogoImage}
+          resizeMode="contain"
+        /> */}
       </YStack>
-      <Image
+      {/* <Image
         position="absolute"
         left={'$0'}
         top={'$15'}
-        source={require('../assets/welcome-bubble-left.png')}
+        source={require('/assets/welcome-bubble-left.png')}
         resizeMode="contain"
       />
       <Image
         position="absolute"
         right={'$0'}
         bottom={'$11'}
-        source={require('../assets/welcome-bubble-right.png')}
+        source={require('/assets/welcome-bubble-right.png')}
         resizeMode="contain"
-      />
+      /> */}
 
-      <Image mb={'$-8'} source={require('../assets/welcome-tumbnail.png')} resizeMode="contain" />
+      {/* <Image mb={'$-8'} source={require('/assets/welcome-tumbnail.png')} resizeMode="contain" /> */}
 
       <YStack alignItems="center">
-        <Paragraph maxWidth={'$25'} mb="$4" maw={'$20'} ta="center">
+        <Paragraph mb="$4" maw={'$20'} ta="center">
           Congue malesuada in ac justo, a tristique leo massa. Arcu leo leo urna.
         </Paragraph>
         <Button {...registerLinkProps} mb="$2.5" size="large" background="red">
@@ -48,46 +55,3 @@ export default function WelcomeScreen() {
     </YStack>
   )
 }
-
-// function SheetDemo() {
-//   const [open, setOpen] = useState(false)
-//   const [position, setPosition] = useState(0)
-//   const toast = useToastController()
-
-//   return (
-//     <>
-//       <Button
-//         size="$6"
-//         icon={open ? ChevronDown : ChevronUp}
-//         circular
-//         onPress={() => setOpen((x) => !x)}
-//       />
-//       <Sheet
-//         modal
-//         animation="medium"
-//         open={open}
-//         onOpenChange={setOpen}
-//         snapPoints={[80]}
-//         position={position}
-//         onPositionChange={setPosition}
-//         dismissOnSnapToBottom
-//       >
-//         <Sheet.Overlay animation="lazy" enterStyle={{ opacity: 0 }} exitStyle={{ opacity: 0 }} />
-//         <Sheet.Frame ai="center" jc="center">
-//           <Sheet.Handle />
-//           <Button
-//             size="$6"
-//             circular
-//             icon={ChevronDown}
-//             onPress={() => {
-//               setOpen(false)
-//               toast.show('Sheet closed!', {
-//                 message: 'Just showing how toast works...',
-//               })
-//             }}
-//           />
-//         </Sheet.Frame>
-//       </Sheet>
-//     </>
-//   )
-// }
