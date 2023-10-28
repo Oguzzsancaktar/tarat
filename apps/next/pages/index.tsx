@@ -1,3 +1,4 @@
+import React from 'react'
 import { WelcomeScreen } from 'app/views'
 import Head from 'next/head'
 

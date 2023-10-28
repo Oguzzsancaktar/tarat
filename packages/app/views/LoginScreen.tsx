@@ -1,5 +1,5 @@
-import { Image, Paragraph, YStack } from '@my/ui'
-import { Apple, Facebook, MailPlus, ArrowLeftCircle } from '@tamagui/lucide-icons'
+import { Paragraph, YStack } from '@my/ui'
+// import { Apple, Facebook, MailPlus, ArrowLeftCircle } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
 import { Button } from '@my/ui/src/components'
@@ -25,34 +25,22 @@ export default function LoginScreen() {
     <YStack f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack w={Dimensions.get('window').width} ai="center">
         <YStack position="absolute" top={'$-2'} left={'$5'}>
-          <ArrowLeftCircle {...welcomeLinkProps} size={'$3'} color={'$gray11'} />
+          {/* <ArrowLeftCircle {...welcomeLinkProps} size={'$3'} color={'$gray11'} /> */}
         </YStack>
 
-        <Image h={'$2'} w={'$15'} source={require('../assets/logo.png')} resizeMode="contain" />
+        {/* <Image h={'$2'} w={'$15'} source={require('../assets/logo.png')} resizeMode="contain" /> */}
       </YStack>
 
       <YStack alignItems="center">
-        <Button
-          {...loginLinkProps}
-          mb="$2.5"
-          size="large"
-          background="black"
-          icon={<Apple size="$1" />}
-        >
+        <Button {...loginLinkProps} mb="$2.5" size="large" background="black">
           Apple ile giriş yap
         </Button>
 
-        <Button
-          {...loginLinkProps}
-          mb="$2.5"
-          size="large"
-          background="red"
-          icon={<MailPlus size="$1" />}
-        >
+        <Button {...loginLinkProps} mb="$2.5" size="large" background="red">
           Google ile giriş yap
         </Button>
 
-        <Button {...registerLinkProps} size="large" background="blue" icon={<Facebook size="$1" />}>
+        <Button {...registerLinkProps} size="large" background="blue">
           Facebook ile giriş yap
         </Button>
 

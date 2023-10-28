@@ -1,6 +1,6 @@
-import { Image, Label, Paragraph, YStack } from '@my/ui'
+import { Label, Paragraph, YStack } from '@my/ui'
 import { Button, Input } from '@my/ui/src/components'
-import { ArrowLeftCircle } from '@tamagui/lucide-icons'
+// import { ArrowLeftCircle } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
 import { Dimensions } from 'react-native'
 import { useLink } from 'solito/link'
@@ -19,10 +19,10 @@ export default function MailLoginScreen() {
     <YStack f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack w={Dimensions.get('window').width} ai="center">
         <YStack position="absolute" top={'$-2'} left={'$5'}>
-          <ArrowLeftCircle {...loginLinkProps} size={'$3'} color={'$gray11'} />
+          {/* <ArrowLeftCircle {...loginLinkProps} size={'$3'} color={'$gray11'} /> */}
         </YStack>
 
-        <Image h={'$2'} w={'$15'} source={require('../assets/logo.png')} resizeMode="contain" />
+        {/* <Image h={'$2'} w={'$15'} source={require('../assets/logo.png')} resizeMode="contain" /> */}
       </YStack>
 
       <YStack>

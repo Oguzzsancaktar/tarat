@@ -2,7 +2,6 @@ import { Avatar, Label, Paragraph, XStack, YStack } from '@my/ui'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
 import { Button, Card } from '@my/ui/src/components'
-import { Bell, Instagram, Facebook, X, Sun } from '@tamagui/lucide-icons'
 import { Switch } from '@my/ui/src/components/switch'
 
 export default function SettingScreen() {
@@ -31,10 +30,10 @@ export default function SettingScreen() {
       <YStack maw={600}>
         <YStack jc={'center'} ai={'center'}>
           <Avatar circular size="$10">
-            <Avatar.Image
+            {/* <Avatar.Image
               accessibilityLabel="Cam"
               src="https://instagram.fada1-13.fna.fbcdn.net/v/t51.2885-19/395152042_294483536741899_7688305704647683554_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fada1-13.fna.fbcdn.net&_nc_cat=107&_nc_ohc=ucH20L2uveMAX_2BZzj&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfD8y-stGyjZXMsVJZxJL5orcJBNJx5Lzc8FCH_fnI4CZQ&oe=653FFC05&_nc_sid=8b3546"
-            />
+            /> */}
             <Avatar.Fallback backgroundColor="$blue10" />
           </Avatar>
           <Paragraph>gokhandogulu@gmail.com</Paragraph>
@@ -48,7 +47,6 @@ export default function SettingScreen() {
           <Card>
             <XStack jc={'space-between'}>
               <XStack ai={'center'}>
-                <Bell />
                 <Label ml={'$2'} htmlFor="notify">
                   Kullanıcı Bildirimleri
                 </Label>
@@ -69,7 +67,6 @@ export default function SettingScreen() {
           <Card>
             <XStack jc={'space-between'}>
               <XStack ai={'center'}>
-                <Instagram />
                 <Label ml={'$2'} htmlFor="instagramSwitch">
                   Instagram Hesabımı Göster
                 </Label>
@@ -85,7 +82,6 @@ export default function SettingScreen() {
 
             <XStack mt={'$3'} jc={'space-between'}>
               <XStack ai={'center'}>
-                <Facebook />
                 <Label ml={'$2'} htmlFor="facebookSwitch">
                   Facebook Hesabımı Göster
                 </Label>
@@ -101,7 +97,6 @@ export default function SettingScreen() {
 
             <XStack mt={'$3'} jc={'space-between'}>
               <XStack ai={'center'}>
-                <X />
                 <Label ml={'$2'} htmlFor="xSwitch">
                   X Hesabımı Göster
                 </Label>
@@ -122,7 +117,6 @@ export default function SettingScreen() {
           <Card>
             <XStack jc={'space-between'}>
               <XStack ai={'center'}>
-                <Bell />
                 <Label ml={'$2'} htmlFor="appIcon">
                   App Icon
                 </Label>
@@ -138,7 +132,6 @@ export default function SettingScreen() {
 
             <XStack mt={'$3'} jc={'space-between'}>
               <XStack ai={'center'}>
-                <Sun />
                 <Label ml={'$2'} htmlFor="darkTheme">
                   Koyu Görünüş
                 </Label>

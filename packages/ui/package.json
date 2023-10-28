@@ -25,6 +25,7 @@
     "@tamagui/themes": "latest",
     "@tamagui/timer": "^1.75.5",
     "@tamagui/toast": "latest",
+    "react": "^18.2.0",
     "tamagui": "latest"
   },
   "devDependencies": {

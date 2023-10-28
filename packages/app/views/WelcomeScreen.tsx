@@ -16,11 +16,13 @@ export default function WelcomeScreen() {
     <YStack f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack maw={600}>
         {/* <Image
-          width={'$100'}
-          height={'$100'}
           // src={LogoImage}
           alt="Logo"
-          source={LogoImage}
+          source={{
+            uri: 'https://placekitten.com/200/300',
+            width: 200,
+            height: 300,
+          }}
           resizeMode="contain"
         /> */}
       </YStack>

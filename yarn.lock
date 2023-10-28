@@ -2777,6 +2777,7 @@ __metadata:
     "@tamagui/themes": latest
     "@tamagui/timer": ^1.75.5
     "@tamagui/toast": latest
+    react: ^18.2.0
     tamagui: latest
   languageName: unknown
   linkType: soft
@@ -3508,6 +3509,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tamagui/animations-reanimated@npm:1.75.5":
+  version: 1.75.5
+  resolution: "@tamagui/animations-reanimated@npm:1.75.5"
+  checksum: a1c38fd6895cc67b0f2ebd470d98d430e7f3960ff58f146f6b56340406eba56df6eed3ad9c97a2f9515e4881c4bde1bb6bfe4e283e0ee35f85ea2018b262f779
+  languageName: node
+  linkType: hard
+
 "@tamagui/aria-hidden@npm:1.75.5":
   version: 1.75.5
   resolution: "@tamagui/aria-hidden@npm:1.75.5"
@@ -3748,6 +3756,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tamagui/demos@npm:1.75.5":
+  version: 1.75.5
+  resolution: "@tamagui/demos@npm:1.75.5"
+  dependencies:
+    "@tamagui/avatar": 1.75.5
+    "@tamagui/button": 1.75.5
+    "@tamagui/core": 1.75.5
+    "@tamagui/list-item": 1.75.5
+    "@tamagui/logo": 1.75.5
+    "@tamagui/menu": 1.75.5
+    "@tamagui/popover": 1.75.5
+    "@tamagui/progress": 1.75.5
+    "@tamagui/radio-group": 1.75.5
+    "@tamagui/select": 1.75.5
+    "@tamagui/sheet": 1.75.5
+    "@tamagui/site-config": 1.75.5
+    "@tamagui/slider": 1.75.5
+    "@tamagui/stacks": 1.75.5
+    "@tamagui/toast": 1.75.5
+    tamagui: 1.75.5
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  checksum: ce497755e8f2a720bfde3796f3d7fb19acfc7ecf51e5f5fc13318e61c2eaa5f8ed1180c51574c51fdd8ff99b14b3b65a73f41d1763a508221cbe41b56c64196a
+  languageName: node
+  linkType: hard
+
 "@tamagui/dialog@npm:1.75.5":
   version: 1.75.5
   resolution: "@tamagui/dialog@npm:1.75.5"
@@ -3830,6 +3865,47 @@ __metadata:
   peerDependencies:
     react: "*"
   checksum: e5c147ed256bc41dd39e357660e835db8a3d8216dc4ba3621e34c6e33f81caa7db539f426fb751e63447d9c8c9d20bfdcc56a7eaaf1936e034595d1ccb0c1528
+  languageName: node
+  linkType: hard
+
+"@tamagui/font-cherry-bomb@npm:1.75.5":
+  version: 1.75.5
+  resolution: "@tamagui/font-cherry-bomb@npm:1.75.5"
+  dependencies:
+    "@tamagui/core": 1.75.5
+  checksum: c5b92a32f4719628337027e0993cbe0ff90bc725946e8c9a71a45b42e7b5a376c7cd7f48e4212ad98381be823d9298eb4dd6b7fe0f7d6afa0456872cdeea3ffc
+  languageName: node
+  linkType: hard
+
+"@tamagui/font-dm-sans@npm:1.75.5":
+  version: 1.75.5
+  resolution: "@tamagui/font-dm-sans@npm:1.75.5"
+  checksum: 0a1a64f811f14e3b9ee6a5835b617e8519eeb73fc2997d76bbd45857f4fa10184e715c3500f6c6fa73c3d63aaa1ce9688d70875ded229b8b3a4097d4820617f6
+  languageName: node
+  linkType: hard
+
+"@tamagui/font-dm-serif-display@npm:1.75.5":
+  version: 1.75.5
+  resolution: "@tamagui/font-dm-serif-display@npm:1.75.5"
+  checksum: c26e99193fa881841e65a200034c79d177f10d6394467fa1b7412614905fb836607b1ac04f4e0a87e15420c3bf787aaaa36d9ce6059a1b2bd460843fa1cf829b
+  languageName: node
+  linkType: hard
+
+"@tamagui/font-fira-mono@npm:1.75.5":
+  version: 1.75.5
+  resolution: "@tamagui/font-fira-mono@npm:1.75.5"
+  dependencies:
+    "@tamagui/core": 1.75.5
+  checksum: 0870d65c72470e46291168727343852945abe5ec3e96620c5f0efbb0b89a1999a410813fdaf6ded653900247cf39a47602c803445d2561b6ab6cb5784411c1e8
+  languageName: node
+  linkType: hard
+
+"@tamagui/font-glusp@npm:1.75.5":
+  version: 1.75.5
+  resolution: "@tamagui/font-glusp@npm:1.75.5"
+  dependencies:
+    "@tamagui/web": 1.75.5
+  checksum: 9e8eaf11b6427500acc1eefa49045c4ad187b18b620bcd38b4a32084f212c43e8cade99bc2c87bbb872af5865c89803e4ad8457822d8e6dc3a66705cec84a8bc
   languageName: node
   linkType: hard
 
@@ -4043,7 +4119,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/lucide-icons@npm:latest":
+"@tamagui/logo@npm:1.75.5":
+  version: 1.75.5
+  resolution: "@tamagui/logo@npm:1.75.5"
+  dependencies:
+    tamagui: 1.75.5
+  peerDependencies:
+    react: "*"
+  checksum: 1867d30ef3f143b899de95b4b8434fc7832719be6c70a7f9f015f4709d2fc0d606489f13e90f664b5ee095153e651b19dffb1f993db4e2cbbb5d16fba60cb5ae
+  languageName: node
+  linkType: hard
+
+"@tamagui/lucide-icons@npm:1.75.5, @tamagui/lucide-icons@npm:latest":
   version: 1.75.5
   resolution: "@tamagui/lucide-icons@npm:1.75.5"
   dependencies:
@@ -4053,6 +4140,18 @@ __metadata:
     react: "*"
     react-native-svg: ">=12"
   checksum: 880c942085c7619c55a58c5d7956478d6d3a0dfb277169b5c5986eedee6e4d5ea610bf79f08a52ee21253712dcba637ea581ae23f68132792a87a8eaf15ae348
+  languageName: node
+  linkType: hard
+
+"@tamagui/menu@npm:1.75.5":
+  version: 1.75.5
+  resolution: "@tamagui/menu@npm:1.75.5"
+  dependencies:
+    "@tamagui/core": 1.75.5
+    "@tamagui/popover": 1.75.5
+  peerDependencies:
+    react: "*"
+  checksum: b35846c9dfb0091047e2d41ca147106f647fa64b688e0c26b3befd327bd6de40abddfcbdcac51995b6471371a05848b87638ac7ed488e7be7895256705d21093
   languageName: node
   linkType: hard
 
@@ -4385,6 +4484,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tamagui/site-config@npm:1.75.5":
+  version: 1.75.5
+  resolution: "@tamagui/site-config@npm:1.75.5"
+  dependencies:
+    "@tamagui/animations-react-native": 1.75.5
+    "@tamagui/animations-reanimated": 1.75.5
+    "@tamagui/colors": 1.75.5
+    "@tamagui/font-cherry-bomb": 1.75.5
+    "@tamagui/font-dm-sans": 1.75.5
+    "@tamagui/font-dm-serif-display": 1.75.5
+    "@tamagui/font-glusp": 1.75.5
+    "@tamagui/font-inter": 1.75.5
+    "@tamagui/font-silkscreen": 1.75.5
+    "@tamagui/react-native-media-driver": 1.75.5
+    "@tamagui/shorthands": 1.75.5
+    "@tamagui/themes": 1.75.5
+    "@tamagui/web": 1.75.5
+  checksum: 72a9fe03b95e8c4aae8e9534c69657e22c08df0ddb1b692b5c623c1212dd387422bdb7e9d2610e0ea634333b51ecce6ed3d390640ad6402b994d65ac3282d6e3
+  languageName: node
+  linkType: hard
+
 "@tamagui/slider@npm:1.75.5":
   version: 1.75.5
   resolution: "@tamagui/slider@npm:1.75.5"
@@ -4546,7 +4666,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/toast@npm:latest":
+"@tamagui/toast@npm:1.75.5, @tamagui/toast@npm:latest":
   version: 1.75.5
   resolution: "@tamagui/toast@npm:1.75.5"
   dependencies:
@@ -4727,6 +4847,17 @@ __metadata:
   version: 1.75.5
   resolution: "@tamagui/use-previous@npm:1.75.5"
   checksum: 5d001fa99f99f61b857b669bf7aefeac32b1319546a42f52ab1415fc664d7ac06d70b5c2d005402583fe2515fadc7671edec684999242b4bb649a843db17ae0b
+  languageName: node
+  linkType: hard
+
+"@tamagui/use-store@npm:1.75.5":
+  version: 1.75.5
+  resolution: "@tamagui/use-store@npm:1.75.5"
+  dependencies:
+    "@tamagui/simple-hash": 1.75.5
+  peerDependencies:
+    react: "*"
+  checksum: 706efd65713f62d4fa7566849e688dd087692c3d7dec6bc99e077dfff42ff64a112c13572df829c056b8ea9f8d85cab4954488525917afa59d15d0cd9d51cf00
   languageName: node
   linkType: hard
 
@@ -5604,6 +5735,7 @@ __metadata:
     burnt: ^0.12.1
     expo-constants: ~14.4.2
     expo-linking: ~5.0.2
+    react: ^18.2.0
     react-native-safe-area-context: 4.6.3
     solito: ^3.0.0
   languageName: unknown
@@ -12263,9 +12395,28 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "next-app@workspace:apps/next"
   dependencies:
+    "@tamagui/animate-presence": 1.75.5
+    "@tamagui/animations-reanimated": 1.75.5
+    "@tamagui/colors": 1.75.5
     "@tamagui/config": latest
+    "@tamagui/core": 1.75.5
+    "@tamagui/demos": 1.75.5
+    "@tamagui/font-fira-mono": 1.75.5
+    "@tamagui/font-inter": 1.75.5
+    "@tamagui/font-silkscreen": 1.75.5
+    "@tamagui/get-token": 1.75.5
+    "@tamagui/logo": 1.75.5
+    "@tamagui/lucide-icons": 1.75.5
+    "@tamagui/menu": 1.75.5
     "@tamagui/next-plugin": latest
     "@tamagui/next-theme": latest
+    "@tamagui/polyfill-dev": 1.75.5
+    "@tamagui/remove-scroll": 1.75.5
+    "@tamagui/shorthands": 1.75.5
+    "@tamagui/site-config": 1.75.5
+    "@tamagui/themes": 1.75.5
+    "@tamagui/toast": 1.75.5
+    "@tamagui/use-store": 1.75.5
     "@types/node": ^18.6.4
     app: 0.0.0
     eslint-config-next: ^13.0.4
@@ -15354,7 +15505,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tamagui@npm:latest":
+"tamagui@npm:1.75.5, tamagui@npm:latest":
   version: 1.75.5
   resolution: "tamagui@npm:1.75.5"
   dependencies:

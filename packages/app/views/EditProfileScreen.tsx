@@ -1,5 +1,5 @@
-import { Avatar, Label, LabelFrame, ListItem, Paragraph, XStack, YStack } from '@my/ui'
 import React, { useState } from 'react'
+import { Avatar, Label, LabelFrame, ListItem, Paragraph, XStack, YStack } from '@my/ui'
 import { useLink } from 'solito/link'
 import { Button, Card, Input } from '@my/ui/src/components'
 
@@ -30,10 +30,10 @@ export default function EditProfile() {
         <YStack jc={'center'}>
           <XStack jc={'space-between'} px={'$1'} ai={'center'}>
             <Avatar circular size="$10">
-              <Avatar.Image
+              {/* <Avatar.Image
                 accessibilityLabel="Cam"
                 src="https://instagram.fada1-13.fna.fbcdn.net/v/t51.2885-19/395152042_294483536741899_7688305704647683554_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fada1-13.fna.fbcdn.net&_nc_cat=107&_nc_ohc=ucH20L2uveMAX_2BZzj&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfD8y-stGyjZXMsVJZxJL5orcJBNJx5Lzc8FCH_fnI4CZQ&oe=653FFC05&_nc_sid=8b3546"
-              />
+              /> */}
               <Avatar.Fallback backgroundColor="$blue10" />
             </Avatar>
 
