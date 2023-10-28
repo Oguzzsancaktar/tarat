@@ -1,5 +1,6 @@
-import { RegisterScreen } from 'app/views'
+import React from 'react'
 import Head from 'next/head'
+import { RegisterScreen } from 'app/views'
 
 export default function Screen() {
   return (

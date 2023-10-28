@@ -1,3 +1,4 @@
+import React from 'react'
 import { MailRegisterScreen } from 'app/views'
 import Head from 'next/head'
 
