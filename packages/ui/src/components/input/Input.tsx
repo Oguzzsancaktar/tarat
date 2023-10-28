@@ -10,16 +10,16 @@ const Input = styled(TamaguiInput, {
   variants: {
     size: {
       xsmall: {
-        width: '$5',
-      },
-      small: {
         width: '$10',
       },
-      medium: {
+      small: {
         width: '$15',
       },
-      large: {
+      medium: {
         width: '$20',
+      },
+      large: {
+        width: 350,
       },
     },
     background: {

@@ -7,7 +7,7 @@ import { Switch } from '@my/ui/src/components/switch'
 
 export default function SettingScreen() {
   const settigsScreenProps = useLink({
-    href: '/settings/',
+    href: '/settings/edit',
   })
 
   const [isChecked, setIsChecked] = useState({
@@ -38,7 +38,7 @@ export default function SettingScreen() {
             <Avatar.Fallback backgroundColor="$blue10" />
           </Avatar>
           <Paragraph>gokhandogulu@gmail.com</Paragraph>
-          <Button height={30} background={'gray'} width={130}>
+          <Button {...settigsScreenProps} height={30} background={'gray'} width={130}>
             Profili Düzenle
           </Button>
         </YStack>

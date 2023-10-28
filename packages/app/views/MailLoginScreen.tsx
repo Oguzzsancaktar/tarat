@@ -16,7 +16,7 @@ export default function MailLoginScreen() {
     href: '/settings',
   })
   return (
-    <YStack f={1} jc="space-between" ai="center" py="$10" px="$4">
+    <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack w={Dimensions.get('window').width} ai="center">
         <YStack position="absolute" top={'$-2'} left={'$5'}>
           <ArrowLeftCircle {...loginLinkProps} size={'$3'} color={'$gray11'} />
@@ -27,16 +27,16 @@ export default function MailLoginScreen() {
 
       <YStack>
         <YStack>
-          <Label htmlFor="email" size={'$1'} mb={'$1.5'} color={'$gray8'}>
+          <Label htmlFor="emailLog" size={'$1'} mb={'$1.5'} color={'$gray8'}>
             E-posta adresi
           </Label>
-          <Input width={350} background="gray" mb={'$5'} />
+          <Input size="large" background="gray" mb={'$5'} />
         </YStack>
         <YStack>
-          <Label htmlFor="password" size={'$1'} mb={'$1.5'} color={'$gray8'}>
+          <Label htmlFor="passwordLog" size={'$1'} mb={'$1.5'} color={'$gray8'}>
             Şifre
           </Label>
-          <Input width={350} background="gray" />
+          <Input size="large" background="gray" />
         </YStack>
 
         <YStack jc={'center'} ai={'center'}>

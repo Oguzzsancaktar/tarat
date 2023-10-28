@@ -21,22 +21,22 @@ export default function MailRegisterScreen() {
 
       <YStack>
         <YStack>
-          <Label htmlFor="email" size={'$1'} color={'$gray8'} mb={'$1.5'}>
+          <Label htmlFor="emailReg" size={'$1'} color={'$gray8'} mb={'$1.5'}>
             E-posta adresi
           </Label>
-          <Input width={350} background="gray" mb={'$4'} />
+          <Input size="large" background="gray" mb={'$4'} />
         </YStack>
         <YStack>
-          <Label htmlFor="password" size={'$1'} color={'$gray8'} mb={'$1.5'}>
+          <Label htmlFor="passwordReg" size={'$1'} color={'$gray8'} mb={'$1.5'}>
             Şifre
           </Label>
-          <Input width={350} background="gray" mb={'$4'} />
+          <Input size="large" background="gray" mb={'$4'} />
         </YStack>
         <YStack>
-          <Label htmlFor="re-password" size={'$1'} color={'$gray8'} mb={'$1.5'}>
+          <Label htmlFor="re-passwordReg" size={'$1'} color={'$gray8'} mb={'$1.5'}>
             Şifre Tekrar
           </Label>
-          <Input width={350} background="gray" />
+          <Input size="large" background="gray" />
         </YStack>
         <YStack ai={'center'}>
           <Progress mt={'$5'} width={'$20'} size={'$1'} backgroundColor="$gray8" value={25}>
