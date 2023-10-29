@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { Image, Label, Paragraph, Progress, YStack } from '@my/ui'
-import { Button, Input } from '@my/ui/src/components'
-// import { ArrowLeftCircle } from '@tamagui/lucide-icons'
+import { Image, Label, Paragraph, Progress, YStack } from '@packages/ui'
+import { Button, Input } from '@packages/ui/src/components'
 import { Dimensions } from 'react-native'
 import { useLink } from 'solito/link'
-import { useAppImages } from 'app/hooks'
+import { useAppImages } from '@packages/common/hooks'
+import { ArrowLeftCircle } from '@tamagui/lucide-icons'
 
 export default function MailRegisterScreen() {
   const appImages = useAppImages()
@@ -18,7 +18,7 @@ export default function MailRegisterScreen() {
     <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack w={Dimensions.get('window').width} ai="center">
         <YStack position="absolute" top={'$-2'} left={'$5'}>
-          {/* <ArrowLeftCircle {...registerLinkProps} size={'$3'} color={'$gray11'} /> */}
+          <ArrowLeftCircle {...registerLinkProps} size={'$3'} color={'$gray11'} />
         </YStack>
 
         <Image alt="Logo" source={appImages.companyLogo} resizeMode="contain" />

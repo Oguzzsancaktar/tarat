@@ -1,6 +1,7 @@
 import React from 'react'
-import { WelcomeScreen } from 'app/views'
+import { WelcomeScreen } from '@packages/common/views'
 import Head from 'next/head'
+import { PublicLayout } from 'app/components/layout'
 
 export default function Page() {
   return (
@@ -8,7 +9,9 @@ export default function Page() {
       <Head>
         <title>Home</title>
       </Head>
-      <WelcomeScreen />
+      <PublicLayout>
+        <WelcomeScreen />
+      </PublicLayout>
     </>
   )
 }

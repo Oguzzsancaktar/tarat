@@ -2778,24 +2778,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@my/ui@0.0.1, @my/ui@workspace:packages/ui":
-  version: 0.0.0-use.local
-  resolution: "@my/ui@workspace:packages/ui"
-  dependencies:
-    "@tamagui/animations-react-native": latest
-    "@tamagui/build": latest
-    "@tamagui/font-inter": latest
-    "@tamagui/image": latest
-    "@tamagui/react-native-media-driver": latest
-    "@tamagui/shorthands": latest
-    "@tamagui/themes": latest
-    "@tamagui/timer": latest
-    "@tamagui/toast": latest
-    react: ^18.2.0
-    tamagui: latest
-  languageName: unknown
-  linkType: soft
-
 "@next/env@npm:13.5.6":
   version: 13.5.6
   resolution: "@next/env@npm:13.5.6"
@@ -2963,6 +2945,48 @@ __metadata:
   checksum: 52dc02259d98da517fae4cb3a0a3850227bdae4939dda1980b788a7670636ca2b4a01b58df03dd5f65c1e3cb70c50fa8ce5762b582b3f499ec30ee5ce1fd9380
   languageName: node
   linkType: hard
+
+"@packages/common@0.0.0, @packages/common@workspace:packages/common":
+  version: 0.0.0-use.local
+  resolution: "@packages/common@workspace:packages/common"
+  dependencies:
+    "@packages/ui": 0.0.1
+    "@tamagui/animations-react-native": latest
+    "@tamagui/colors": latest
+    "@tamagui/font-inter": latest
+    "@tamagui/image": latest
+    "@tamagui/lucide-icons": latest
+    "@tamagui/shorthands": latest
+    "@tamagui/themes": latest
+    "@tamagui/timer": latest
+    "@types/react": ^18.0.27
+    "@types/react-native": ^0.71.3
+    burnt: ^0.12.1
+    expo-constants: ~14.4.2
+    expo-linking: ~5.0.2
+    react: ^18.2.0
+    react-native-safe-area-context: 4.6.3
+    solito: ^3.0.0
+  languageName: unknown
+  linkType: soft
+
+"@packages/ui@0.0.1, @packages/ui@workspace:packages/ui":
+  version: 0.0.0-use.local
+  resolution: "@packages/ui@workspace:packages/ui"
+  dependencies:
+    "@tamagui/animations-react-native": latest
+    "@tamagui/build": latest
+    "@tamagui/font-inter": latest
+    "@tamagui/image": latest
+    "@tamagui/react-native-media-driver": latest
+    "@tamagui/shorthands": latest
+    "@tamagui/themes": latest
+    "@tamagui/timer": latest
+    "@tamagui/toast": latest
+    react: ^18.2.0
+    tamagui: latest
+  languageName: unknown
+  linkType: soft
 
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
@@ -3497,7 +3521,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/animate-presence@npm:1.75.7, @tamagui/animate-presence@npm:latest":
+"@tamagui/animate-presence@npm:1.75.7":
   version: 1.75.7
   resolution: "@tamagui/animate-presence@npm:1.75.7"
   dependencies:
@@ -3549,13 +3573,6 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 4ea4388fbc8d70b757d507fc112752604814d088d32136dd532a47cef39574b5000a932bd3400d3349cb834ba5ff4efd7d4cde455e58dc105d99a468cce0abc9
-  languageName: node
-  linkType: hard
-
-"@tamagui/animations-reanimated@npm:1.75.7, @tamagui/animations-reanimated@npm:latest":
-  version: 1.75.7
-  resolution: "@tamagui/animations-reanimated@npm:1.75.7"
-  checksum: cf2eee9a22eb1697b9ce5a0fc1328bf0ab718a7a7423166d2ef929af69dca2bef5efd3e799cc24129356274d6f2045a25b067c76291e8184a9639de21b482ee7
   languageName: node
   linkType: hard
 
@@ -3760,7 +3777,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/core@npm:1.75.7, @tamagui/core@npm:latest":
+"@tamagui/core@npm:1.75.7":
   version: 1.75.7
   resolution: "@tamagui/core@npm:1.75.7"
   dependencies:
@@ -3796,33 +3813,6 @@ __metadata:
   version: 1.75.7
   resolution: "@tamagui/cubic-bezier-animator@npm:1.75.7"
   checksum: 7b0caaaeea433fe28dfc3e47dd274416a35dcb756b772a12f9e5d13485e9323b125231b8791c1027138e54a735ac1a593728acc35ddfdc1277c4a2c1e7691af7
-  languageName: node
-  linkType: hard
-
-"@tamagui/demos@npm:latest":
-  version: 1.75.7
-  resolution: "@tamagui/demos@npm:1.75.7"
-  dependencies:
-    "@tamagui/avatar": 1.75.7
-    "@tamagui/button": 1.75.7
-    "@tamagui/core": 1.75.7
-    "@tamagui/list-item": 1.75.7
-    "@tamagui/logo": 1.75.7
-    "@tamagui/menu": 1.75.7
-    "@tamagui/popover": 1.75.7
-    "@tamagui/progress": 1.75.7
-    "@tamagui/radio-group": 1.75.7
-    "@tamagui/select": 1.75.7
-    "@tamagui/sheet": 1.75.7
-    "@tamagui/site-config": 1.75.7
-    "@tamagui/slider": 1.75.7
-    "@tamagui/stacks": 1.75.7
-    "@tamagui/toast": 1.75.7
-    tamagui: 1.75.7
-  peerDependencies:
-    react: "*"
-    react-dom: "*"
-  checksum: fbb31ceffdc0394c92efd38de5c7081fea8e4d18c1669037296131ec9efc103bf86e90c518cf365c884317f4dd1361d1c58d5453b89b8690f203d980e97841f6
   languageName: node
   linkType: hard
 
@@ -3911,47 +3901,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/font-cherry-bomb@npm:1.75.7":
-  version: 1.75.7
-  resolution: "@tamagui/font-cherry-bomb@npm:1.75.7"
-  dependencies:
-    "@tamagui/core": 1.75.7
-  checksum: 3f0df34295a2a531b17fb2f61c23471183ab22b196d146b340c3b7043d22c9e4888b15fd877004a23717ea6007fa2f75a36a44d0f1a4a903de7c529d24201380
-  languageName: node
-  linkType: hard
-
-"@tamagui/font-dm-sans@npm:1.75.7":
-  version: 1.75.7
-  resolution: "@tamagui/font-dm-sans@npm:1.75.7"
-  checksum: 05ca25e6b9b464139fb4d822225265c760b8f3da2a1236ee560fab0096a62ab2fa52e0558d0f1c1f31a303191a7151cbc0072b67d4669a30285917540cfa5fe4
-  languageName: node
-  linkType: hard
-
-"@tamagui/font-dm-serif-display@npm:1.75.7":
-  version: 1.75.7
-  resolution: "@tamagui/font-dm-serif-display@npm:1.75.7"
-  checksum: 0a47f33295de6c9eeaf9f57bbe131c1dc2c8f571562cad5f92c00568e776a49a3ca2d53063139b9c9bc7fa759074a52d5dfe5489a1809315640888649db668f6
-  languageName: node
-  linkType: hard
-
-"@tamagui/font-fira-mono@npm:latest":
-  version: 1.75.7
-  resolution: "@tamagui/font-fira-mono@npm:1.75.7"
-  dependencies:
-    "@tamagui/core": 1.75.7
-  checksum: e72b88cb71f011befec05eb68a85907d6a69e8bb5085945a00c301c087ee742c458d6a2acb115858ccffba8de4893be38ae2d21ad5990fb6810eff9d4bcc0471
-  languageName: node
-  linkType: hard
-
-"@tamagui/font-glusp@npm:1.75.7":
-  version: 1.75.7
-  resolution: "@tamagui/font-glusp@npm:1.75.7"
-  dependencies:
-    "@tamagui/web": 1.75.7
-  checksum: 262340c33006af3ce61ae510da46fbe3bb4cc36db7c0a139719b00f9b0072b14825c0fba3a2013b60cb388e71f645cb7a3e88dba7bbc3a1b4f06243aefa46a46
-  languageName: node
-  linkType: hard
-
 "@tamagui/font-inter@npm:1.75.7, @tamagui/font-inter@npm:latest":
   version: 1.75.7
   resolution: "@tamagui/font-inter@npm:1.75.7"
@@ -3961,7 +3910,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/font-silkscreen@npm:1.75.7, @tamagui/font-silkscreen@npm:latest":
+"@tamagui/font-silkscreen@npm:1.75.7":
   version: 1.75.7
   resolution: "@tamagui/font-silkscreen@npm:1.75.7"
   dependencies:
@@ -4033,7 +3982,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/get-token@npm:1.75.7, @tamagui/get-token@npm:latest":
+"@tamagui/get-token@npm:1.75.7":
   version: 1.75.7
   resolution: "@tamagui/get-token@npm:1.75.7"
   dependencies:
@@ -4162,17 +4111,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/logo@npm:1.75.7, @tamagui/logo@npm:latest":
-  version: 1.75.7
-  resolution: "@tamagui/logo@npm:1.75.7"
-  dependencies:
-    tamagui: 1.75.7
-  peerDependencies:
-    react: "*"
-  checksum: 9fdba6d3b0ff72101a12b24f1ae028920499862e6ab6f0fa0dbc46a802292ff35a049d6fc42c79fe2d1896de7c3d75ad7d4e589be30c4382d07d8a0de8c24660
-  languageName: node
-  linkType: hard
-
 "@tamagui/lucide-icons@npm:latest":
   version: 1.75.7
   resolution: "@tamagui/lucide-icons@npm:1.75.7"
@@ -4183,18 +4121,6 @@ __metadata:
     react: "*"
     react-native-svg: ">=12"
   checksum: 85111af5d12cef545cb8150f79a3878af1d3a50e2f69b474a62094f79a0986cd88c8c423675c8600732825852dc09b10ff23ec1aea18be04df467f90f74f40f8
-  languageName: node
-  linkType: hard
-
-"@tamagui/menu@npm:1.75.7, @tamagui/menu@npm:latest":
-  version: 1.75.7
-  resolution: "@tamagui/menu@npm:1.75.7"
-  dependencies:
-    "@tamagui/core": 1.75.7
-    "@tamagui/popover": 1.75.7
-  peerDependencies:
-    react: "*"
-  checksum: 3b7ed86a1a56f421963e074cf6573607e4a331076d6657bbfb003f69b2d1dada870e6743435c3ab2dcef7ed34bc674e36bd26a2354c6d78f3bcd3c5198ba7800
   languageName: node
   linkType: hard
 
@@ -4242,7 +4168,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/polyfill-dev@npm:1.75.7, @tamagui/polyfill-dev@npm:latest":
+"@tamagui/polyfill-dev@npm:1.75.7":
   version: 1.75.7
   resolution: "@tamagui/polyfill-dev@npm:1.75.7"
   checksum: a73b92baf7f2e3f0fc6e5f34967577aab7e828ba17ae1fee58086191aebd181fab7a7475330c25358613a858d85640831d717e0fe64eb19ccbbeb695115ba9c2
@@ -4394,7 +4320,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/remove-scroll@npm:1.75.7, @tamagui/remove-scroll@npm:latest":
+"@tamagui/remove-scroll@npm:1.75.7":
   version: 1.75.7
   resolution: "@tamagui/remove-scroll@npm:1.75.7"
   dependencies:
@@ -4524,27 +4450,6 @@ __metadata:
   version: 1.75.7
   resolution: "@tamagui/simple-hash@npm:1.75.7"
   checksum: dceed5bc97b9d3a33bdf5b430a9a689f7578e245ae02f5cbcc1d6e2da4a6fc6b38e8565cf0a489062a172d9e17bf87b3d545194f618bb42d6ac5b265c6dab93c
-  languageName: node
-  linkType: hard
-
-"@tamagui/site-config@npm:1.75.7, @tamagui/site-config@npm:latest":
-  version: 1.75.7
-  resolution: "@tamagui/site-config@npm:1.75.7"
-  dependencies:
-    "@tamagui/animations-react-native": 1.75.7
-    "@tamagui/animations-reanimated": 1.75.7
-    "@tamagui/colors": 1.75.7
-    "@tamagui/font-cherry-bomb": 1.75.7
-    "@tamagui/font-dm-sans": 1.75.7
-    "@tamagui/font-dm-serif-display": 1.75.7
-    "@tamagui/font-glusp": 1.75.7
-    "@tamagui/font-inter": 1.75.7
-    "@tamagui/font-silkscreen": 1.75.7
-    "@tamagui/react-native-media-driver": 1.75.7
-    "@tamagui/shorthands": 1.75.7
-    "@tamagui/themes": 1.75.7
-    "@tamagui/web": 1.75.7
-  checksum: 66bf6e9fb73fbd2e162ed09978885edf6c10255397ef430706b07cadfe99b389e4e4a32013f38d227b8f880acdec4de06335d6b3f0426a54896402eb5f1d2f5e
   languageName: node
   linkType: hard
 
@@ -4709,7 +4614,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/toast@npm:1.75.7, @tamagui/toast@npm:latest":
+"@tamagui/toast@npm:latest":
   version: 1.75.7
   resolution: "@tamagui/toast@npm:1.75.7"
   dependencies:
@@ -4890,17 +4795,6 @@ __metadata:
   version: 1.75.7
   resolution: "@tamagui/use-previous@npm:1.75.7"
   checksum: 94c41d708f84fad19fc416f82e22ef3b1a70376881837c68baf7696a0608641d3252f60495abd5cd3c69b2b94e0c036946b4ed278fa3b049f5bd04b255546620
-  languageName: node
-  linkType: hard
-
-"@tamagui/use-store@npm:latest":
-  version: 1.75.7
-  resolution: "@tamagui/use-store@npm:1.75.7"
-  dependencies:
-    "@tamagui/simple-hash": 1.75.7
-  peerDependencies:
-    react: "*"
-  checksum: 4f332c793bdf0104bbd4f59b2c7c5136fe5d3d187ca91394c272b9ef199c4c55ee98d6ea30e4353595c20acfd56ba7710ad090939ac41c70828ce900e858f3b1
   languageName: node
   linkType: hard
 
@@ -5789,30 +5683,6 @@ __metadata:
   checksum: 3e044fd6d1d26545f235a9fe4d7a534e2029d8e59fa7fd9f2a6eb21230f6b5380ea1eaf55136e60cbf8e613544b3b766e7a6fa2102e2a3a117505466e3025dc2
   languageName: node
   linkType: hard
-
-"app@0.0.0, app@workspace:packages/app":
-  version: 0.0.0-use.local
-  resolution: "app@workspace:packages/app"
-  dependencies:
-    "@my/ui": 0.0.1
-    "@tamagui/animations-react-native": latest
-    "@tamagui/colors": latest
-    "@tamagui/font-inter": latest
-    "@tamagui/image": latest
-    "@tamagui/lucide-icons": latest
-    "@tamagui/shorthands": latest
-    "@tamagui/themes": latest
-    "@tamagui/timer": latest
-    "@types/react": ^18.0.27
-    "@types/react-native": ^0.71.3
-    burnt: ^0.12.1
-    expo-constants: ~14.4.2
-    expo-linking: ~5.0.2
-    react: ^18.2.0
-    react-native-safe-area-context: 4.6.3
-    solito: ^3.0.0
-  languageName: unknown
-  linkType: soft
 
 "appdirsjs@npm:^1.2.4":
   version: 1.2.7
@@ -8809,10 +8679,10 @@ __metadata:
     "@babel/runtime": ^7.18.9
     "@expo/config-plugins": ~7.2.2
     "@expo/metro-config": ~0.10.0
-    "@my/ui": 0.0.1
+    "@packages/common": 0.0.0
+    "@packages/ui": 0.0.1
     "@react-navigation/native": ^6.1.6
     "@tamagui/babel-plugin": latest
-    app: 0.0.0
     babel-plugin-module-resolver: ^4.1.0
     babel-plugin-transform-inline-environment-variables: ^0.4.4
     burnt: ^0.12.1
@@ -12626,30 +12496,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "next-app@workspace:apps/next"
   dependencies:
-    "@tamagui/animate-presence": latest
-    "@tamagui/animations-reanimated": latest
-    "@tamagui/colors": latest
+    "@packages/common": 0.0.0
     "@tamagui/config": latest
-    "@tamagui/core": latest
-    "@tamagui/demos": latest
-    "@tamagui/font-fira-mono": latest
-    "@tamagui/font-inter": latest
-    "@tamagui/font-silkscreen": latest
-    "@tamagui/get-token": latest
-    "@tamagui/logo": latest
-    "@tamagui/lucide-icons": latest
-    "@tamagui/menu": latest
     "@tamagui/next-plugin": latest
     "@tamagui/next-theme": latest
-    "@tamagui/polyfill-dev": latest
-    "@tamagui/remove-scroll": latest
-    "@tamagui/shorthands": latest
-    "@tamagui/site-config": latest
-    "@tamagui/themes": latest
-    "@tamagui/toast": latest
-    "@tamagui/use-store": latest
     "@types/node": ^18.6.4
-    app: 0.0.0
     eslint-config-next: ^13.0.4
     next: ^13.5.2
     raf: ^3.4.1
@@ -15831,7 +15682,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tamagui@npm:1.75.7, tamagui@npm:latest":
+"tamagui@npm:latest":
   version: 1.75.7
   resolution: "tamagui@npm:1.75.7"
   dependencies:

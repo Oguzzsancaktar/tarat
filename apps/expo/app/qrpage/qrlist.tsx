@@ -1,4 +1,4 @@
-import { QrPageListScreen } from 'app/views'
+import { QrPageListScreen } from '@packages/common/views'
 import { Stack } from 'expo-router'
 
 export default function Screen() {

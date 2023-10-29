@@ -1,5 +1,5 @@
 import { useMemo } from "react"
-import { IMAGE_PATHS } from "app/constants"
+import { IMAGE_PATHS } from "@packages/common/constants"
 
 
 

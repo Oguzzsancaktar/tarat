@@ -1,10 +1,10 @@
-import { Image, Paragraph, YStack } from '@my/ui'
+import { Image, Paragraph, YStack } from '@packages/ui'
 // import { Apple, Facebook, MailPlus, ArrowLeftCircle } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
-import { Button } from '@my/ui/src/components'
+import { Button } from '@packages/ui/src/components'
 import { Dimensions } from 'react-native'
-import { useAppImages } from 'app/hooks'
+import { useAppImages } from '@packages/common/hooks'
 
 export default function LoginScreen() {
   const appImages = useAppImages()

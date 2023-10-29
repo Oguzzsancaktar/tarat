@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Avatar, Label, LabelFrame, ListItem, Paragraph, XStack, YStack } from '@my/ui'
+import { Avatar, Label, LabelFrame, ListItem, Paragraph, XStack, YStack } from '@packages/ui'
 import { useLink } from 'solito/link'
-import { Button, Card, Input } from '@my/ui/src/components'
+import { Button, Card, Input } from '@packages/ui/src/components'
 
 export default function EditProfile() {
   const editProfileScreenProps = useLink({

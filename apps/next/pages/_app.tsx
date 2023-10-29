@@ -5,7 +5,7 @@ import '@tamagui/font-inter/css/700.css'
 import 'raf/polyfill'
 
 import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme'
-import { Provider } from 'app/provider'
+import { Provider } from '@packages/common/provider'
 import Head from 'next/head'
 import type { SolitoAppProps } from 'solito'
 

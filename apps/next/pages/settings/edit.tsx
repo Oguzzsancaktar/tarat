@@ -1,4 +1,4 @@
-import { EditProfileScreen } from 'app/views'
+import { EditProfileScreen } from '@packages/common/views'
 import Head from 'next/head'
 
 export default function Page() {

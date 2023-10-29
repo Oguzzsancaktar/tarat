@@ -1,13 +1,13 @@
 {
   "version": "0.0.0",
-  "name": "app",
+  "name": "@packages/common",
   "main": "index.ts",
   "private": true,
   "sideEffects": [
     "*.css"
   ],
   "dependencies": {
-    "@my/ui": "0.0.1",
+    "@packages/ui": "0.0.1",
     "@tamagui/animations-react-native": "latest",
     "@tamagui/colors": "latest",
     "@tamagui/font-inter": "latest",

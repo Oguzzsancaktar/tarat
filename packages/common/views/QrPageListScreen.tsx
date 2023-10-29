@@ -1,7 +1,7 @@
-import { Paragraph, ScrollView, XStack, YStack } from '@my/ui'
+import { Paragraph, ScrollView, XStack, YStack } from '@packages/ui'
 import { QrCode, Trash2 } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
-import { Button } from '@my/ui/src/components'
+import { Button } from '@packages/ui/src/components'
 import { Dimensions, StatusBar, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 

@@ -1,18 +1,10 @@
-import React, { useMemo } from 'react'
-import { Image, Paragraph, Text, YStack } from '@my/ui'
-import { Button } from '@my/ui/src/components'
-import { useLink } from 'solito/link'
-import { useAppImages } from 'app/hooks'
+import React from 'react'
+import { Image, Paragraph, YStack } from '@packages/ui'
+import { useAppImages } from '@packages/common/hooks'
+import { LoginButton, RegisterButton } from '@packages/common/components'
 
 export default function WelcomeScreen() {
   const appImages = useAppImages()
-  const loginLinkProps = useLink({
-    href: '/login',
-  })
-
-  const registerLinkProps = useLink({
-    href: '/register',
-  })
 
   return (
     <YStack
@@ -52,12 +44,10 @@ export default function WelcomeScreen() {
         <Paragraph mb="$4" maw={'$20'} ta="center">
           Congue malesuada in ac justo, a tristique leo massa. Arcu leo leo urna.
         </Paragraph>
-        <Button {...registerLinkProps} mb="$2.5" size="large" background="red">
-          Kayıt Ol
-        </Button>
-        <Button {...loginLinkProps} size="large" background="gray">
-          Zaten hesabın var mı?
-        </Button>
+
+        <LoginButton />
+
+        <RegisterButton />
       </YStack>
     </YStack>
   )

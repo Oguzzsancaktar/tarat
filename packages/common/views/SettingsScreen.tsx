@@ -1,8 +1,8 @@
-import { Avatar, Label, Paragraph, XStack, YStack } from '@my/ui'
+import { Avatar, Label, Paragraph, XStack, YStack } from '@packages/ui'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
-import { Button, Card } from '@my/ui/src/components'
-import { Switch } from '@my/ui/src/components/switch'
+import { Button, Card } from '@packages/ui/src/components'
+import { Switch } from '@packages/ui/src/components/switch'
 
 export default function SettingScreen() {
   const settigsScreenProps = useLink({

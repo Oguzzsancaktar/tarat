@@ -1,5 +1,5 @@
 import React from 'react'
-import { MailRegisterScreen } from 'app/views'
+import { MailRegisterScreen } from '@packages/common/views'
 import Head from 'next/head'
 
 export default function Page() {

@@ -1,10 +1,10 @@
-import { Paragraph, XStack, YStack } from '@my/ui'
+import { Paragraph, XStack, YStack } from '@packages/ui'
 import { QrCode, ArrowDown, ArrowRight, Trash2 } from '@tamagui/lucide-icons'
 import React from 'react'
 import { useLink } from 'solito/link'
-import { Button } from '@my/ui/src/components'
+import { Button } from '@packages/ui/src/components'
 import { Dimensions } from 'react-native'
-import { Circle } from '@my/ui'
+import { Circle } from '@packages/ui'
 
 export default function QrPageScreen() {
   const QrPageListLinkProps = useLink({
