@@ -256,46 +256,6 @@ export default function QrPageListScreen() {
             ))}
           </ScrollView>
         </SafeAreaView>
-
-        <YStack
-          backgroundColor="transparent"
-          width={Dimensions.get('window').width * 0.85}
-          height={'$6'}
-          jc={'space-between'}
-          justifyContent="center"
-          ai={'center'}
-          mt={'$2'}
-          px={'$5'}
-          borderColor={'$gray7'}
-          borderWidth={'$0.5'}
-          borderTopLeftRadius={15}
-          borderTopRightRadius={15}
-          borderBottomLeftRadius={15}
-          borderBottomRightRadius={15}
-        >
-          <XStack width={Dimensions.get('window').width * 0.78} ai={'center'} jc={'space-between'}>
-            <XStack ai={'center'}>
-              <YStack
-                backgroundColor="#30303c"
-                width={'$4'}
-                height={'$4'}
-                jc={'center'}
-                ai={'center'}
-                padding="$2.5"
-                borderTopLeftRadius={15}
-                borderTopRightRadius={15}
-                borderBottomLeftRadius={15}
-                borderBottomRightRadius={15}
-                mr={'$3'}
-              >
-                <Paragraph size={'$2'}>Jun</Paragraph>
-                <Paragraph>25</Paragraph>
-              </YStack>
-              <Paragraph size={'$4'}>Spotify</Paragraph>
-            </XStack>
-            <Paragraph size={'$4'}>$5.99</Paragraph>
-          </XStack>
-        </YStack>
       </YStack>
     </YStack>
   )

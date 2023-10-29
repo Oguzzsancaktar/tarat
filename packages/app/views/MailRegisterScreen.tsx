@@ -1,11 +1,16 @@
 import React, { useState } from 'react'
-import { Label, Paragraph, Progress, YStack } from '@my/ui'
+import { Image, Label, Paragraph, Progress, YStack } from '@my/ui'
 import { Button, Input } from '@my/ui/src/components'
 // import { ArrowLeftCircle } from '@tamagui/lucide-icons'
 import { Dimensions } from 'react-native'
 import { useLink } from 'solito/link'
+import { useAppImages } from 'app/hooks'
 
 export default function MailRegisterScreen() {
+  const appImages = useAppImages()
+  const loginLinkProps = useLink({
+    href: '/login',
+  })
   const registerLinkProps = useLink({
     href: '/register',
   })
@@ -16,7 +21,7 @@ export default function MailRegisterScreen() {
           {/* <ArrowLeftCircle {...registerLinkProps} size={'$3'} color={'$gray11'} /> */}
         </YStack>
 
-        {/* <Image src={'../assets/logo.png'} /> */}
+        <Image alt="Logo" source={appImages.companyLogo} resizeMode="contain" />
       </YStack>
 
       <YStack>

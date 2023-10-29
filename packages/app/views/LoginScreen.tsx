@@ -1,11 +1,13 @@
-import { Paragraph, YStack } from '@my/ui'
+import { Image, Paragraph, YStack } from '@my/ui'
 // import { Apple, Facebook, MailPlus, ArrowLeftCircle } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
 import { Button } from '@my/ui/src/components'
 import { Dimensions } from 'react-native'
+import { useAppImages } from 'app/hooks'
 
 export default function LoginScreen() {
+  const appImages = useAppImages()
   const mailLoginLinkProps = useLink({
     href: '/login/mail',
   })
@@ -31,7 +33,7 @@ export default function LoginScreen() {
           {/* <ArrowLeftCircle {...welcomeLinkProps} size={'$3'} color={'$gray11'} /> */}
         </YStack>
 
-        {/* <Image h={'$2'} w={'$15'} source={require('../assets/logo.png')} resizeMode="contain" /> */}
+        <Image alt="Logo" source={appImages.companyLogo} resizeMode="contain" />
       </YStack>
 
       <YStack alignItems="center">
