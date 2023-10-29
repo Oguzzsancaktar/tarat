@@ -41,8 +41,10 @@ yarn-error.log*
 .DS_Store
 THUMBS_DB
 thumbs.db
+.zshrc
 
 # turbo build log
 **/.turbo/*
 
-.zshrc
+# lock 
+yarn.lock

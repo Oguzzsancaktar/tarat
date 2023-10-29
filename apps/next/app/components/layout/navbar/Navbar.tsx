@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { Anchor, Image, Stack, Text, View, XStack } from '@packages/ui'
+import { Anchor, Stack, Text, View, XStack } from '@packages/ui'
 import { LoginButton, RegisterButton } from '@packages/common/components'
 import { useAppImages } from '@packages/common/hooks'
 
 import { map } from 'lodash'
+import Image from 'next/image'
 
 interface MenuItem {
   text: string
@@ -18,18 +19,20 @@ const MENU_LIST: MenuItem[] = [
 
 const Navbar: React.FC = () => {
   const appImages = useAppImages()
-
-  const [navActive, setNavActive] = useState<boolean | null>(null)
-  const [activeIdx, setActiveIdx] = useState<number>(-1)
-
   return (
     <nav style={{ width: '100vw', position: 'fixed', top: 0, zIndex: 2 }}>
       <XStack justifyContent="space-between" ai={'center'} padding="$5">
-        <Image alt="Logo" source={appImages.companyLogo} resizeMode="contain" />
+        <Image
+          alt="Logo"
+          width={appImages.companyLogo.width}
+          height={appImages.companyLogo.height}
+          // @todo -> make it interface
+          src={(appImages.companyLogo as { uri: string; width: number; height: number }).uri}
+        />
 
         <XStack ai={'center'}>
           {map(MENU_LIST, (item, idx) => (
-            <Anchor mr="$2" href={item.href}>
+            <Anchor key={idx} mr="$2" href={item.href}>
               {item.text}
             </Anchor>
           ))}

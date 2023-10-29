@@ -1,9 +1,14 @@
+import dynamic from 'next/dynamic'
 import React from 'react'
-import { Navbar } from '.'
 
 interface IProps {
   children: React.ReactNode
 }
+
+const Navbar = dynamic(() => import('./navbar/Navbar'), {
+  ssr: false,
+})
+
 const PublicLayout: React.FC<IProps> = ({ children }) => {
   return (
     <>

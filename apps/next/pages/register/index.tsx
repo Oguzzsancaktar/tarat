@@ -1,7 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
-import { RegisterScreen } from '@packages/common/views'
 import { PublicLayout } from 'app/components/layout'
+import dynamic from 'next/dynamic'
+
+const RegisterScreen = dynamic(() => import('@packages/common/views/RegisterScreen'), {
+  ssr: false,
+})
 
 export default function Screen() {
   return (

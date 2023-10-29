@@ -1,4 +1,4 @@
-import { RegisterScreen } from '@packages/common/views'
+import { SettingsScreen } from '@packages/common/views'
 import { Stack } from 'expo-router'
 
 export default function Screen() {
@@ -7,10 +7,10 @@ export default function Screen() {
       <Stack.Screen
         options={{
           headerShown: false,
-          title: 'Register',
+          title: 'Settings',
         }}
       />
-      <RegisterScreen />
+      <SettingsScreen />
     </>
   )
 }

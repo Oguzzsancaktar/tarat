@@ -1,7 +1,10 @@
 import React from 'react'
-import { LoginScreen } from '@packages/common/views'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 
+const LoginScreen = dynamic(() => import('@packages/common/views/LoginScreen'), {
+  ssr: false,
+})
 export default function Screen() {
   return (
     <>

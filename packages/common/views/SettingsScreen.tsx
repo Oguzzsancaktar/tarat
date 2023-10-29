@@ -1,10 +1,15 @@
 import { Avatar, Label, Paragraph, XStack, YStack } from '@packages/ui'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLink } from 'solito/link'
 import { Button, Card } from '@packages/ui/src/components'
 import { Switch } from '@packages/ui/src/components/switch'
+import { useSession } from '../hooks'
+import { useRouter } from 'solito/router'
 
 export default function SettingScreen() {
+  const router = useRouter()
+  const { session, isLoading, signIn, signOut } = useSession()
+
   const settigsScreenProps = useLink({
     href: '/settings/edit',
   })
@@ -25,6 +30,15 @@ export default function SettingScreen() {
     }))
   }
 
+  useEffect(() => {
+    console.log(11111111, session)
+    if (!session) {
+      console.log(222222)
+
+      router.push('/')
+    }
+  }, [session, isLoading])
+
   return (
     <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack maw={600}>
@@ -37,6 +51,10 @@ export default function SettingScreen() {
             <Avatar.Fallback backgroundColor="$blue10" />
           </Avatar>
           <Paragraph>gokhandogulu@gmail.com</Paragraph>
+          <Button onPress={() => signOut()} height={30} background={'gray'} width={130}>
+            Logout
+          </Button>
+
           <Button {...settigsScreenProps} height={30} background={'gray'} width={130}>
             Profili Düzenle
           </Button>

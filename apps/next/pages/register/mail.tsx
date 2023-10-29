@@ -1,6 +1,10 @@
 import React from 'react'
-import { MailRegisterScreen } from '@packages/common/views'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
+
+const MailRegisterScreen = dynamic(() => import('@packages/common/views/MailRegisterScreen'), {
+  ssr: false,
+})
 
 export default function Page() {
   return (

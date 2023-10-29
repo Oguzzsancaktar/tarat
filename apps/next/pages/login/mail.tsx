@@ -1,6 +1,10 @@
 import React from 'react'
-import { MailLoginScreen } from '@packages/common/views'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
+
+const MailLoginScreen = dynamic(() => import('@packages/common/views/MailLoginScreen'), {
+  ssr: false,
+})
 
 export default function Page() {
   return (

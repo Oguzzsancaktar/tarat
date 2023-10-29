@@ -3,7 +3,9 @@ import { useColorScheme } from 'react-native'
 
 import { ToastViewport } from './ToastViewport'
 import config from '../tamagui.config'
+import { AuthSessionProvider } from '../hooks'
 
+// @todo -> make name with combineProvider
 export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'config'>) {
   const scheme = useColorScheme()
   return (

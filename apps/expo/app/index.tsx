@@ -1,5 +1,6 @@
+import { useSession } from '@packages/common/hooks'
 import { WelcomeScreen } from '@packages/common/views'
-import { Redirect, Stack } from 'expo-router'
+import { Stack } from 'expo-router'
 
 export default function Screen() {
   return (
@@ -11,7 +12,6 @@ export default function Screen() {
         }}
       />
       <WelcomeScreen />
-      <Redirect href="/welcome" />
     </>
   )
 }

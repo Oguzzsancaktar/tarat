@@ -1,11 +1,12 @@
 import { useMemo } from "react"
 import { IMAGE_PATHS } from "@packages/common/constants"
+import { Platform } from "react-native"
 
 
 
 const useAppImages = () => {
   const ImageObjects = useMemo(() => {
-    if (process?.title === 'browser') {
+    if (Platform.OS === 'web') {
       return {
         companyLogo: {
           uri: IMAGE_PATHS.CompanyLogo.src,

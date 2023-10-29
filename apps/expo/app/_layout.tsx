@@ -1,8 +1,9 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
 import { Provider } from '@packages/common/provider'
 import { useFonts } from 'expo-font'
-import { Stack } from 'expo-router'
+import { Slot, Stack } from 'expo-router'
 import { useColorScheme } from 'react-native'
+import { AuthSessionProvider, useSession } from '@packages/common/hooks'
 
 export default function HomeLayout() {
   const [loaded] = useFonts({
@@ -17,7 +18,19 @@ export default function HomeLayout() {
   return (
     <Provider>
       <ThemeProvider value={scheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack screenOptions={{ headerShown: false }} />
+        <Slot />
+        {/* <Stack
+            screenOptions={{
+              headerShown: false,
+              headerStyle: {
+                backgroundColor: '#ffa98f',
+              },
+              headerTintColor: '#00df2d',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+              },
+            }}
+          /> */}
       </ThemeProvider>
     </Provider>
   )
