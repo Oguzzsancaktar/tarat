@@ -4963,6 +4963,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash@npm:^4.14.200":
+  version: 4.14.200
+  resolution: "@types/lodash@npm:4.14.200"
+  checksum: 6471f8bb5da692a6ecf03a8da4935bfbc341e67ee9bcb4f5730bfacff0c367232548f0a01e8ac5ea18c6fe78fb085d502494e33ccb47a7ee87cbdee03b47d00d
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:*":
   version: 20.8.9
   resolution: "@types/node@npm:20.8.9"
@@ -13778,8 +13785,10 @@ __metadata:
     "@babel/runtime": ^7.18.9
     "@manypkg/cli": ^0.19.1
     "@tamagui/timer": latest
+    "@types/lodash": ^4.14.200
     check-dependency-version-consistency: ^3.0.3
     eslint: ^8.21.0
+    lodash: ^4.17.21
     node-gyp: ^9.3.1
     prettier: ^2.7.1
     turbo: ^1.10.3

@@ -2,13 +2,16 @@ import { Button } from '@packages/ui/src/components'
 import React from 'react'
 import { useLink } from 'solito/link'
 
-const LoginButton = () => {
+interface IProps {
+  size?: 'small' | 'medium' | 'large'
+}
+const LoginButton: React.FC<IProps> = ({ size = 'large' }) => {
   const loginLinkProps = useLink({
     href: '/login',
   })
 
   return (
-    <Button {...loginLinkProps} size="large" background="gray">
+    <Button {...loginLinkProps} size={size} background="gray">
       Giriş Yap
     </Button>
   )

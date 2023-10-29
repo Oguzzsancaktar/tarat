@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar } from '../navbar'
+import { Navbar } from '.'
 
 interface IProps {
   children: React.ReactNode
@@ -8,8 +8,8 @@ const PublicLayout: React.FC<IProps> = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
-      <footer>Footer</footer>
+      <>{children}</>
+      {/* <footer>Footer</footer> */}
     </>
   )
 }

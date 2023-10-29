@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Paragraph, YStack } from '@packages/ui'
+import { Image, Paragraph, Stack, YStack } from '@packages/ui'
 import { useAppImages } from '@packages/common/hooks'
 import { LoginButton, RegisterButton } from '@packages/common/components'
 
@@ -18,7 +18,9 @@ export default function WelcomeScreen() {
       px="$4"
     >
       <YStack maw={600}>
-        <Image alt="Logo" source={appImages.companyLogo} resizeMode="contain" />
+        {process?.title !== 'browser' && (
+          <Image alt="Logo" source={appImages.companyLogo} resizeMode="contain" />
+        )}
       </YStack>
       <Image
         position="absolute"
@@ -45,7 +47,9 @@ export default function WelcomeScreen() {
           Congue malesuada in ac justo, a tristique leo massa. Arcu leo leo urna.
         </Paragraph>
 
-        <LoginButton />
+        <Stack mb="$4">
+          <LoginButton />
+        </Stack>
 
         <RegisterButton />
       </YStack>
