@@ -1,8 +1,72 @@
-import { Paragraph, XStack, YStack } from '@my/ui'
+import { Paragraph, ScrollView, XStack, YStack } from '@my/ui'
 import { QrCode, Trash2 } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
 import { Button } from '@my/ui/src/components'
-import { Dimensions } from 'react-native'
+import { Dimensions, StatusBar, StyleSheet } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+
+const data = [
+  {
+    month: 'Jun',
+    day: '25',
+    subscription: 'Spotify',
+    price: '$5.99',
+  },
+  {
+    month: 'Jun',
+    day: '25',
+    subscription: 'Spotify',
+    price: '$5.99',
+  },
+  {
+    month: 'Jun',
+    day: '25',
+    subscription: 'Spotify',
+    price: '$5.99',
+  },
+  {
+    month: 'Jun',
+    day: '25',
+    subscription: 'Spotify',
+    price: '$5.99',
+  },
+  {
+    month: 'Jun',
+    day: '25',
+    subscription: 'Spotify',
+    price: '$5.99',
+  },
+  {
+    month: 'Jun',
+    day: '25',
+    subscription: 'Spotify',
+    price: '$5.99',
+  },
+  {
+    month: 'Jun',
+    day: '25',
+    subscription: 'Spotify',
+    price: '$5.99',
+  },
+  {
+    month: 'Jun',
+    day: '25',
+    subscription: 'Spotify',
+    price: '$5.99',
+  },
+  {
+    month: 'Jun',
+    day: '25',
+    subscription: 'Spotify',
+    price: '$5.99',
+  },
+  {
+    month: 'Jun',
+    day: '25',
+    subscription: 'Spotify',
+    price: '$5.99',
+  },
+]
 
 export default function QrPageListScreen() {
   //   height={Dimensions.get('window').height * 0.9433}
@@ -142,123 +206,57 @@ export default function QrPageListScreen() {
             <Paragraph size={'$2'}>Upcoming bills</Paragraph>
           </Button>
         </XStack>
-        <YStack
-          backgroundColor="transparent"
-          width={Dimensions.get('window').width * 0.85}
-          height={'$6'}
-          jc={'space-between'}
-          justifyContent="center"
-          ai={'center'}
-          mt={'$2'}
-          px={'$5'}
-          borderColor={'$gray7'}
-          borderWidth={'$0.5'}
-          borderTopLeftRadius={15}
-          borderTopRightRadius={15}
-          borderBottomLeftRadius={15}
-          borderBottomRightRadius={15}
-        >
-          <XStack width={Dimensions.get('window').width * 0.78} ai={'center'} jc={'space-between'}>
-            <XStack ai={'center'}>
+
+        <SafeAreaView style={styles.container}>
+          <ScrollView style={styles.scrollView}>
+            {data.map((item) => (
               <YStack
-                backgroundColor="#30303c"
-                width={'$4'}
-                height={'$4'}
-                jc={'center'}
+                backgroundColor="transparent"
+                width={Dimensions.get('window').width * 0.85}
+                height={'$6'}
+                jc={'space-between'}
+                justifyContent="center"
                 ai={'center'}
-                padding="$2.5"
+                mt={'$2'}
+                px={'$5'}
+                borderColor={'$gray7'}
+                borderWidth={'$0.5'}
                 borderTopLeftRadius={15}
                 borderTopRightRadius={15}
                 borderBottomLeftRadius={15}
                 borderBottomRightRadius={15}
-                mr={'$3'}
               >
-                <Paragraph size={'$2'}>Jun</Paragraph>
-                <Paragraph>25</Paragraph>
+                <XStack
+                  width={Dimensions.get('window').width * 0.78}
+                  ai={'center'}
+                  jc={'space-between'}
+                >
+                  <XStack ai={'center'}>
+                    <YStack
+                      backgroundColor="#30303c"
+                      width={'$4'}
+                      height={'$4'}
+                      jc={'center'}
+                      ai={'center'}
+                      padding="$2.5"
+                      borderTopLeftRadius={15}
+                      borderTopRightRadius={15}
+                      borderBottomLeftRadius={15}
+                      borderBottomRightRadius={15}
+                      mr={'$3'}
+                    >
+                      <Paragraph size={'$2'}>{item.month}</Paragraph>
+                      <Paragraph>{item.day}</Paragraph>
+                    </YStack>
+                    <Paragraph size={'$4'}>{item.subscription}</Paragraph>
+                  </XStack>
+                  <Paragraph size={'$4'}>{item.price}</Paragraph>
+                </XStack>
               </YStack>
-              <Paragraph size={'$4'}>Spotify</Paragraph>
-            </XStack>
-            <Paragraph size={'$4'}>$5.99</Paragraph>
-          </XStack>
-        </YStack>
-        <YStack
-          backgroundColor="transparent"
-          width={Dimensions.get('window').width * 0.85}
-          height={'$6'}
-          jc={'space-between'}
-          justifyContent="center"
-          ai={'center'}
-          mt={'$2'}
-          px={'$5'}
-          borderColor={'$gray7'}
-          borderWidth={'$0.5'}
-          borderTopLeftRadius={15}
-          borderTopRightRadius={15}
-          borderBottomLeftRadius={15}
-          borderBottomRightRadius={15}
-        >
-          <XStack width={Dimensions.get('window').width * 0.78} ai={'center'} jc={'space-between'}>
-            <XStack ai={'center'}>
-              <YStack
-                backgroundColor="#30303c"
-                width={'$4'}
-                height={'$4'}
-                jc={'center'}
-                ai={'center'}
-                padding="$2.5"
-                borderTopLeftRadius={15}
-                borderTopRightRadius={15}
-                borderBottomLeftRadius={15}
-                borderBottomRightRadius={15}
-                mr={'$3'}
-              >
-                <Paragraph size={'$2'}>Jun</Paragraph>
-                <Paragraph>25</Paragraph>
-              </YStack>
-              <Paragraph size={'$4'}>Spotify</Paragraph>
-            </XStack>
-            <Paragraph size={'$4'}>$5.99</Paragraph>
-          </XStack>
-        </YStack>
-        <YStack
-          backgroundColor="transparent"
-          width={Dimensions.get('window').width * 0.85}
-          height={'$6'}
-          jc={'space-between'}
-          justifyContent="center"
-          ai={'center'}
-          mt={'$2'}
-          px={'$5'}
-          borderColor={'$gray7'}
-          borderWidth={'$0.5'}
-          borderTopLeftRadius={15}
-          borderTopRightRadius={15}
-          borderBottomLeftRadius={15}
-          borderBottomRightRadius={15}
-        >
-          <XStack width={Dimensions.get('window').width * 0.78} ai={'center'} jc={'space-between'}>
-            <XStack ai={'center'}>
-              <YStack
-                backgroundColor="#30303c"
-                width={'$4'}
-                height={'$4'}
-                jc={'center'}
-                ai={'center'}
-                padding="$2.5"
-                borderTopLeftRadius={15}
-                borderTopRightRadius={15}
-                borderBottomLeftRadius={15}
-                borderBottomRightRadius={15}
-                mr={'$3'}
-              >
-                <Paragraph size={'$2'}>Jun</Paragraph>
-                <Paragraph>25</Paragraph>
-              </YStack>
-              <Paragraph size={'$4'}>Spotify</Paragraph>
-            </XStack>
-            <Paragraph size={'$4'}>$5.99</Paragraph>
-          </XStack>
-        </YStack>
+            ))}
+          </ScrollView>
+        </SafeAreaView>
+
         <YStack
           backgroundColor="transparent"
           width={Dimensions.get('window').width * 0.85}
@@ -302,3 +300,16 @@ export default function QrPageListScreen() {
     </YStack>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  scrollView: {
+    marginHorizontal: 10,
+    marginVertical: 20,
+  },
+  text: {
+    fontSize: 42,
+  },
+})
