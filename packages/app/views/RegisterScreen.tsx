@@ -23,7 +23,7 @@ export default function LoginScreen() {
           <ArrowLeftCircle {...welcomeLinkProps} size={'$3'} color={'$gray11'} />
         </YStack>
 
-        <Image h={'$2'} w={'$15'} source={appImages.companyLogo} resizeMode="contain" />
+        <Image source={appImages.companyLogo} resizeMode="contain" />
       </YStack>
 
       <YStack alignItems="center">
