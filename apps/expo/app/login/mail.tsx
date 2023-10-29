@@ -1,4 +1,4 @@
-import { MailLoginScreen } from 'app/views'
+import { MailLoginScreen } from '@packages/common/views'
 import { Stack } from 'expo-router'
 
 export default function Screen() {

@@ -33,10 +33,14 @@
     "@tamagui/timer": "latest",
     "check-dependency-version-consistency": "^3.0.3",
     "eslint": "^8.21.0",
+    "lodash": "^4.17.21",
     "node-gyp": "^9.3.1",
     "prettier": "^2.7.1",
     "turbo": "^1.10.3",
     "typescript": "^4.9.4"
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@3.6.3",
+  "devDependencies": {
+    "@types/lodash": "^4.14.200"
+  }
 }

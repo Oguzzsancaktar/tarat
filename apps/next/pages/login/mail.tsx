@@ -1,4 +1,5 @@
-import { MailLoginScreen } from 'app/views'
+import React from 'react'
+import { MailLoginScreen } from '@packages/common/views'
 import Head from 'next/head'
 
 export default function Page() {

@@ -13,7 +13,7 @@ const Button = styled(TamaguiButton, {
         width: '$5',
       },
       small: {
-        width: '$10',
+        width: '$12',
       },
       medium: {
         width: '$15',
@@ -95,6 +95,18 @@ const Button = styled(TamaguiButton, {
           backgroundColor: '#000',
           borderColor: '#111',
           outlineColor: '#1e1e1e',
+        },
+      },
+      grayQr: {
+        backgroundColor: 'transparent',
+        borderColor: 'transparent',
+        hoverStyle: {
+          backgroundColor: '$gray7',
+        },
+        focusStyle: {
+          backgroundColor: '$gray3',
+          borderColor: '$gray4',
+          outlineColor: '$gray5',
         },
       },
     },

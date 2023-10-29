@@ -1,5 +1,7 @@
-import { RegisterScreen } from 'app/views'
+import React from 'react'
 import Head from 'next/head'
+import { RegisterScreen } from '@packages/common/views'
+import { PublicLayout } from 'app/components/layout'
 
 export default function Screen() {
   return (
@@ -7,7 +9,9 @@ export default function Screen() {
       <Head>
         <title>Register</title>
       </Head>
-      <RegisterScreen />
+      <PublicLayout>
+        <RegisterScreen />
+      </PublicLayout>
     </>
   )
 }

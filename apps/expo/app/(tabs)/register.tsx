@@ -1,4 +1,4 @@
-import { RegisterScreen } from 'app/views'
+import { RegisterScreen } from '@packages/common/views'
 import { Stack } from 'expo-router'
 
 export default function Screen() {

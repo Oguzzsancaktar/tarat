@@ -8,20 +8,6 @@ const Input = styled(TamaguiInput, {
   overflow: 'hidden',
 
   variants: {
-    size: {
-      xsmall: {
-        width: '$5',
-      },
-      small: {
-        width: '$10',
-      },
-      medium: {
-        width: '$15',
-      },
-      large: {
-        width: '$20',
-      },
-    },
     background: {
       red: {
         backgroundColor: '$red4',
@@ -57,18 +43,6 @@ const Input = styled(TamaguiInput, {
           backgroundColor: '$blue2',
         },
       },
-      green: {
-        backgroundColor: '$green4',
-        borderColor: '$green7',
-        hoverStyle: {
-          backgroundColor: '$green5',
-        },
-        focusStyle: {
-          backgroundColor: '$green2',
-          outlineColor: '$green8',
-          borderColor: '$green9',
-        },
-      },
       gray: {
         backgroundColor: 'transparent',
         borderColor: '$gray8',
@@ -85,8 +59,8 @@ const Input = styled(TamaguiInput, {
   } as const,
 
   defaultVariants: {
-    size: 'large',
     background: 'blue',
   },
 })
+
 export default Input

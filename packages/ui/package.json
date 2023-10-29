@@ -1,5 +1,5 @@
 {
-  "name": "@my/ui",
+  "name": "@packages/ui",
   "version": "0.0.1",
   "sideEffects": [
     "*.css"
@@ -19,12 +19,13 @@
   "dependencies": {
     "@tamagui/animations-react-native": "latest",
     "@tamagui/font-inter": "latest",
-    "@tamagui/image": "^1.75.5",
+    "@tamagui/image": "latest",
     "@tamagui/react-native-media-driver": "latest",
     "@tamagui/shorthands": "latest",
     "@tamagui/themes": "latest",
-    "@tamagui/timer": "^1.75.5",
+    "@tamagui/timer": "latest",
     "@tamagui/toast": "latest",
+    "react": "^18.2.0",
     "tamagui": "latest"
   },
   "devDependencies": {
