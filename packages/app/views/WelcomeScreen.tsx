@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Image, Paragraph, Text, YStack } from '@my/ui'
 import { Button } from '@my/ui/src/components'
 import { useLink } from 'solito/link'
+import { useAppImages } from 'app/hooks'
 
 export default function WelcomeScreen() {
+  const appImages = useAppImages()
   const loginLinkProps = useLink({
     href: '/login',
   })
@@ -13,35 +15,38 @@ export default function WelcomeScreen() {
   })
 
   return (
-    <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
+    <YStack
+      maw={400}
+      backgroundColor={'$background'}
+      f={1}
+      alignSelf="center"
+      jc="space-between"
+      ai="center"
+      py="$10"
+      px="$4"
+    >
       <YStack maw={600}>
-        {/* <Image
-          // src={LogoImage}
-          alt="Logo"
-          source={{
-            uri: 'https://placekitten.com/200/300',
-            width: 200,
-            height: 300,
-          }}
-          resizeMode="contain"
-        /> */}
+        <Image alt="Logo" source={appImages.companyLogo} resizeMode="contain" />
       </YStack>
-      {/* <Image
+      <Image
         position="absolute"
-        left={'$0'}
-        top={'$15'}
-        source={require('/assets/welcome-bubble-left.png')}
+        //@todo: add bigger points
+        left={'$-20'}
+        transform="rotate(-45deg)"
+        top={'$5'}
+        source={appImages.bubble}
         resizeMode="contain"
       />
       <Image
         position="absolute"
-        right={'$0'}
-        bottom={'$11'}
-        source={require('/assets/welcome-bubble-right.png')}
+        right={'$-20'}
+        transform="rotate(-45deg)"
+        bottom={'$0'}
+        source={appImages.bubble}
         resizeMode="contain"
-      /> */}
+      />
 
-      {/* <Image mb={'$-8'} source={require('/assets/welcome-tumbnail.png')} resizeMode="contain" /> */}
+      <Image mb={'$-8'} source={appImages.thumbnail} resizeMode="contain" />
 
       <YStack alignItems="center">
         <Paragraph mb="$4" maw={'$20'} ta="center">

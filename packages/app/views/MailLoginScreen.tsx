@@ -30,13 +30,13 @@ export default function MailLoginScreen() {
           <Label htmlFor="emailLog" size={'$1'} mb={'$1.5'} color={'$gray8'}>
             E-posta adresi
           </Label>
-          <Input size="large" background="gray" mb={'$5'} />
+          <Input background="gray" mb={'$5'} />
         </YStack>
         <YStack>
           <Label htmlFor="passwordLog" size={'$1'} mb={'$1.5'} color={'$gray8'}>
             Şifre
           </Label>
-          <Input size="large" background="gray" />
+          <Input background="gray" />
         </YStack>
 
         <YStack jc={'center'} ai={'center'}>

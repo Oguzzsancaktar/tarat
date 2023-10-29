@@ -8,20 +8,6 @@ const Input = styled(TamaguiInput, {
   overflow: 'hidden',
 
   variants: {
-    size: {
-      xsmall: {
-        width: '$10',
-      },
-      small: {
-        width: '$15',
-      },
-      medium: {
-        width: '$20',
-      },
-      large: {
-        width: 350,
-      },
-    },
     background: {
       red: {
         backgroundColor: '$red4',
@@ -72,8 +58,8 @@ const Input = styled(TamaguiInput, {
   } as const,
 
   defaultVariants: {
-    size: 'large',
     background: 'blue',
   },
 })
+
 export default Input

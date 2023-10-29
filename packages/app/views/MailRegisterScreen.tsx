@@ -24,19 +24,19 @@ export default function MailRegisterScreen() {
           <Label htmlFor="emailReg" size={'$1'} color={'$gray8'} mb={'$1.5'}>
             E-posta adresi
           </Label>
-          <Input size="large" background="gray" mb={'$4'} />
+          <Input background="gray" mb={'$4'} />
         </YStack>
         <YStack>
           <Label htmlFor="passwordReg" size={'$1'} color={'$gray8'} mb={'$1.5'}>
             Şifre
           </Label>
-          <Input size="large" background="gray" mb={'$4'} />
+          <Input background="gray" mb={'$4'} />
         </YStack>
         <YStack>
           <Label htmlFor="re-passwordReg" size={'$1'} color={'$gray8'} mb={'$1.5'}>
             Şifre Tekrar
           </Label>
-          <Input size="large" background="gray" />
+          <Input background="gray" />
         </YStack>
         <YStack ai={'center'}>
           <Progress mt={'$5'} width={'$20'} size={'$1'} backgroundColor="$gray8" value={25}>

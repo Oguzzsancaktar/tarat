@@ -1,11 +1,14 @@
 import React from 'react'
-import { Paragraph, YStack } from '@my/ui'
+import { Image, Paragraph, YStack } from '@my/ui'
 import { Button } from '@my/ui/src/components'
-// import { Apple, ArrowLeftCircle, Facebook, MailPlus } from '@tamagui/lucide-icons'
+import { Apple, ArrowLeftCircle, Facebook, MailPlus } from '@tamagui/lucide-icons'
 import { Dimensions } from 'react-native'
 import { useLink } from 'solito/link'
+import { useAppImages } from 'app/hooks'
 
 export default function LoginScreen() {
+  const appImages = useAppImages()
+
   const mailRegisterLinkProps = useLink({
     href: '/register/mail',
   })
@@ -17,14 +20,14 @@ export default function LoginScreen() {
     <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack w={Dimensions.get('window').width} ai="center">
         <YStack position="absolute" top={'$-2'} left={'$5'}>
-          {/* <ArrowLeftCircle {...welcomeLinkProps} size={'$3'} color={'$gray11'} /> */}
+          <ArrowLeftCircle {...welcomeLinkProps} size={'$3'} color={'$gray11'} />
         </YStack>
 
-        {/* <Image h={'$2'} w={'$15'} source={require('../assets/logo.png')} resizeMode="contain" /> */}
+        <Image h={'$2'} w={'$15'} source={appImages.companyLogo} resizeMode="contain" />
       </YStack>
 
       <YStack alignItems="center">
-        {/* <Button mb="$2.5" size="large" background="black" icon={<Apple size="$1" />}>
+        <Button mb="$2.5" size="large" background="black" icon={<Apple size="$1" />}>
           Apple ile kayıt ol
         </Button>
 
@@ -34,7 +37,7 @@ export default function LoginScreen() {
 
         <Button size="large" background="blue" icon={<Facebook size="$1" />}>
           Facebook ile kayıt ol
-        </Button> */}
+        </Button>
 
         <Paragraph size={'$2'} maxWidth={'$25'} my="$5" maw={'$20'} ta="center">
           yada
