@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
+    "noImplicitAny": false,
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
     "paths": {
+      "interfaces/*": [
+        "./packages/interfaces/*"
+      ],
       "common/*": [
         "./packages/common/*"
       ],
