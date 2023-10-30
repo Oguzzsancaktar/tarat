@@ -25,7 +25,7 @@ export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'conf
           ]
         }
       >
-        {children}
+        <AuthSessionProvider>{children}</AuthSessionProvider>
 
         <CustomToast />
         <ToastViewport />

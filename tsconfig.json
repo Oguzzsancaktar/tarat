@@ -4,7 +4,7 @@
     "noUncheckedIndexedAccess": true,
     "paths": {
       "common/*": [
-        "./packages/app/*"
+        "./packages/common/*"
       ],
       "ui/*": [
         "./packages/ui/*"

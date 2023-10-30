@@ -1,15 +1,26 @@
 import React from 'react'
 import { useStorageState } from './useStorageState'
 
+interface AuthSessionProviderProps {
+  signOut: () => void
+  signIn: () => void
+  session?: string | null
+  isLoading: boolean
+}
 const AuthContext = React.createContext<{
   signIn: () => void
   signOut: () => void
   session?: string | null
   isLoading: boolean
-} | null>(null)
+}>({
+  signIn: () => {},
+  signOut: () => {},
+  session: null,
+  isLoading: false,
+})
 
 // This hook can be used to access the user info.
-export function useSession() {
+export function useSession(): AuthSessionProviderProps {
   const value = React.useContext(AuthContext)
   if (process.env.NODE_ENV !== 'production') {
     if (!value) {
@@ -23,6 +34,7 @@ export function useSession() {
 export function AuthSessionProvider(props: React.PropsWithChildren) {
   const [[isLoading, session], setSession] = useStorageState('session')
 
+  console.log('useStorageState', useStorageState)
   return (
     <AuthContext.Provider
       value={{
