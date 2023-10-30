@@ -1,5 +1,7 @@
-import * as SecureStore from 'expo-secure-store';
-import * as React from 'react';
+import React, { useEffect, useReducer } from 'react';
+const SecureStore = require('expo-secure-store');
+
+
 import { Platform } from 'react-native';
 
 type UseStateHook<T> = [[boolean, T | null], (value?: T | null) => void];
@@ -7,7 +9,7 @@ type UseStateHook<T> = [[boolean, T | null], (value?: T | null) => void];
 function useAsyncState<T>(
   initialValue: [boolean, T | null] = [true, null],
 ): UseStateHook<T> {
-  return React.useReducer(
+  return useReducer(
     (state: [boolean, T | null], action: T | null = null) => [false, action],
     initialValue
   ) as UseStateHook<T>;
@@ -26,9 +28,9 @@ export async function setStorageItemAsync(key: string, value: string | null) {
     }
   } else {
     if (value == null) {
-      await SecureStore.deleteItemAsync(key);
+      // await SecureStore.deleteItemAsync(key);
     } else {
-      await SecureStore.setItemAsync(key, value);
+      // await SecureStore.setItemAsync(key, value);
     }
   }
 }
@@ -37,8 +39,10 @@ export function useStorageState(key: string): UseStateHook<string> {
   // Public
   const [state, setState] = useAsyncState<string>();
 
+  ;
+
   // Get
-  React.useEffect(() => {
+  useEffect(() => {
     console.log("Platform.OS", Platform.OS);
     if (Platform.OS === 'web') {
       try {
@@ -49,18 +53,18 @@ export function useStorageState(key: string): UseStateHook<string> {
         console.error('Local storage is unavailable:', e);
       }
     } else {
-      SecureStore.getItemAsync(key).then(value => {
-        setState(value);
-      });
+      // SecureStore.getItemAsync(key).then(value => {
+      //   setState(value);
+      // });
     }
   }, [key]);
 
   // Set
   const setValue = React.useCallback(
     (value: string | null) => {
-      setStorageItemAsync(key, value).then(() => {
-        setState(value);
-      });
+      // setStorageItemAsync(key, value).then(() => {
+      //   setState(value);
+      // });
     },
     [key]
   );

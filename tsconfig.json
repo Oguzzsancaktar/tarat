@@ -1,10 +1,14 @@
 {
   "compilerOptions": {
+    "noImplicitAny": false,
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
     "paths": {
+      "interfaces/*": [
+        "./packages/interfaces/*"
+      ],
       "common/*": [
-        "./packages/app/*"
+        "./packages/common/*"
       ],
       "ui/*": [
         "./packages/ui/*"

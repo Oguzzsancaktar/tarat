@@ -6,7 +6,7 @@ import { useLink } from 'solito/link'
 
 export default function WelcomeScreen() {
   const appImages = useAppImages()
-  // const { session, isLoading, signIn, signOut } = useSession()
+  const { session, isLoading, signIn, signOut } = useSession()
 
   const settingsLinkProps = useLink({
     href: '/settings',
@@ -57,7 +57,9 @@ export default function WelcomeScreen() {
           Congue malesuada in ac justo, a tristique leo massa. Arcu leo leo urna.
         </Paragraph>
 
-        <View mb="$4">{/* <Button onPress={() => signIn()}>signin</Button> */}</View>
+        <View mb="$4">
+          <Button onPress={() => signIn()}>signin</Button>
+        </View>
 
         <View mb="$4">
           <Button {...settingsLinkProps}>serttin</Button>

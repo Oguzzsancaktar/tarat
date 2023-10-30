@@ -8,7 +8,6 @@ import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme'
 import { Provider } from '@packages/common/provider'
 import Head from 'next/head'
 import type { SolitoAppProps } from 'solito'
-import { AuthSessionProvider } from '@packages/common/hooks'
 
 if (process.env.NODE_ENV === 'production') {
   require('../public/tamagui.css')
