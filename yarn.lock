@@ -2983,6 +2983,8 @@ __metadata:
 "@packages/interfaces@^1.0.0, @packages/interfaces@workspace:packages/interfaces":
   version: 0.0.0-use.local
   resolution: "@packages/interfaces@workspace:packages/interfaces"
+  dependencies:
+    mongoose: ^8.0.0
   languageName: unknown
   linkType: soft
 
@@ -6541,6 +6543,13 @@ __metadata:
   version: 5.5.1
   resolution: "bson@npm:5.5.1"
   checksum: f49730504e8362e2c8d1eb0c272e5e125392c41fb7196fc35ccbc39718ee62569a1d197bd2342c3334cd420073d3fd5dc7dea764a7f219dcd79e0ce473dd2772
+  languageName: node
+  linkType: hard
+
+"bson@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "bson@npm:6.2.0"
+  checksum: 950fccd2abd0ff5a1bd3637f4697631298f1538314994ab8c9e13f1c9851d0fd042b54fe8340e00151c2acee43917ea40e64b800ceeea811b00f2de3e900c77e
   languageName: node
   linkType: hard
 
@@ -12943,6 +12952,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mongodb@npm:6.2.0":
+  version: 6.2.0
+  resolution: "mongodb@npm:6.2.0"
+  dependencies:
+    "@mongodb-js/saslprep": ^1.1.0
+    bson: ^6.2.0
+    mongodb-connection-string-url: ^2.6.0
+  peerDependencies:
+    "@aws-sdk/credential-providers": ^3.188.0
+    "@mongodb-js/zstd": ^1.1.0
+    gcp-metadata: ^5.2.0
+    kerberos: ^2.0.1
+    mongodb-client-encryption: ">=6.0.0 <7"
+    snappy: ^7.2.2
+    socks: ^2.7.1
+  peerDependenciesMeta:
+    "@aws-sdk/credential-providers":
+      optional: true
+    "@mongodb-js/zstd":
+      optional: true
+    gcp-metadata:
+      optional: true
+    kerberos:
+      optional: true
+    mongodb-client-encryption:
+      optional: true
+    snappy:
+      optional: true
+    socks:
+      optional: true
+  checksum: dca058e497e4d70f84509b863db33a1126f182757bc389893b31086c49ff429257e62de06f7099aba8cef8790a497f50c98fdcead6e66c451c057ed1453b2049
+  languageName: node
+  linkType: hard
+
 "mongoose@npm:^7.1.1":
   version: 7.6.3
   resolution: "mongoose@npm:7.6.3"
@@ -12955,6 +12998,21 @@ __metadata:
     ms: 2.1.3
     sift: 16.0.1
   checksum: 16d097d6a40ad788a8b49867a5d256e1ffefb6aab0bb75481d9a95908551b53152e7f1870655befef5433b86a574f07679733f789a2723fca08f1eb66a9a715a
+  languageName: node
+  linkType: hard
+
+"mongoose@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "mongoose@npm:8.0.0"
+  dependencies:
+    bson: ^6.2.0
+    kareem: 2.5.1
+    mongodb: 6.2.0
+    mpath: 0.9.0
+    mquery: 5.0.0
+    ms: 2.1.3
+    sift: 16.0.1
+  checksum: bb6e10147ad4b28c043f9af1a3b4e028f71de7d399b13fa457f166213177767bebad94eb128494a5f42d06211f195c2f2bdede6ba7f4a802aeb11de7d4beb455
   languageName: node
   linkType: hard
 

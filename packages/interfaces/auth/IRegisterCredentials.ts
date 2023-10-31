@@ -1,7 +1,7 @@
-import ILoginCredentials from "./ILoginCredentials";
+import { IUser } from "..";
 
-interface IRegisterCredentials extends ILoginCredentials {
-  confirmPassword: string;
+interface IRegisterCredentials extends Pick<IUser, "username" | "email" | "password"> {
+  passwordConfirm: string;
 }
 
 export default IRegisterCredentials;

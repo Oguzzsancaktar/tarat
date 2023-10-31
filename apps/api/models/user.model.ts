@@ -1,11 +1,18 @@
 import mongoose, { Schema } from "mongoose";
 
 // ---- USER ----- //
-// - qrcodes 
-// - addres info detail 
+// - qrcodes
+// - addres info detail
 
 
 const userSchema = new Schema({
+  username: {
+    required: true,
+    type: String,
+    unique: true,
+    trim: true,
+    lowercase: true
+  },
   email: {
     required: true,
     type: String,
