@@ -8,10 +8,11 @@ import middlewares from '../middlewares'
 
 
 // Login
+router.post("/login", middlewares.authMiddleware.loginMiddleware, controllers.authController.login)
 
-
-// Register 
+// Register
 router.post("/register", middlewares.authMiddleware.registerMiddleware, controllers.authController.register)
+
 
 
 export default router
