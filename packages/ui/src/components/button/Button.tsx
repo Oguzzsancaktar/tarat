@@ -3,8 +3,6 @@ import { Button as TamaguiButton, styled } from 'tamagui'
 const Button = styled(TamaguiButton, {
   alignItems: 'center',
   justifyContent: 'center',
-  borderRadius: 100_000_000,
-  borderStyle: 'solid',
   overflow: 'hidden',
 
   variants: {
@@ -19,10 +17,24 @@ const Button = styled(TamaguiButton, {
         width: '$15',
       },
       large: {
-        width: '$20',
+        width: 358,
+        height: 66,
       },
     },
+    type: {
+      circle: {
+        width: 42,
+        height: 42,
+        borderColor: '$gray',
+        borderRadius: 50,
+      },
+    },
+
     background: {
+      tarat: {
+        backgroundColor: '#F8B401',
+      },
+
       red: {
         backgroundColor: '$red10',
         borderColor: '$red5',
@@ -115,6 +127,7 @@ const Button = styled(TamaguiButton, {
   defaultVariants: {
     size: 'large',
     background: 'blue',
+    type: 'circle',
   },
 })
 export default Button

@@ -43,7 +43,7 @@ export default function LoginScreen() {
           yada
         </Paragraph>
 
-        <Button {...mailRegisterLinkProps} mb="$4" size="large" background="gray">
+        <Button {...mailRegisterLinkProps} mb="$4" size="tarat" background="gray">
           E-posta ile kayıt ol
         </Button>
 

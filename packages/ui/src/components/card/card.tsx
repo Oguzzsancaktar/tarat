@@ -27,6 +27,10 @@ const Card = styled(TamaguiCard, {
         backgroundColor: '$blue3',
         borderColor: 'black',
       },
+
+      gray: {
+        backgroundColor: '$gray4',
+      },
     },
   } as const,
 

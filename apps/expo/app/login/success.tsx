@@ -1,4 +1,4 @@
-import { MailLoginScreen } from '@packages/common/views'
+import { SuccessScreen } from '@packages/common/views'
 import { Stack } from 'expo-router'
 
 export default function Screen() {
@@ -7,10 +7,10 @@ export default function Screen() {
       <Stack.Screen
         options={{
           headerShown: false,
-          title: 'Login With Mail',
+          title: 'Success',
         }}
       />
-      <MailLoginScreen />
+      <SuccessScreen />
     </>
   )
 }
