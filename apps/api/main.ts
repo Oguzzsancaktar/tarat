@@ -1,5 +1,3 @@
-import jwt from 'jsonwebtoken'
-import path from 'path'
 
 import dotenv from 'dotenv'
 
@@ -24,7 +22,7 @@ dotenv.config({ path: envPath })
 
 const URI = process.env.MONGO_URI || ""
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 8000
 
 const main = async () => {
   try {
@@ -54,6 +52,7 @@ const main = async () => {
     })
   )
 
+
   app.use(
     helmet.contentSecurityPolicy({
       useDefaults: true,
@@ -73,6 +72,8 @@ const main = async () => {
   app.use(bodyParser.json())
 
   app.use('/api', routes)
+
+
 
   // error handler
   app.use(function (err, req, res, next) {

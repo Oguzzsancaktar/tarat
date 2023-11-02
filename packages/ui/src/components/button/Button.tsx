@@ -4,6 +4,7 @@ const Button = styled(TamaguiButton, {
   alignItems: 'center',
   justifyContent: 'center',
   overflow: 'hidden',
+  height: '$40',
 
   variants: {
     size: {
@@ -17,7 +18,7 @@ const Button = styled(TamaguiButton, {
         width: '$15',
       },
       large: {
-        width: '$20',
+        width: '0',
       },
     },
     type: {
@@ -30,20 +31,20 @@ const Button = styled(TamaguiButton, {
     },
 
     background: {
-      primary: {
-        backgroundColor: '#F8B401',
-        borderColor: '#F8B401',
+      orange: {
+        backgroundColor: '$orange',
+        borderColor: 'orange',
         color: 'white',
-        shadowColor: '#F8B401',
+        shadowColor: 'orange',
 
         hoverStyle: {
-          backgroundColor: '#F8B401',
+          backgroundColor: 'orange',
         },
 
         focusStyle: {
-          backgroundColor: '#F8B401',
-          borderColor: '#F8B401',
-          outlineColor: '#F8B401',
+          backgroundColor: 'orange',
+          borderColor: 'orange',
+          outlineColor: 'orange',
         },
       },
       white: {
@@ -109,7 +110,7 @@ const Button = styled(TamaguiButton, {
 
   defaultVariants: {
     size: 'large',
-    background: 'primary',
+    background: 'orange',
   },
 })
 export default Button

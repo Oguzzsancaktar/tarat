@@ -32,11 +32,11 @@ export default function WelcomeScreen() {
         </YStack>
         {/*Button */}
         <YStack jc={'center'} ai={'center'}>
-          <Button {...loginLinkProps} size="large">
+          <Button background="orange" {...loginLinkProps} size="large">
             Giriş Yap
           </Button>
           <Button {...registerLimkProps} size="large" background="white">
-            Kayıt Ol
+            Kayıt Ol a
           </Button>
         </YStack>
       </YStack>
