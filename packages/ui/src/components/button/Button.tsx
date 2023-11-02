@@ -17,8 +17,7 @@ const Button = styled(TamaguiButton, {
         width: '$15',
       },
       large: {
-        width: 358,
-        height: 66,
+        width: '$20',
       },
     },
     type: {
@@ -31,35 +30,31 @@ const Button = styled(TamaguiButton, {
     },
 
     background: {
-      tarat: {
+      primary: {
         backgroundColor: '#F8B401',
-      },
-
-      red: {
-        backgroundColor: '$red10',
-        borderColor: '$red5',
+        borderColor: '#F8B401',
         color: 'white',
-        shadowColor: '$red11',
+        shadowColor: '#F8B401',
 
         hoverStyle: {
-          backgroundColor: '$red11',
+          backgroundColor: '#F8B401',
         },
 
         focusStyle: {
-          backgroundColor: '$red5',
-          borderColor: '$red6',
-          outlineColor: '$red7',
+          backgroundColor: '#F8B401',
+          borderColor: '#F8B401',
+          outlineColor: '#F8B401',
         },
       },
-      blue: {
-        backgroundColor: '$blue10',
-        borderColor: '$blue5',
-        color: 'white',
+      white: {
+        backgroundColor: '#FFFFFF',
+        borderColor: '#FFFFFF',
+        color: '#F8B401',
         elevation: 8,
-        shadowColor: '$blue11',
+        shadowColor: '#FFFFFF',
 
         hoverStyle: {
-          backgroundColor: '$blue11',
+          backgroundColor: '#FFFFFF',
         },
 
         focusStyle: {
@@ -83,18 +78,6 @@ const Button = styled(TamaguiButton, {
           outlineColor: '$green7',
         },
       },
-      gray: {
-        backgroundColor: '$gray6',
-        borderColor: '$gray3',
-        hoverStyle: {
-          backgroundColor: '$gray7',
-        },
-        focusStyle: {
-          backgroundColor: '$gray3',
-          borderColor: '$gray4',
-          outlineColor: '$gray5',
-        },
-      },
       black: {
         backgroundColor: '#000',
         borderColor: '#000',
@@ -109,7 +92,7 @@ const Button = styled(TamaguiButton, {
           outlineColor: '#1e1e1e',
         },
       },
-      grayQr: {
+      gray: {
         backgroundColor: 'transparent',
         borderColor: 'transparent',
         hoverStyle: {
@@ -126,8 +109,7 @@ const Button = styled(TamaguiButton, {
 
   defaultVariants: {
     size: 'large',
-    background: 'blue',
-    type: 'circle',
+    background: 'primary',
   },
 })
 export default Button

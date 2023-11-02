@@ -1,7 +1,5 @@
 import { VerifyMailScreen } from '@packages/common/views/';
 export { default as LoginScreen } from './Login/LoginScreen'
-export { default as MailRegisterScreen } from './Register/MailRegisterScreen'
-export { default as MailLoginScreen } from './Login/MailLoginScreen'
 export { default as ForgetPasswordScreen } from './Login/ForgetPasswordScreen'
 export { default as VerifyMailScreen } from './Login/VerifyMailScreen'
 export { default as ResetPasswordScreen } from './Login/ResetPasswordScreen'
