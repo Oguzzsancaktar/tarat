@@ -2994,6 +2994,7 @@ __metadata:
   dependencies:
     "@tamagui/animations-react-native": latest
     "@tamagui/build": latest
+    "@tamagui/create-theme": ^1.76.0
     "@tamagui/font-inter": latest
     "@tamagui/image": latest
     "@tamagui/react-native-media-driver": latest
@@ -3819,7 +3820,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/create-theme@npm:1.76.0":
+"@tamagui/create-theme@npm:1.76.0, @tamagui/create-theme@npm:^1.76.0":
   version: 1.76.0
   resolution: "@tamagui/create-theme@npm:1.76.0"
   dependencies:

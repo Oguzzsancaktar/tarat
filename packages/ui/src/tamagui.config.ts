@@ -1,8 +1,9 @@
-import { createTamagui } from 'tamagui'
 import { createInterFont } from '@tamagui/font-inter'
 import { shorthands } from '@tamagui/shorthands'
-import { themes, tokens } from '@tamagui/themes'
+import { themes, tokens as defaultTokens } from '@tamagui/themes'
 import { createMedia } from '@tamagui/react-native-media-driver'
+
+import { createFont, createTamagui, createTokens } from 'tamagui'
 
 import { animations } from './animations'
 
@@ -51,6 +52,49 @@ const bodyFont = createInterFont(
   }
 )
 
+
+const appColors = {
+  white: '#ffffff',
+  whiteDark: "#F5F5F5",
+  gray: "#9D9693",
+  blackLight: '#1A0700',
+  black: '#000000',
+
+  orange: "#F8B401",
+  red: "#D62828",
+}
+
+const size = {
+  0: 0,
+  1: 5,
+  2: 10,
+  5: 15,
+  12: 20,
+  15: 25,
+  20: 30,
+  25: 35,
+  30: 40,
+  35: 45,
+  40: 500,
+  45: 55,
+  50: 60,
+  55: 65,
+  60: 70,
+  true: 10,
+}
+
+export const tokens = createTokens({
+  size,
+  space: { ...size, '-1': -5, '-2': -10 },
+  radius: { 0: 0, 1: 3 },
+  zIndex: { 0: 0, 1: 100, 2: 200 },
+  color: {
+    white: '#fff',
+    black: '#000',
+  },
+})
+
+
 export const config = createTamagui({
   defaultFont: 'body',
   animations,
@@ -61,7 +105,22 @@ export const config = createTamagui({
     body: bodyFont,
     heading: headingFont,
   },
-  themes,
+
+  themes: {
+    light: {
+      background: appColors.white,
+      heading: appColors.blackLight,
+      textGray: appColors.gray,
+      white: appColors.white,
+      orange: appColors.orange,
+      red: appColors.red,
+    },
+    dark: {
+      bg: '#111',
+      color: tokens.color.white,
+    },
+  },
+
   tokens,
   media: createMedia({
     xs: { maxWidth: 660 },
