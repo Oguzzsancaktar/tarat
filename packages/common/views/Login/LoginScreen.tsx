@@ -1,18 +1,12 @@
 import React from 'react'
 import { H1, Input, Button, Paragraph, Separator, XStack, YStack, Anchor } from '@packages/ui'
-import { Dimensions } from 'react-native'
-import { ArrowLeft, Facebook, MailPlus } from '@tamagui/lucide-icons'
-import { useNavigation } from '@react-navigation/native'
+import { Facebook, MailPlus } from '@tamagui/lucide-icons'
 import { useLink } from 'solito/link'
+import { ButtonGoBack } from '../../components'
 
 export default function MailRegisterScreen() {
-  const navigation = useNavigation()
-
   const forgetLinkProps = useLink({
     href: '/login/forget',
-  })
-  const welcomeLinkProps = useLink({
-    href: '/',
   })
 
   const loginSuccessLinkProps = useLink({
@@ -25,19 +19,8 @@ export default function MailRegisterScreen() {
 
   return (
     <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
-      <YStack w={Dimensions.get('window').width} ai="center">
-        <YStack position="absolute" top={'$-2'} left={'$5'}>
-          <Button
-            {...welcomeLinkProps}
-            icon={<ArrowLeft />}
-            w={50}
-            h={50}
-            mt={'$3'}
-            ml={'$3'}
-            backgroundColor="#F8B40120"
-            color={'#F8B401'}
-          />
-        </YStack>
+      <YStack position="absolute" zIndex={99999} top={'$20'} left={'$5'}>
+        <ButtonGoBack />
       </YStack>
 
       <YStack>
