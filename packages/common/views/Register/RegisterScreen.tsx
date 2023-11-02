@@ -4,18 +4,22 @@ import { Input } from '@packages/ui/src/components'
 import { Dimensions } from 'react-native'
 import { useLink } from 'solito/link'
 import { useAppImages } from '@packages/common/hooks'
-import { useNavigation } from '@react-navigation/native'
 
 import { ArrowLeft, Facebook, MailPlus } from '@tamagui/lucide-icons'
 
 export default function MailRegisterScreen() {
-  const navigation = useNavigation()
   const appImages = useAppImages()
   const loginLinkProps = useLink({
     href: '/login',
   })
   const registerLinkProps = useLink({
     href: '/register',
+  })
+  const welcomeLinkProps = useLink({
+    href: '/',
+  })
+  const successLinkProps = useLink({
+    href: '/register/success',
   })
 
   return (
@@ -24,7 +28,7 @@ export default function MailRegisterScreen() {
         <YStack position="absolute" top={'$-2'} left={'$5'}>
           <Button
             icon={<ArrowLeft />}
-            onPress={() => navigation.goBack()} // Go back when the button is pressed
+            {...welcomeLinkProps}
             w={50}
             h={50}
             mt={'$3'}
@@ -54,14 +58,14 @@ export default function MailRegisterScreen() {
       </YStack>
 
       <YStack>
-        <Button h={66} w={358} mb={'$4'} backgroundColor="#F8B401">
+        <Button {...successLinkProps} h={66} w={358} mb={'$4'} backgroundColor="#F8B401">
           Kayıt ol
         </Button>
         <XStack jc="center">
           <Paragraph size={'$3'} color={'$gray8'}>
             Zaten bir hesabınız var mı?{' '}
           </Paragraph>
-          <Paragraph size={'$3'} color={'#D62828'}>
+          <Paragraph {...loginLinkProps} size={'$3'} color={'#D62828'}>
             Giriş Yap
           </Paragraph>
         </XStack>

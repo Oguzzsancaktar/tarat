@@ -9,16 +9,19 @@ export default function MailRegisterScreen() {
   const navigation = useNavigation()
 
   const successLinkProps = useLink({
-    href: '/login/success',
+    href: '/login/passwordSuccess',
   })
 
+  const welcomeLinkProps = useLink({
+    href: '/',
+  })
   return (
     <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack w={Dimensions.get('window').width} ai="center">
         <YStack position="absolute" top={'$-2'} left={'$5'}>
           <Button
             icon={<ArrowLeft />}
-            onPress={() => navigation.goBack()} // Go back when the button is pressed
+            {...welcomeLinkProps}
             w={50}
             h={50}
             mt={'$3'}

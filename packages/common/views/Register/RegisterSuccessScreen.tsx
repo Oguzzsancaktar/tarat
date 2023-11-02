@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Paragraph, YStack, H4, XStack, Square, Avatar } from '@packages/ui'
+import { Button, Paragraph, YStack, H4, Avatar } from '@packages/ui'
 import { Card, Input } from '@packages/ui/src/components'
 import { Dimensions } from 'react-native'
 import { useLink } from 'solito/link'
@@ -14,13 +14,18 @@ export default function MailRegisterScreen() {
   const registerLinkProps = useLink({
     href: '/register',
   })
+
+  const welcomeLinkProps = useLink({
+    href: '/',
+  })
+
   return (
     <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack w={Dimensions.get('window').width} ai="center">
         <YStack position="absolute" top={'$-2'} left={'$5'}>
           <Button
             icon={<ArrowLeft />}
-            {...registerLinkProps}
+            {...welcomeLinkProps}
             w={50}
             h={50}
             mt={'$3'}
@@ -47,7 +52,7 @@ export default function MailRegisterScreen() {
               </Avatar>
               <H4 mt={35}>İşlem Başarılı</H4>
               <Paragraph mb={80} color={'gray'} size={'$1'}>
-                Tebrikler, şifreniz başarıyla değiştirildi.
+                Tebrikler, kaydınız başarıyla oluşturuldu.
               </Paragraph>
             </YStack>
           </YStack>

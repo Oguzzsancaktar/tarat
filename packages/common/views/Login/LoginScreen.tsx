@@ -11,14 +11,25 @@ export default function MailRegisterScreen() {
   const forgetLinkProps = useLink({
     href: '/login/forget',
   })
+  const welcomeLinkProps = useLink({
+    href: '/',
+  })
+
+  const loginSuccessLinkProps = useLink({
+    href: '/login/loginSuccess',
+  })
+
+  const registerLinkProps = useLink({
+    href: '/register',
+  })
 
   return (
     <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack w={Dimensions.get('window').width} ai="center">
         <YStack position="absolute" top={'$-2'} left={'$5'}>
           <Button
+            {...welcomeLinkProps}
             icon={<ArrowLeft />}
-            onPress={() => navigation.goBack()} // Go back when the button is pressed
             w={50}
             h={50}
             mt={'$3'}
@@ -49,14 +60,21 @@ export default function MailRegisterScreen() {
       </YStack>
 
       <YStack>
-        <Button h={66} w={358} mt={150} mb={'$4'} backgroundColor="#F8B401">
+        <Button
+          {...loginSuccessLinkProps}
+          h={66}
+          w={358}
+          mt={150}
+          mb={'$4'}
+          backgroundColor="#F8B401"
+        >
           Giriş yap
         </Button>
         <XStack jc="center">
           <Paragraph size={'$3'} color={'$gray8'}>
             Hesabınız yok mu?{' '}
           </Paragraph>
-          <Paragraph size={'$3'} color={'#D62828'}>
+          <Paragraph {...registerLinkProps} size={'$3'} color={'#D62828'}>
             Kayıt Ol
           </Paragraph>
         </XStack>

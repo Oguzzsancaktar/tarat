@@ -28,7 +28,9 @@ export default function MailRegisterScreen() {
   const verifyLinkProps = useLink({
     href: '/login/verifyMail',
   })
-
+  const verifyPhoneLinkProps = useLink({
+    href: '/login/verifyPhone',
+  })
   return (
     <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
       <YStack w={Dimensions.get('window').width} ai="center">
@@ -78,6 +80,7 @@ export default function MailRegisterScreen() {
         </YStack>
         <YStack>
           <Button
+            {...verifyPhoneLinkProps}
             jc={'flex-start'}
             ai={'flex-start'}
             icon={<MessageSquare size="$2" />}

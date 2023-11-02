@@ -1,9 +1,13 @@
+import { DefaultTheme } from '@react-navigation/native';
 import { VerifyMailScreen } from '@packages/common/views/';
 export { default as LoginScreen } from './Login/LoginScreen'
 export { default as ForgetPasswordScreen } from './Login/ForgetPasswordScreen'
 export { default as VerifyMailScreen } from './Login/VerifyMailScreen'
+export { default as VerifyPhoneScreen } from './Login/VerifyPhoneScreen'
 export { default as ResetPasswordScreen } from './Login/ResetPasswordScreen'
-export { default as SuccessScreen } from './Login/SuccessScreen'
+export { default as PasswordSuccessScreen } from './Login/PasswordSuccessScreen'
+export { default as LoginSuccessScreen } from './Login/LoginSuccessScreen'
+export { default as RegisterSuccessScreen } from './Register/RegisterSuccessScreen'
 export { default as RegisterScreen } from './Register/RegisterScreen'
 export { default as WelcomeScreen } from './WelcomeScreen'
 export { default as SettingsScreen } from './SettingsScreen'
