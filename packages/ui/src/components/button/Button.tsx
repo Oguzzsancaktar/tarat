@@ -5,6 +5,7 @@ const Button = styled(TamaguiButton, {
   justifyContent: 'center',
   overflow: 'hidden',
   height: '$40',
+  borderRadius: '$radius.1',
 
   variants: {
     size: {
@@ -23,10 +24,10 @@ const Button = styled(TamaguiButton, {
     },
     type: {
       circle: {
-        width: 42,
-        height: 42,
+        width: '$30',
+        height: '$30',
         borderColor: '$gray',
-        borderRadius: 50,
+        backgroundColor: 'red',
       },
     },
 
@@ -111,6 +112,7 @@ const Button = styled(TamaguiButton, {
   defaultVariants: {
     size: 'large',
     background: 'orange',
+    type: 'circle',
   },
 })
 export default Button

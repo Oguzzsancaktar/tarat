@@ -8,18 +8,7 @@ const ButtonGoBack = () => {
     href: '/',
   })
 
-  return (
-    <Button
-      {...welcomeLinkProps}
-      icon={<ArrowLeft />}
-      w={50}
-      h={50}
-      mt={'$3'}
-      ml={'$3'}
-      backgroundColor="#F8B40120"
-      color={'#F8B401'}
-    />
-  )
+  return <Button {...welcomeLinkProps} type={'circle'} background="orange" icon={<ArrowLeft />} />
 }
 
 export default ButtonGoBack

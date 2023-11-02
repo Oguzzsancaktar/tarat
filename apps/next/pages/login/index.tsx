@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 const LoginScreen = dynamic(() => import('@packages/common/views/login/LoginScreen'), {
   ssr: false,
 })
+
 export default function Screen() {
   return (
     <>
