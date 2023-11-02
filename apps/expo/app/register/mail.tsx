@@ -1,3 +1,4 @@
+import React from 'react'
 import { MailRegisterScreen } from '@packages/common/views'
 import { Stack } from 'expo-router'
 
