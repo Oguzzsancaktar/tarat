@@ -5,9 +5,13 @@ import '@tamagui/font-inter/css/700.css'
 import 'raf/polyfill'
 
 import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme'
-import { Provider } from '@packages/common/provider'
 import Head from 'next/head'
 import type { SolitoAppProps } from 'solito'
+import dynamic from 'next/dynamic'
+
+const CombineProvider = dynamic(() => import('@packages/common/provider/CombineProvider'), {
+  ssr: false,
+})
 
 if (process.env.NODE_ENV === 'production') {
   require('../public/tamagui.css')
@@ -17,7 +21,7 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
   return (
     <>
       <Head>
-        <title>Tamagui Example App</title>
+        <title>Tarat</title>
         <meta name="description" content="Tamagui, Solito, Expo & Next.js" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -37,9 +41,9 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
         setTheme(next as any)
       }}
     >
-      <Provider disableRootThemeClass defaultTheme={theme}>
+      <CombineProvider disableRootThemeClass defaultTheme={theme}>
         {children}
-      </Provider>
+      </CombineProvider>
     </NextThemeProvider>
   )
 }

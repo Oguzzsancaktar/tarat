@@ -2794,6 +2794,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/env@npm:14.0.1":
+  version: 14.0.1
+  resolution: "@next/env@npm:14.0.1"
+  checksum: 1fab6732f877c3702fce12396f16046f9b7a59c70b0d0b3db713995eed431706d12175530709d21c613682865ce82ef965a5719a43d6bc84142462a8ed558cda
+  languageName: node
+  linkType: hard
+
 "@next/eslint-plugin-next@npm:13.5.6":
   version: 13.5.6
   resolution: "@next/eslint-plugin-next@npm:13.5.6"
@@ -2810,9 +2817,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-darwin-arm64@npm:14.0.1":
+  version: 14.0.1
+  resolution: "@next/swc-darwin-arm64@npm:14.0.1"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@next/swc-darwin-x64@npm:13.5.6":
   version: 13.5.6
   resolution: "@next/swc-darwin-x64@npm:13.5.6"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@next/swc-darwin-x64@npm:14.0.1":
+  version: 14.0.1
+  resolution: "@next/swc-darwin-x64@npm:14.0.1"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -2824,9 +2845,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-linux-arm64-gnu@npm:14.0.1":
+  version: 14.0.1
+  resolution: "@next/swc-linux-arm64-gnu@npm:14.0.1"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
 "@next/swc-linux-arm64-musl@npm:13.5.6":
   version: 13.5.6
   resolution: "@next/swc-linux-arm64-musl@npm:13.5.6"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-arm64-musl@npm:14.0.1":
+  version: 14.0.1
+  resolution: "@next/swc-linux-arm64-musl@npm:14.0.1"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
@@ -2838,9 +2873,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-linux-x64-gnu@npm:14.0.1":
+  version: 14.0.1
+  resolution: "@next/swc-linux-x64-gnu@npm:14.0.1"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
 "@next/swc-linux-x64-musl@npm:13.5.6":
   version: 13.5.6
   resolution: "@next/swc-linux-x64-musl@npm:13.5.6"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-x64-musl@npm:14.0.1":
+  version: 14.0.1
+  resolution: "@next/swc-linux-x64-musl@npm:14.0.1"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
@@ -2852,6 +2901,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-win32-arm64-msvc@npm:14.0.1":
+  version: 14.0.1
+  resolution: "@next/swc-win32-arm64-msvc@npm:14.0.1"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@next/swc-win32-ia32-msvc@npm:13.5.6":
   version: 13.5.6
   resolution: "@next/swc-win32-ia32-msvc@npm:13.5.6"
@@ -2859,9 +2915,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-win32-ia32-msvc@npm:14.0.1":
+  version: 14.0.1
+  resolution: "@next/swc-win32-ia32-msvc@npm:14.0.1"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
 "@next/swc-win32-x64-msvc@npm:13.5.6":
   version: 13.5.6
   resolution: "@next/swc-win32-x64-msvc@npm:13.5.6"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@next/swc-win32-x64-msvc@npm:14.0.1":
+  version: 14.0.1
+  resolution: "@next/swc-win32-x64-msvc@npm:14.0.1"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -2974,6 +3044,7 @@ __metadata:
     expo-constants: ~14.4.2
     expo-linking: ~5.0.2
     expo-secure-store: ^12.5.0
+    next: ^14.0.1
     react: ^18.2.0
     react-native-safe-area-context: 4.6.3
     solito: ^3.0.0
@@ -2994,7 +3065,7 @@ __metadata:
   dependencies:
     "@tamagui/animations-react-native": latest
     "@tamagui/build": latest
-    "@tamagui/create-theme": ^1.76.0
+    "@tamagui/create-theme": latest
     "@tamagui/font-inter": latest
     "@tamagui/image": latest
     "@tamagui/react-native-media-driver": latest
@@ -3820,7 +3891,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/create-theme@npm:1.76.0, @tamagui/create-theme@npm:^1.76.0":
+"@tamagui/create-theme@npm:1.76.0, @tamagui/create-theme@npm:latest":
   version: 1.76.0
   resolution: "@tamagui/create-theme@npm:1.76.0"
   dependencies:
@@ -13183,6 +13254,61 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next@npm:^14.0.1":
+  version: 14.0.1
+  resolution: "next@npm:14.0.1"
+  dependencies:
+    "@next/env": 14.0.1
+    "@next/swc-darwin-arm64": 14.0.1
+    "@next/swc-darwin-x64": 14.0.1
+    "@next/swc-linux-arm64-gnu": 14.0.1
+    "@next/swc-linux-arm64-musl": 14.0.1
+    "@next/swc-linux-x64-gnu": 14.0.1
+    "@next/swc-linux-x64-musl": 14.0.1
+    "@next/swc-win32-arm64-msvc": 14.0.1
+    "@next/swc-win32-ia32-msvc": 14.0.1
+    "@next/swc-win32-x64-msvc": 14.0.1
+    "@swc/helpers": 0.5.2
+    busboy: 1.6.0
+    caniuse-lite: ^1.0.30001406
+    postcss: 8.4.31
+    styled-jsx: 5.1.1
+    watchpack: 2.4.0
+  peerDependencies:
+    "@opentelemetry/api": ^1.1.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    sass: ^1.3.0
+  dependenciesMeta:
+    "@next/swc-darwin-arm64":
+      optional: true
+    "@next/swc-darwin-x64":
+      optional: true
+    "@next/swc-linux-arm64-gnu":
+      optional: true
+    "@next/swc-linux-arm64-musl":
+      optional: true
+    "@next/swc-linux-x64-gnu":
+      optional: true
+    "@next/swc-linux-x64-musl":
+      optional: true
+    "@next/swc-win32-arm64-msvc":
+      optional: true
+    "@next/swc-win32-ia32-msvc":
+      optional: true
+    "@next/swc-win32-x64-msvc":
+      optional: true
+  peerDependenciesMeta:
+    "@opentelemetry/api":
+      optional: true
+    sass:
+      optional: true
+  bin:
+    next: dist/bin/next
+  checksum: d142407f47012eb57ba3932f91453960c79d7df2fef03ded581f32195b98a4378e13c49709f498a112d142109a8edd73f40357ee102a6bd4d7b1f76de9f0877a
+  languageName: node
+  linkType: hard
+
 "nice-try@npm:^1.0.4":
   version: 1.0.5
   resolution: "nice-try@npm:1.0.5"
@@ -14462,6 +14588,7 @@ __metadata:
     check-dependency-version-consistency: ^3.0.3
     eslint: ^8.21.0
     lodash: ^4.17.21
+    next: ^14.0.1
     node-gyp: ^9.3.1
     prettier: ^2.7.1
     turbo: ^1.10.3
