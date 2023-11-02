@@ -3,8 +3,6 @@ import { Button as TamaguiButton, styled } from 'tamagui'
 const Button = styled(TamaguiButton, {
   alignItems: 'center',
   justifyContent: 'center',
-  borderRadius: 100_000_000,
-  borderStyle: 'solid',
   overflow: 'hidden',
 
   variants: {
@@ -22,32 +20,41 @@ const Button = styled(TamaguiButton, {
         width: '$20',
       },
     },
+    type: {
+      circle: {
+        width: 42,
+        height: 42,
+        borderColor: '$gray',
+        borderRadius: 50,
+      },
+    },
+
     background: {
-      red: {
-        backgroundColor: '$red10',
-        borderColor: '$red5',
+      primary: {
+        backgroundColor: '#F8B401',
+        borderColor: '#F8B401',
         color: 'white',
-        shadowColor: '$red11',
+        shadowColor: '#F8B401',
 
         hoverStyle: {
-          backgroundColor: '$red11',
+          backgroundColor: '#F8B401',
         },
 
         focusStyle: {
-          backgroundColor: '$red5',
-          borderColor: '$red6',
-          outlineColor: '$red7',
+          backgroundColor: '#F8B401',
+          borderColor: '#F8B401',
+          outlineColor: '#F8B401',
         },
       },
-      blue: {
-        backgroundColor: '$blue10',
-        borderColor: '$blue5',
-        color: 'white',
+      white: {
+        backgroundColor: '#FFFFFF',
+        borderColor: '#FFFFFF',
+        color: '#F8B401',
         elevation: 8,
-        shadowColor: '$blue11',
+        shadowColor: '#FFFFFF',
 
         hoverStyle: {
-          backgroundColor: '$blue11',
+          backgroundColor: '#FFFFFF',
         },
 
         focusStyle: {
@@ -71,18 +78,6 @@ const Button = styled(TamaguiButton, {
           outlineColor: '$green7',
         },
       },
-      gray: {
-        backgroundColor: '$gray6',
-        borderColor: '$gray3',
-        hoverStyle: {
-          backgroundColor: '$gray7',
-        },
-        focusStyle: {
-          backgroundColor: '$gray3',
-          borderColor: '$gray4',
-          outlineColor: '$gray5',
-        },
-      },
       black: {
         backgroundColor: '#000',
         borderColor: '#000',
@@ -97,7 +92,7 @@ const Button = styled(TamaguiButton, {
           outlineColor: '#1e1e1e',
         },
       },
-      grayQr: {
+      gray: {
         backgroundColor: 'transparent',
         borderColor: 'transparent',
         hoverStyle: {
@@ -114,7 +109,7 @@ const Button = styled(TamaguiButton, {
 
   defaultVariants: {
     size: 'large',
-    background: 'blue',
+    background: 'primary',
   },
 })
 export default Button
