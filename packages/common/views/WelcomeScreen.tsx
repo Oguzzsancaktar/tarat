@@ -12,13 +12,13 @@ export default function WelcomeScreen() {
   })
 
   const loginLinkProps = useLink({
-    href: '/login',
+    href: '/qr/',
   })
 
   return (
     <YStack maw={400} alignSelf="center" jc="space-between" ai="center" py="$10" px="$4">
       <YStack maw={600}>
-        {/*Images */}
+        {/*Images @todo OĞUZ*/}
         <View jc={'center'} ai={'center'}>
           <Image mt={100} w={300} source={appImages.thumbnail}></Image>
         </View>

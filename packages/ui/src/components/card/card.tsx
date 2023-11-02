@@ -30,13 +30,14 @@ const Card = styled(TamaguiCard, {
 
       gray: {
         backgroundColor: '$gray4',
+        borderRadius: 24,
       },
     },
   } as const,
 
   defaultVariants: {
     size: 'large',
-    background: 'blue',
+    background: 'gray',
   },
 })
 export default Card
