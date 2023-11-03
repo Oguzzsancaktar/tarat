@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Paragraph, YStack, View, H3 } from '@packages/ui'
+import { Image, Paragraph, , View, H3 } from '@packages/ui'
 import { useAppImages } from '@packages/common/hooks'
 import { useLink } from 'solito/link'
 import { Button } from '@packages/ui/src/components'
