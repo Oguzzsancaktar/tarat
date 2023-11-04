@@ -39,7 +39,7 @@ export default function MailRegisterScreen() {
             Giriş yap
           </Button>
           <XStack jc="center">
-            <Paragraph size={'$3'} color={'$gray8'}>
+            <Paragraph size={'$3'} color={'$textGray'}>
               Hesabınız yok mu?{' '}
             </Paragraph>
             <Paragraph {...registerLinkProps} size={'$3'} color={'#D62828'}>
@@ -56,6 +56,7 @@ export default function MailRegisterScreen() {
         <XStack ai="center" jc="space-between">
           <Button
             color="white"
+            w={'$10'}
             backgroundColor={'$blue11'}
             mr={10}
             icon={<Facebook />}
@@ -63,6 +64,7 @@ export default function MailRegisterScreen() {
           ></Button>
           <Button
             color="white"
+            w={'$10'}
             backgroundColor={'#D62828'}
             ml={10}
             icon={<MailPlus />}

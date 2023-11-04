@@ -38,7 +38,7 @@ export default function WelcomeScreen() {
         {/*Button */}
         <YStackFullW paddingHorizontal="$space.5" jc={'center'} ai={'center'}>
           <Button {...loginLinkProps}>Giriş Yap</Button>
-          <Button {...registerLimkProps} background="white">
+          <Button mt={'$space.2'} {...registerLimkProps} background="orange30">
             Kayıt Ol
           </Button>
         </YStackFullW>

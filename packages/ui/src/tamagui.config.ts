@@ -3,7 +3,7 @@ import { shorthands } from '@tamagui/shorthands'
 import { themes, tokens as defaultTokens } from '@tamagui/themes'
 import { createMedia } from '@tamagui/react-native-media-driver'
 
-import { createFont, createTamagui, createTokens } from 'tamagui'
+import { createTamagui, createTokens } from 'tamagui'
 
 import { animations } from './animations'
 

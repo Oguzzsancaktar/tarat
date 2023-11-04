@@ -51,6 +51,22 @@ const Button = styled(TamaguiButton, {
           outlineColor: '$orange',
         },
       },
+      orange30: {
+        backgroundColor: '$orange30',
+        borderColor: '$orange30',
+        color: '$orange',
+        shadowColor: '$orange30',
+
+        hoverStyle: {
+          backgroundColor: '$orange30',
+        },
+
+        focusStyle: {
+          backgroundColor: '$orange30',
+          borderColor: '$orange30',
+          outlineColor: '$orange30',
+        },
+      },
       white: {
         backgroundColor: '#FFFFFF',
         borderColor: '#FFFFFF',
