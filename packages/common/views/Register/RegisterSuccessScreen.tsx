@@ -1,7 +1,7 @@
 import React from 'react'
 import { YStack } from '@packages/ui'
 import { useLink } from 'solito/link'
-import { ScreenContainer, StatusBox } from 'common/components'
+import { ScreenContainer, StatusBox } from '@packages/common/components'
 
 export default function MailRegisterScreen() {
   const welcomeLinkProps = useLink({

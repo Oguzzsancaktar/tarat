@@ -1,5 +1,5 @@
 import React from 'react'
-import { H1, Paragraph, Separator, XStack, YStack, Anchor } from '@packages/ui'
+import { H1, Paragraph, Separator, XStack, YStack, Anchor, View } from '@packages/ui'
 import { Facebook, MailPlus } from '@tamagui/lucide-icons'
 import { useLink } from 'solito/link'
 import { ButtonGoBack, InputWithIcon, ScreenContainer } from '../../components'
@@ -20,9 +20,9 @@ export default function LoginScreen() {
 
   return (
     <ScreenContainer showGoBackButton={true}>
-      <YStack jc="space-between" ai="center">
+      <YStackFullW jc={'space-between'}>
         <YStackFullW>
-          <H1 fontFamily={'$body'} fontSize={30}>
+          <H1 color={'$heading'} fontFamily={'$body'} fontSize={30}>
             Hesabınıza Giriş {'\n'}Yapın
           </H1>
 
@@ -33,8 +33,15 @@ export default function LoginScreen() {
             value={''}
             placeholder="E-posta"
           />
-          <Input placeholder="Şifre" backgroundColor={'#F5F5F5'} mb={'$1'} />
-
+          <View mt={'$space.2'}>
+            <InputWithIcon
+              error={false}
+              success={true}
+              icon="mail"
+              value={''}
+              placeholder="Şifre"
+            />
+          </View>
           <Paragraph {...forgetLinkProps} textAlign="right" color={'gray'}>
             Şifreni mi unuttun?
           </Paragraph>
@@ -52,33 +59,32 @@ export default function LoginScreen() {
               Kaydol
             </Paragraph>
           </XStack>
-          <Separator mt="$2" width={358} />
+          <Separator borderColor={'$heading'} mt="$2" width={358} />
           <YStack mt="$2">
-            <Paragraph ta="center" size={'$3'} color={'$gray8'}>
+            <Paragraph color={'$textGray'} ta="center" size={'$3'}>
               Sosyal Medya ile devam et
             </Paragraph>
           </YStack>
+          <XStack ai="center" jc="center">
+            <Button
+              color="white"
+              w={'$10'}
+              backgroundColor={'$blue11'}
+              mr={10}
+              icon={<Facebook />}
+              borderRadius={50}
+            ></Button>
+            <Button
+              color="white"
+              backgroundColor={'#D62828'}
+              w={'$10'}
+              ml={10}
+              icon={<MailPlus />}
+              borderRadius={50}
+            ></Button>
+          </XStack>
         </YStackFullW>
-
-        <XStack ai="center" jc="center">
-          <Button
-            color="white"
-            w={'$10'}
-            backgroundColor={'$blue11'}
-            mr={10}
-            icon={<Facebook />}
-            borderRadius={50}
-          ></Button>
-          <Button
-            color="white"
-            w={'$10'}
-            backgroundColor={'#D62828'}
-            ml={10}
-            icon={<MailPlus />}
-            borderRadius={50}
-          ></Button>
-        </XStack>
-      </YStack>
+      </YStackFullW>
     </ScreenContainer>
   )
 }
