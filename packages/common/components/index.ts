@@ -5,4 +5,3 @@ export * from './login'
 export * from './register'
 export * from './statusBox'
 
-export { default as APP_ICONS } from './icons'

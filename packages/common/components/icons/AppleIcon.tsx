@@ -1,16 +1,13 @@
 import React from 'react'
 import { Svg, Path } from 'react-native-svg'
+import { IIconProps } from './IIconProps'
 
-export interface IIconProps {
-  size: number
-  color: string
-}
 const AppleIcon: React.FC<IIconProps> = ({ size, color }) => {
   return (
     <Svg
       width={size}
       height={size}
-      viewBox="0 0 24 24"
+      viewBox="0 0 20 23"
       fill={color}
       strokeWidth="2"
       strokeLinecap="round"

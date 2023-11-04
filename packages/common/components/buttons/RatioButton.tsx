@@ -1,17 +1,41 @@
-import React from 'react'
+import React, { useMemo } from 'react'
+import { Text, View, YStack } from '@packages/ui'
 import { Button } from '@packages/ui/src/components'
-import { Avatar, Text, YStack } from 'tamagui'
-import { MailCheck } from '@tamagui/lucide-icons'
-const RatioButton = ({ Title, Description }) => {
+import AppleIcon from '../icons/AppleIcon'
+
+interface IProps {
+  title: string
+  description: string
+  isSelected?: boolean
+}
+const RatioButton: React.FC<IProps> = ({ isSelected = false, title, description }) => {
   return (
-    <Button background={'$ratioButton'} type={'ratio'}>
-      <Avatar borderRadius={'$size.10'} size={'$10'} background="$ratio30" />
+    <Button
+      alignItems="center"
+      justifyContent="flex-start"
+      py="$3"
+      px="$4"
+      style={{ height: 'auto' }}
+      background={'ratio'}
+      borderColor={isSelected ? '$orange' : ''}
+    >
+      <Button
+        mr={'$space.2'}
+        ai={'center'}
+        justifyContent="center"
+        w="$10"
+        background="orange30"
+        type="circle"
+      >
+        <AppleIcon color="orange" size={35} />
+      </Button>
+
       <YStack>
         <Text fontSize={18} color={'$textGray'}>
-          {Title}
+          {title}
         </Text>
         <Text fontSize={14} color={'$textGray'}>
-          {Description}
+          {description}
         </Text>
       </YStack>
     </Button>

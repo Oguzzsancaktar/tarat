@@ -32,10 +32,9 @@ const Button = styled(TamaguiButton, {
         width: '$10',
         height: '$10',
       },
-      ratio: {
-        borderWidth: 0,
-        color: '$textGray',
-        backgroundColor: '$ratioButton',
+
+      circle: {
+        borderRadius: 100,
       },
     },
 
@@ -72,65 +71,20 @@ const Button = styled(TamaguiButton, {
           outlineColor: '$orange30',
         },
       },
-      white: {
-        backgroundColor: '#FFFFFF',
-        borderColor: '#FFFFFF',
-        color: '#F8B401',
-        elevation: 8,
-        shadowColor: '#FFFFFF',
 
-        hoverStyle: {
-          backgroundColor: '#FFFFFF',
-        },
-
-        focusStyle: {
-          backgroundColor: '$blue5',
-          borderColor: '$blue6',
-          outlineColor: '$blue7',
-        },
-      },
       ratio: {
-        backgroundColor: '$ratioButton',
-        color: '#F8B401',
+        backgroundColor: '$inputBackground',
 
         hoverStyle: {
-          backgroundColor: '$ratioButton',
+          backgroundColor: '$inputBackground',
         },
         focusStyle: {
-          backgroundColor: '$ratioButton',
-          borderColor: '$ratioButton',
-          outlineColor: '$ratioButton',
+          backgroundColor: '$inputBackground',
+          borderColor: '$inputBackground',
+          outlineColor: '$inputBackground',
         },
       },
-      green: {
-        backgroundColor: '$green10',
-        borderColor: '$green5',
-        color: 'white',
-        shadowColor: '$green11',
 
-        hoverStyle: {
-          backgroundColor: '$green11',
-        },
-        focusStyle: {
-          backgroundColor: '$green5',
-          borderColor: '$green6',
-          outlineColor: '$green7',
-        },
-      },
-      black: {
-        backgroundColor: '#000',
-        borderColor: '#000',
-        color: 'white',
-        shadowColor: '#000',
-        hoverStyle: {
-          backgroundColor: '#111',
-        },
-        focusStyle: {
-          backgroundColor: '#000',
-          borderColor: '#111',
-          outlineColor: '#1e1e1e',
-        },
-      },
       gray: {
         backgroundColor: 'transparent',
         borderColor: 'transparent',

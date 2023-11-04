@@ -118,8 +118,8 @@ export const config = createTamagui({
       inputBackground: APP_COLORS.wildSand,
       inputColor: APP_COLORS.black,
       inputPlaceholderColor: APP_COLORS.silver,
-
     },
+
     dark: {
       background: APP_COLORS.black,
       heading: APP_COLORS.mystic,
