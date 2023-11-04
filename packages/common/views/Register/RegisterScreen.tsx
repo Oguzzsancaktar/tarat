@@ -45,7 +45,7 @@ export default function MailRegisterScreen() {
         <Button {...successLinkProps} mb={'$4'}>
           Kaydol
         </Button>
-        <SocialSign type="register" />
+        <SocialSign type="signin" />
       </YStack>
     </ScreenContainer>
   )
