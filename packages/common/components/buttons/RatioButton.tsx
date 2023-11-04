@@ -7,17 +7,26 @@ interface IProps {
   title: string
   description: string
   isSelected?: boolean
+  value: string
+  handleClick: (value: string) => void
 }
-const RatioButton: React.FC<IProps> = ({ isSelected = false, title, description }) => {
+const RatioButton: React.FC<IProps> = ({
+  isSelected = false,
+  value,
+  title,
+  description,
+  handleClick,
+}) => {
   return (
     <Button
+      onPress={() => handleClick(value)}
       alignItems="center"
       justifyContent="flex-start"
       py="$3"
       px="$4"
       style={{ height: 'auto' }}
       background={'ratio'}
-      borderColor={isSelected ? '$orange' : ''}
+      borderColor={isSelected ? '$orange' : '$inputBackground'}
     >
       <Button
         mr={'$space.2'}

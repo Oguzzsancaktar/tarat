@@ -5,6 +5,13 @@ import { RatioButton, ScreenContainer } from '@packages/common/components'
 import { Button, YStackFullW } from '@packages/ui/src/components'
 
 export default function ForgetPasswordScreen() {
+  const [passwordResetType, setPasswordResetType] = React.useState<string>()
+
+  const handleRatioClick = (value: string) => {
+    setPasswordResetType(value)
+  }
+
+  console.log('passwordResetType', passwordResetType)
   return (
     <ScreenContainer showGoBackButton={true}>
       <YStackFullW jc="space-between" ai="center">
@@ -15,10 +22,22 @@ export default function ForgetPasswordScreen() {
           </Paragraph>
         </YStack>
         <YStackFullW mb={'$space.2'}>
-          <RatioButton title={'E-posta'} description={'Kodu Gönder'} />
+          <RatioButton
+            isSelected={passwordResetType === 'email'}
+            handleClick={handleRatioClick}
+            value="email"
+            title={'E-posta'}
+            description={'Kodu Gönder'}
+          />
         </YStackFullW>
         <YStackFullW mb={'$space.10'}>
-          <RatioButton title={'Telefon'} description={'Kodu Gönder'} />
+          <RatioButton
+            isSelected={passwordResetType === 'phone'}
+            handleClick={handleRatioClick}
+            value="phone"
+            title={'Telefon'}
+            description={'Kodu Gönder'}
+          />
         </YStackFullW>
         <Button>DEVAM ET</Button>
       </YStackFullW>
