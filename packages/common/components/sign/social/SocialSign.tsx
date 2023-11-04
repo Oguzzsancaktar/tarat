@@ -6,7 +6,7 @@ import { useLink } from 'solito/link'
 import { getAppIcon } from '../../icons'
 
 const texts = {
-  signin: {
+  login: {
     desc: 'Hesabınız var mı?',
     title: 'Giriş Yap',
   },
@@ -17,12 +17,12 @@ const texts = {
 }
 
 interface IProps {
-  type: 'signin' | 'register'
+  type: 'login' | 'register'
 }
 
 const SocialSign: React.FC<IProps> = ({ type }) => {
-  const registerLinkProps = useLink({
-    href: '/register',
+  const linkProps = useLink({
+    href: '/' + type,
   })
 
   return (
@@ -31,7 +31,7 @@ const SocialSign: React.FC<IProps> = ({ type }) => {
         <Paragraph size={'$3'} color={'$textGray'}>
           {texts[type].desc}{' '}
         </Paragraph>
-        <Paragraph {...registerLinkProps} size={'$3'} color={'$red'}>
+        <Paragraph {...linkProps} size={'$3'} color={'$red'}>
           {texts[type].title}
         </Paragraph>
       </XStack>
