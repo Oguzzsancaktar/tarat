@@ -1,6 +1,6 @@
+import { APP_COLORS } from '@packages/common/constants';
 import { createInterFont } from '@tamagui/font-inter'
 import { shorthands } from '@tamagui/shorthands'
-import { themes, tokens as defaultTokens } from '@tamagui/themes'
 import { createMedia } from '@tamagui/react-native-media-driver'
 
 import { createTamagui, createTokens } from 'tamagui'
@@ -55,24 +55,6 @@ const bodyFont = createInterFont(
 )
 
 
-const appColors = {
-  white: '#ffffff',
-  wildSand: "#F5F5F5",
-
-  mystic: "#DFE4EE",
-
-  silver: "#C9C5C4",
-  gray: "#9D9693",
-
-  shark: "#1C1C1E",
-  nero: "#1A0700",
-  black: '#000000',
-
-  orange: "#F8B401",
-  orange30: "#F8B40130",
-
-  red: "#ff4201",
-}
 
 
 const radius = {
@@ -82,6 +64,7 @@ const radius = {
 }
 
 const size = {
+  px1: 1,
   0: 0,
   1: 5,
   2: 10,
@@ -102,11 +85,11 @@ export const tokens = createTokens({
   radius,
   zIndex: { 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 9: 9 },
   color: {
-    primary: appColors.orange,
-    textGray: appColors.silver,
-    orange: appColors.orange,
-    orange30: appColors.orange30,
-    red: appColors.red,
+    primary: APP_COLORS.orange,
+    textGray: APP_COLORS.silver,
+    orange: APP_COLORS.orange,
+    orange30: APP_COLORS.orange30,
+    red: APP_COLORS.red,
   },
 })
 
@@ -124,17 +107,23 @@ export const config = createTamagui({
 
   themes: {
     light: {
-      background: appColors.white,
-      heading: appColors.nero,
-      textGray: appColors.gray,
-      white: appColors.white,
+      background: APP_COLORS.white,
+      heading: APP_COLORS.nero,
+      textGray: APP_COLORS.gray,
+      white: APP_COLORS.white,
+      inputBackground: APP_COLORS.wildSand,
+      inputColor: APP_COLORS.black,
+      inputPlaceholderColor: APP_COLORS.silver,
 
     },
     dark: {
-      background: appColors.black,
-      heading: appColors.mystic,
-      textGray: appColors.gray,
-      white: appColors.white,
+      background: APP_COLORS.black,
+      heading: APP_COLORS.mystic,
+      textGray: APP_COLORS.gray,
+      white: APP_COLORS.white,
+      inputBackground: APP_COLORS.shark,
+      inputColor: APP_COLORS.silver,
+      inputPlaceholderColor: APP_COLORS.gray,
     },
   },
 

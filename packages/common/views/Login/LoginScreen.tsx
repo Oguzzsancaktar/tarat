@@ -2,7 +2,7 @@ import React from 'react'
 import { H1, Paragraph, Separator, XStack, YStack, Anchor } from '@packages/ui'
 import { Facebook, MailPlus } from '@tamagui/lucide-icons'
 import { useLink } from 'solito/link'
-import { ButtonGoBack, ScreenContainer } from '../../components'
+import { ButtonGoBack, InputWithIcon, ScreenContainer } from '../../components'
 import { Button, Input, YStackFullW } from '@packages/ui/src/components'
 
 export default function MailRegisterScreen() {
@@ -26,7 +26,13 @@ export default function MailRegisterScreen() {
             Hesabınıza Giriş {'\n'}Yapın
           </H1>
 
-          <Input placeholder="E-posta" backgroundColor={'#F5F5F5'} mb={'$4'} />
+          <InputWithIcon
+            error={false}
+            success={true}
+            icon="mail"
+            value={''}
+            placeholder="E-posta"
+          />
           <Input placeholder="Şifre" backgroundColor={'#F5F5F5'} mb={'$1'} />
 
           <Paragraph {...forgetLinkProps} textAlign="right" color={'gray'}>

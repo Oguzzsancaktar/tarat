@@ -1,20 +1,11 @@
 import React, { useState } from 'react'
 import { Button, Paragraph, YStack, H4, Avatar } from '@packages/ui'
-import { Card, Input } from '@packages/ui/src/components'
 import { Dimensions } from 'react-native'
 import { useLink } from 'solito/link'
 import { useAppImages } from '@packages/common/hooks'
 import { ArrowLeft, Check } from '@tamagui/lucide-icons'
 
 export default function MailRegisterScreen() {
-  const appImages = useAppImages()
-  const loginLinkProps = useLink({
-    href: '/login',
-  })
-  const registerLinkProps = useLink({
-    href: '/register',
-  })
-
   const welcomeLinkProps = useLink({
     href: '/',
   })

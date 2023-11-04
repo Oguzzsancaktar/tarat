@@ -3,6 +3,10 @@ import { Input as TamaguiInput, styled } from 'tamagui'
 const Input = styled(TamaguiInput, {
   width: '100%',
   height: '$10',
+  backgroundColor: '$inputBackground',
+  paddingHorizontal: '$space.3',
+  borderLeftWidth: 0,
+  placeholderTextColor: '$inputPlaceholderColor',
 
   variants: {
     size: {
