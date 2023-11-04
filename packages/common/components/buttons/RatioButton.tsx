@@ -5,7 +5,7 @@ import { MailCheck } from '@tamagui/lucide-icons'
 const RatioButton = ({ Title, Description }) => {
   return (
     <Button background={'$ratioButton'} type={'ratio'}>
-      <Avatar borderRadius={'$size.10'} size={'$10'} backgroundColor="#F8B40120" />
+      <Avatar borderRadius={'$size.10'} size={'$10'} background="$ratio30" />
       <YStack>
         <Text fontSize={18} color={'$textGray'}>
           {Title}
