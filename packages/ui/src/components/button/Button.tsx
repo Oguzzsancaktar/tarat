@@ -32,6 +32,11 @@ const Button = styled(TamaguiButton, {
         width: '$10',
         height: '$10',
       },
+      ratio: {
+        borderWidth: 0,
+        color: '$textGray',
+        backgroundColor: '$ratioButton',
+      },
     },
 
     background: {
@@ -82,6 +87,19 @@ const Button = styled(TamaguiButton, {
           backgroundColor: '$blue5',
           borderColor: '$blue6',
           outlineColor: '$blue7',
+        },
+      },
+      ratio: {
+        backgroundColor: '$ratioButton',
+        color: '#F8B401',
+
+        hoverStyle: {
+          backgroundColor: '$ratioButton',
+        },
+        focusStyle: {
+          backgroundColor: '$ratioButton',
+          borderColor: '$ratioButton',
+          outlineColor: '$ratioButton',
         },
       },
       green: {

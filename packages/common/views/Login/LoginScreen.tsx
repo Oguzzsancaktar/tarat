@@ -5,7 +5,7 @@ import { useLink } from 'solito/link'
 import { ButtonGoBack, ScreenContainer } from '../../components'
 import { Button, Input, YStackFullW } from '@packages/ui/src/components'
 
-export default function MailRegisterScreen() {
+export default function LoginScreen() {
   const forgetLinkProps = useLink({
     href: '/login/forget',
   })

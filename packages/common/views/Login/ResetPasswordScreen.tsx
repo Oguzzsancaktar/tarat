@@ -5,7 +5,7 @@ import { ArrowLeft } from '@tamagui/lucide-icons'
 import { useNavigation } from '@react-navigation/native'
 import { useLink } from 'solito/link'
 
-export default function MailRegisterScreen() {
+export default function ResetPasswordScreen() {
   const navigation = useNavigation()
 
   const successLinkProps = useLink({
