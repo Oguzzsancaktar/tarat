@@ -1,60 +1,42 @@
 import React from 'react'
-import { H1, Input, Button, YStack } from '@packages/ui'
-import { Dimensions } from 'react-native'
-import { ArrowLeft } from '@tamagui/lucide-icons'
-import { useNavigation } from '@react-navigation/native'
+import { H1, Paragraph, Separator, XStack, YStack, Anchor, View } from '@packages/ui'
+import { Facebook, MailPlus } from '@tamagui/lucide-icons'
 import { useLink } from 'solito/link'
+import { ButtonGoBack, InputWithIcon, ScreenContainer } from '../../components'
+import { Button, Input, YStackFullW } from '@packages/ui/src/components'
+import PasswordSuccessScreen from './PasswordSuccessScreen'
 
 export default function ResetPasswordScreen() {
-  const navigation = useNavigation()
-
   const successLinkProps = useLink({
-    href: '/login/passwordSuccess',
+    href: '/login/loginSuccess',
   })
 
-  const welcomeLinkProps = useLink({
-    href: '/',
-  })
   return (
-    <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
-      <YStack w={Dimensions.get('window').width} ai="center">
-        <YStack position="absolute" top={'$-2'} left={'$5'}>
-          <Button
-            icon={<ArrowLeft />}
-            {...welcomeLinkProps}
-            w={50}
-            h={50}
-            mt={'$3'}
-            ml={'$3'}
-            backgroundColor="#F8B40120"
-            color={'#F8B401'}
-          />
-        </YStack>
-      </YStack>
+    <ScreenContainer showGoBackButton={true}>
+      <YStackFullW jc={'space-between'}>
+        <YStackFullW>
+          <H1 mb={'$space.4'} color={'$heading'} fontFamily={'$body'} fontSize={30}>
+            Şifrenizi {'\n'}Sıfırlayın
+          </H1>
 
-      <YStack>
-        <YStack>
-          <YStack>
-            <H1 mt={80} mb={30}>
-              Şifrenizi {'             '} Sıfırlayın
-            </H1>
-          </YStack>
-          <Input placeholder="Şifre" w={358} h={66} backgroundColor={'$gray4'} mb={'$4'} />
-        </YStack>
+          <InputWithIcon error={false} success={true} icon="mail" value={''} placeholder="Şifre" />
+          <View mt={'$space.2'}>
+            <InputWithIcon
+              error={false}
+              success={true}
+              icon="mail"
+              value={''}
+              placeholder="Şifre Tekrar"
+            />
+          </View>
+        </YStackFullW>
 
-        <YStack>
-          <Input
-            placeholder="Şifreyi doğrula"
-            w={358}
-            h={66}
-            backgroundColor={'$gray4'}
-            mb={'$1'}
-          />
-          <Button {...successLinkProps} mt={'$5'} h={66} w={358} mb={300} backgroundColor="#F8B401">
-            Sıfırla
+        <YStackFullW mt={'$space.4'}>
+          <Button {...successLinkProps} mb={'$4'}>
+            SIFIRLA
           </Button>
-        </YStack>
-      </YStack>
-    </YStack>
+        </YStackFullW>
+      </YStackFullW>
+    </ScreenContainer>
   )
 }

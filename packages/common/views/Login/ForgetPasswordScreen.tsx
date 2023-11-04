@@ -1,8 +1,8 @@
 import React from 'react'
 import { H1, Paragraph, YStack } from '@packages/ui'
-
 import { RatioButton, ScreenContainer } from '@packages/common/components'
 import { Button, YStackFullW } from '@packages/ui/src/components'
+import { useLink } from 'solito/link'
 
 export default function ForgetPasswordScreen() {
   return (
