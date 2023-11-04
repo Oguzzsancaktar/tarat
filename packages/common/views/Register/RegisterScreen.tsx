@@ -6,7 +6,7 @@ import { useLink } from 'solito/link'
 import { useAppImages } from '@packages/common/hooks'
 
 import { ArrowLeft, Facebook, MailPlus } from '@tamagui/lucide-icons'
-import { ScreenContainer } from '@packages/common/components'
+import { ScreenContainer, SocialSign } from '@packages/common/components'
 
 export default function MailRegisterScreen() {
   const appImages = useAppImages()
@@ -42,43 +42,11 @@ export default function MailRegisterScreen() {
       </YStack>
 
       <YStack>
-        <Button {...successLinkProps} backgroundColor="#F8B401">
+        <Button {...successLinkProps} mb={'$4'}>
           Kaydol
         </Button>
-        <XStack jc="center">
-          <Paragraph size={'$3'} color={'$textGray'}>
-            Zaten bir hesabınız var mı?{' '}
-          </Paragraph>
-          <Paragraph {...loginLinkProps} size={'$3'} color={'$red'}>
-            Giriş Yap
-          </Paragraph>
-        </XStack>
-        <Separator borderColor={'$textGray'} mt="$2" width={358} />
-        <YStack mt="$2">
-          <Paragraph ta="center" size={'$3'} color={'$textGray'}>
-            Sosyal Medya ile devam et
-          </Paragraph>
-        </YStack>
+        <SocialSign type="signin" />
       </YStack>
-
-      <XStack ai="center" jc="center">
-        <Button
-          color="white"
-          w={'$10'}
-          backgroundColor={'$blue11'}
-          mr={10}
-          icon={<Facebook />}
-          borderRadius={50}
-        ></Button>
-        <Button
-          color="white"
-          w={'$10'}
-          backgroundColor={'#D62828'}
-          ml={10}
-          icon={<MailPlus />}
-          borderRadius={50}
-        ></Button>
-      </XStack>
     </ScreenContainer>
   )
 }

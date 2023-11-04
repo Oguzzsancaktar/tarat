@@ -19,7 +19,8 @@ const ScreenContainer: React.FC<IProps> = ({
       position="relative"
       backgroundColor={'$background'}
       height={height}
-      paddingVertical={showGoBackButton ? '$25' : '$7'}
+      paddingVertical={'$7'}
+      paddingTop={verticalPadding ? '$30' : '$7'}
       paddingHorizontal={verticalPadding ? '$5' : '$0'}
     >
       {showGoBackButton && (

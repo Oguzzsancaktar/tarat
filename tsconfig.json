@@ -4,13 +4,13 @@
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
     "paths": {
-      "interfaces/*": [
+      "@packages/interfaces/*": [
         "./packages/interfaces/*"
       ],
-      "common/*": [
+      "@packages/common/*": [
         "./packages/common/*"
       ],
-      "ui/*": [
+      "@packages/ui/*": [
         "./packages/ui/*"
       ]
     }
