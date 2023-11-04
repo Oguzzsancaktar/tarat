@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Anchor, Stack, Text, View, XStack } from '@packages/ui'
 import { LoginButton, RegisterButton } from '@packages/common/components'
 import { useAppImages } from '@packages/common/hooks'
@@ -20,7 +20,7 @@ const MENU_LIST: MenuItem[] = [
 const Navbar: React.FC = () => {
   const appImages = useAppImages()
   return (
-    <nav style={{ width: '100vw', position: 'fixed', top: 0, zIndex: 2 }}>
+    <nav style={{ backgroundColor: 'red', width: '100vw', position: 'fixed', top: 0, zIndex: 2 }}>
       <XStack justifyContent="space-between" ai={'center'} padding="$5">
         <Image
           alt="Logo"

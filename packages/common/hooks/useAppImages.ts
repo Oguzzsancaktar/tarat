@@ -13,7 +13,7 @@ const useAppImages = () => {
           width: IMAGE_PATHS.CompanyLogo.width,
           height: IMAGE_PATHS.CompanyLogo.height,
         },
-        thumbnail: {
+        welcomeThumbnail: {
           uri: IMAGE_PATHS.WelcomeThumbnail.src,
           width: IMAGE_PATHS.WelcomeThumbnail.width,
           height: IMAGE_PATHS.WelcomeThumbnail.height,
@@ -27,7 +27,7 @@ const useAppImages = () => {
     }
     return {
       companyLogo: IMAGE_PATHS.CompanyLogo,
-      thumbnail: IMAGE_PATHS.WelcomeThumbnail,
+      welcomeThumbnail: IMAGE_PATHS.WelcomeThumbnail,
       bubble: IMAGE_PATHS.WelcomeBubble,
     }
   }, [process])

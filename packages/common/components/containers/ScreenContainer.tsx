@@ -1,15 +1,33 @@
 import React from 'react'
-import { Stack } from '@packages/ui'
+import { Stack, View } from '@packages/ui'
 import { ButtonGoBack } from '../buttons'
+import { Dimensions, useWindowDimensions } from 'react-native'
 
 interface IProps {
   children: React.ReactNode
   showGoBackButton?: boolean
+  verticalPadding?: boolean
 }
-const ScreenContainer: React.FC<IProps> = ({ children, showGoBackButton = false }) => {
+const ScreenContainer: React.FC<IProps> = ({
+  children,
+  showGoBackButton = false,
+  verticalPadding = true,
+}) => {
+  const { width, height } = useWindowDimensions()
   return (
-    <Stack paddingVertical="$20">
-      {showGoBackButton && <ButtonGoBack />}
+    <Stack
+      position="relative"
+      backgroundColor={'$background'}
+      height={height}
+      paddingVertical={showGoBackButton ? '$25' : '$7'}
+      paddingHorizontal={verticalPadding ? '$5' : '$0'}
+    >
+      {showGoBackButton && (
+        // @tamabug: tamagui type bug
+        <Stack zIndex={'$9' as any} position="absolute" top="$space.10" left="$space.5">
+          <ButtonGoBack />
+        </Stack>
+      )}
       {children}
     </Stack>
   )

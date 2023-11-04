@@ -1,14 +1,14 @@
 import { Button as TamaguiButton, styled } from 'tamagui'
 
 const Button = styled(TamaguiButton, {
-  alignItems: 'center',
-  justifyContent: 'center',
   overflow: 'hidden',
-  height: '$40',
-  borderRadius: '$radius.1',
+  borderRadius: '$radius.15',
+  width: '100%',
+  height: '$10',
 
   variants: {
     size: {
+      default: {},
       xsmall: {
         width: '$5',
       },
@@ -22,30 +22,33 @@ const Button = styled(TamaguiButton, {
         width: '0',
       },
     },
+
     type: {
-      circle: {
-        width: '$30',
-        height: '$30',
-        borderColor: '$gray',
-        backgroundColor: 'red',
+      default: {},
+      goBack: {
+        borderWidth: 0,
+        color: '$primary',
+        backgroundColor: '$orange30',
+        width: '$10',
+        height: '$10',
       },
     },
 
     background: {
       orange: {
         backgroundColor: '$orange',
-        borderColor: 'orange',
+        borderColor: '$orange',
         color: 'white',
-        shadowColor: 'orange',
+        shadowColor: '$orange',
 
         hoverStyle: {
-          backgroundColor: 'orange',
+          backgroundColor: '$orange',
         },
 
         focusStyle: {
-          backgroundColor: 'orange',
-          borderColor: 'orange',
-          outlineColor: 'orange',
+          backgroundColor: '$orange',
+          borderColor: '$orange',
+          outlineColor: '$orange',
         },
       },
       white: {
@@ -110,9 +113,9 @@ const Button = styled(TamaguiButton, {
   } as const,
 
   defaultVariants: {
-    size: 'large',
+    size: 'default',
     background: 'orange',
-    type: 'circle',
+    type: 'default',
   },
 })
 export default Button

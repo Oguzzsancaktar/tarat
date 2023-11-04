@@ -1,8 +1,8 @@
 import React from 'react'
-import { Image, Paragraph, Stack, View, H3 } from '@packages/ui'
+import { Image, Paragraph, Stack, View, H3, YStack } from '@packages/ui'
 import { useAppImages } from '@packages/common/hooks'
 import { useLink } from 'solito/link'
-import { Button } from '@packages/ui/src/components'
+import { Button, YStackFullW } from '@packages/ui/src/components'
 import { ScreenContainer } from '../components/containers'
 
 export default function WelcomeScreen() {
@@ -17,32 +17,32 @@ export default function WelcomeScreen() {
   })
 
   return (
-    <ScreenContainer>
-      <Stack maw={400} alignSelf="center" jc="space-between" ai="center" py="$10" px="$4">
-        <Stack maw={600}>
-          {/*Images */}
-          <View jc={'center'} ai={'center'}>
-            <Image mt={100} w={300} source={appImages.thumbnail} />
-          </View>
-          {/*LOGO*/}
-          <Stack jc={'center'} ai={'center'}>
-            <H3>TARAT</H3>
-          </Stack>
-          {/*Slogan */}
-          <Stack jc={'center'} ai={'center'}>
-            <Paragraph>Sen de TARAT ile nesnelerin hakkında bilgi ver.</Paragraph>
-          </Stack>
-          {/*Button */}
-          <Stack jc={'center'} ai={'center'}>
-            <Button background="orange" {...loginLinkProps} size="large">
-              Giriş Yap
-            </Button>
-            <Button {...registerLimkProps} size="large" background="white">
-              Kayıt Ol a
-            </Button>
-          </Stack>
-        </Stack>
-      </Stack>
+    <ScreenContainer verticalPadding={false}>
+      <YStack style={{ height: '100%', width: '100%' }} jc="space-between" ai="center">
+        {/*Images */}
+        <View mt="$space.7" style={{ width: '100%' }} jc={'center'} ai={'center'}>
+          <Image overflow="visible" width={'100%'} source={appImages.welcomeThumbnail} />
+        </View>
+
+        {/*LOGO*/}
+        {/*Slogan */}
+        <YStack jc={'center'} ai={'center'}>
+          <H3>TARAT</H3>
+          <Paragraph color={'$textGray'} textAlign="center">
+            Hadi sen de TARAT ile ürünlerin
+            {'\n'}
+            hakkında bilgi ver.
+          </Paragraph>
+        </YStack>
+
+        {/*Button */}
+        <YStackFullW paddingHorizontal="$space.5" jc={'center'} ai={'center'}>
+          <Button {...loginLinkProps}>Giriş Yap</Button>
+          <Button {...registerLimkProps} background="white">
+            Kayıt Ol
+          </Button>
+        </YStackFullW>
+      </YStack>
     </ScreenContainer>
   )
 }

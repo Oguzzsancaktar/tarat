@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { PublicLayout } from 'app/components/layout'
 import dynamic from 'next/dynamic'
 
-const RegisterScreen = dynamic(() => import('@packages/common/views/RegisterScreen'), {
+const RegisterScreen = dynamic(() => import('@packages/common/views/register/RegisterScreen'), {
   ssr: false,
 })
 

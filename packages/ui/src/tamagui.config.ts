@@ -24,6 +24,7 @@ const headingFont = createInterFont({
     6: '$colorFocus',
     7: '$color',
   },
+
   letterSpacing: {
     5: 2,
     6: 1,
@@ -35,6 +36,7 @@ const headingFont = createInterFont({
     14: -5,
     15: -6,
   },
+
   face: {
     700: { normal: 'InterBold' },
   },
@@ -55,42 +57,56 @@ const bodyFont = createInterFont(
 
 const appColors = {
   white: '#ffffff',
-  whiteDark: "#F5F5F5",
+  wildSand: "#F5F5F5",
+
+  mystic: "#DFE4EE",
+
+  silver: "#C9C5C4",
   gray: "#9D9693",
-  blackLight: '#1A0700',
+
+  shark: "#1C1C1E",
+  nero: "#1A0700",
   black: '#000000',
 
   orange: "#F8B401",
-  red: "#D62828",
+  orange30: "#F8B40130",
+
+  red: "#ff4201",
+}
+
+
+const radius = {
+  0: 0,
+  1: 3,
+  15: 15
 }
 
 const size = {
   0: 0,
   1: 5,
   2: 10,
-  5: 15,
-  12: 20,
-  15: 25,
-  20: 30,
-  25: 35,
-  30: 40,
-  35: 45,
-  40: 500,
-  45: 55,
-  50: 60,
-  55: 65,
-  60: 70,
-  true: 10,
+  3: 15,
+  4: 20,
+  5: 25,
+  7: 35,
+  10: 50,
+  15: 75,
+  20: 100,
+  25: 125,
+  true: 1,
 }
 
 export const tokens = createTokens({
   size,
   space: { ...size, '-1': -5, '-2': -10 },
-  radius: { 0: 0, 1: 3 },
-  zIndex: { 0: 0, 1: 100, 2: 200 },
+  radius,
+  zIndex: { 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 9: 9 },
   color: {
-    white: '#fff',
-    black: '#000',
+    primary: appColors.orange,
+    textGray: appColors.silver,
+    orange: appColors.orange,
+    orange30: appColors.orange30,
+    red: appColors.red,
   },
 })
 
@@ -109,15 +125,16 @@ export const config = createTamagui({
   themes: {
     light: {
       background: appColors.white,
-      heading: appColors.blackLight,
+      heading: appColors.nero,
       textGray: appColors.gray,
       white: appColors.white,
-      orange: appColors.orange,
-      red: appColors.red,
+
     },
     dark: {
-      bg: '#111',
-      color: tokens.color.white,
+      background: appColors.black,
+      heading: appColors.mystic,
+      textGray: appColors.gray,
+      white: appColors.white,
     },
   },
 
