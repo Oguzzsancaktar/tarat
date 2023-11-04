@@ -60,8 +60,10 @@ const bodyFont = createInterFont(
 const radius = {
   0: 0,
   1: 3,
+  10: 50,
   15: 15
 }
+
 
 const size = {
   px1: 1,
@@ -74,6 +76,7 @@ const size = {
   7: 35,
   10: 50,
   15: 75,
+  16: 80,
   20: 100,
   25: 125,
   true: 1,
@@ -83,6 +86,7 @@ export const tokens = createTokens({
   size,
   space: { ...size, '-1': -5, '-2': -10 },
   radius,
+  borderRadius: { ...size, '-1': -5, '-2': -10 },
   zIndex: { 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 9: 9 },
   color: {
     primary: APP_COLORS.orange,

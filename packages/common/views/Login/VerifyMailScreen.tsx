@@ -6,7 +6,7 @@ import { useLink } from 'solito/link'
 import { useAppImages } from '@packages/common/hooks'
 import { ArrowLeft } from '@tamagui/lucide-icons'
 
-export default function MailRegisterScreen() {
+export default function VerifyMailScreen() {
   const appImages = useAppImages()
   const loginLinkProps = useLink({
     href: '/login',

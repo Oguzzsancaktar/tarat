@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { H1, Button, Paragraph, Separator, XStack, YStack } from '@packages/ui'
-import { Input } from '@packages/ui/src/components'
+import { H1, Paragraph, Separator, XStack, YStack } from '@packages/ui'
+import { Button, Input, YStackFullW } from '@packages/ui/src/components'
 import { Dimensions } from 'react-native'
 import { useLink } from 'solito/link'
 import { useAppImages } from '@packages/common/hooks'
 
 import { ArrowLeft, Facebook, MailPlus } from '@tamagui/lucide-icons'
+import { ScreenContainer } from '@packages/common/components'
 
 export default function MailRegisterScreen() {
   const appImages = useAppImages()
@@ -23,28 +24,11 @@ export default function MailRegisterScreen() {
   })
 
   return (
-    <YStack backgroundColor={'$background'} f={1} jc="space-between" ai="center" py="$10" px="$4">
-      <YStack w={Dimensions.get('window').width} ai="center">
-        <YStack position="absolute" top={'$-2'} left={'$5'}>
-          <Button
-            icon={<ArrowLeft />}
-            {...welcomeLinkProps}
-            w={50}
-            h={50}
-            mt={'$3'}
-            ml={'$3'}
-            backgroundColor="#F8B40120"
-            color={'#F8B401'}
-          />
-        </YStack>
-      </YStack>
-
+    <ScreenContainer showGoBackButton={true}>
       <YStack>
         <YStack>
           <YStack>
-            <H1 mt={80} mb={80}>
-              Yeni Hesap {'         '} Oluştur
-            </H1>
+            <H1 color={'$heading'}>Yeni Hesap {'\n'} Oluştur </H1>
           </YStack>
           <Input placeholder="Kullanıcı adı" w={358} h={66} backgroundColor={'#F5F5F5'} mb={'$4'} />
           <Input placeholder="E-posta" w={358} h={66} backgroundColor={'#F5F5F5'} mb={'$4'} />
@@ -58,27 +42,29 @@ export default function MailRegisterScreen() {
       </YStack>
 
       <YStack>
-        <Button {...successLinkProps} h={66} w={358} mb={'$4'} backgroundColor="#F8B401">
-          Kayıt ol
+        <Button {...successLinkProps} backgroundColor="#F8B401">
+          Kaydol
         </Button>
         <XStack jc="center">
-          <Paragraph size={'$3'} color={'$gray8'}>
+          <Paragraph size={'$3'} color={'$textGray'}>
             Zaten bir hesabınız var mı?{' '}
           </Paragraph>
-          <Paragraph {...loginLinkProps} size={'$3'} color={'#D62828'}>
+          <Paragraph {...loginLinkProps} size={'$3'} color={'$red'}>
             Giriş Yap
           </Paragraph>
         </XStack>
-        <Separator mt="$2" width={358} />
+        <Separator borderColor={'$textGray'} mt="$2" width={358} />
         <YStack mt="$2">
-          <Paragraph ta="center" size={'$3'} color={'$gray8'}>
+          <Paragraph ta="center" size={'$3'} color={'$textGray'}>
             Sosyal Medya ile devam et
           </Paragraph>
         </YStack>
       </YStack>
-      <XStack mt={'$6'} ai="center" jc="space-between">
+
+      <XStack ai="center" jc="center">
         <Button
           color="white"
+          w={'$10'}
           backgroundColor={'$blue11'}
           mr={10}
           icon={<Facebook />}
@@ -86,12 +72,13 @@ export default function MailRegisterScreen() {
         ></Button>
         <Button
           color="white"
+          w={'$10'}
           backgroundColor={'#D62828'}
           ml={10}
           icon={<MailPlus />}
           borderRadius={50}
         ></Button>
       </XStack>
-    </YStack>
+    </ScreenContainer>
   )
 }

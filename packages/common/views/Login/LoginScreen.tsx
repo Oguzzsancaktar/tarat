@@ -5,7 +5,7 @@ import { useLink } from 'solito/link'
 import { ButtonGoBack, InputWithIcon, ScreenContainer } from '../../components'
 import { Button, Input, YStackFullW } from '@packages/ui/src/components'
 
-export default function MailRegisterScreen() {
+export default function LoginScreen() {
   const forgetLinkProps = useLink({
     href: '/login/forget',
   })
@@ -20,7 +20,7 @@ export default function MailRegisterScreen() {
 
   return (
     <ScreenContainer showGoBackButton={true}>
-      <YStackFullW jc="space-between" ai="center">
+      <YStack jc="space-between" ai="center">
         <YStackFullW>
           <H1 fontFamily={'$body'} fontSize={30}>
             Hesabınıza Giriş {'\n'}Yapın
@@ -49,7 +49,7 @@ export default function MailRegisterScreen() {
               Hesabınız yok mu?{' '}
             </Paragraph>
             <Paragraph {...registerLinkProps} size={'$3'} color={'#D62828'}>
-              Kayıt Ol
+              Kaydol
             </Paragraph>
           </XStack>
           <Separator mt="$2" width={358} />
@@ -59,7 +59,8 @@ export default function MailRegisterScreen() {
             </Paragraph>
           </YStack>
         </YStackFullW>
-        <XStack ai="center" jc="space-between">
+
+        <XStack ai="center" jc="center">
           <Button
             color="white"
             w={'$10'}
@@ -77,7 +78,7 @@ export default function MailRegisterScreen() {
             borderRadius={50}
           ></Button>
         </XStack>
-      </YStackFullW>
+      </YStack>
     </ScreenContainer>
   )
 }

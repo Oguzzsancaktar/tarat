@@ -3,7 +3,7 @@ import { Avatar, Label, LabelFrame, ListItem, Paragraph, XStack, YStack } from '
 import { useLink } from 'solito/link'
 import { Button, Card, Input } from '@packages/ui/src/components'
 
-export default function EditProfile() {
+export default function EditProfileScreen() {
   const editProfileScreenProps = useLink({
     href: '/editProfile/',
   })
