@@ -1,6 +1,7 @@
 import { useMemo } from "react"
 import { IMAGE_PATHS } from "@packages/common/constants"
 import { Platform } from "react-native"
+import { APP_ICONS } from "@packages/common/components"
 
 
 
@@ -23,12 +24,18 @@ const useAppImages = () => {
           width: IMAGE_PATHS.WelcomeBubble.width,
           height: IMAGE_PATHS.WelcomeBubble.height,
         },
+        appleSvg: {
+          uri: APP_ICONS.Apple.src,
+          width: APP_ICONS.Apple.width,
+          height: APP_ICONS.Apple.height,
+        },
       }
     }
     return {
       companyLogo: IMAGE_PATHS.CompanyLogo,
       welcomeThumbnail: IMAGE_PATHS.WelcomeThumbnail,
       bubble: IMAGE_PATHS.WelcomeBubble,
+      appleSvg: APP_ICONS.Apple,
     }
   }, [process])
 
