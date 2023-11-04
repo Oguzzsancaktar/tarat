@@ -29,18 +29,12 @@ export default function LoginScreen() {
           <InputWithIcon
             error={false}
             success={true}
-            icon="mail"
+            icon="apple"
             value={''}
             placeholder="E-posta"
           />
           <View mt={'$space.2'}>
-            <InputWithIcon
-              error={false}
-              success={true}
-              icon="mail"
-              value={''}
-              placeholder="Şifre"
-            />
+            <InputWithIcon error={false} success={true} icon="key" value={''} placeholder="Şifre" />
           </View>
           <Paragraph {...forgetLinkProps} textAlign="right" color={'gray'}>
             Şifreni mi unuttun?

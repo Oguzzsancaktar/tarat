@@ -1,8 +1,6 @@
-import { useMemo } from "react"
-import { IMAGE_PATHS } from "@packages/common/constants"
-import { Platform } from "react-native"
-
-
+import { useMemo } from 'react'
+import { IMAGE_PATHS } from '../constants'
+import { Platform } from 'react-native'
 
 const useAppImages = () => {
   const ImageObjects = useMemo(() => {
@@ -23,7 +21,6 @@ const useAppImages = () => {
           width: IMAGE_PATHS.WelcomeBubble.width,
           height: IMAGE_PATHS.WelcomeBubble.height,
         },
-
       }
     }
     return {
@@ -34,8 +31,6 @@ const useAppImages = () => {
   }, [process])
 
   return ImageObjects
-
 }
-
 
 export default useAppImages

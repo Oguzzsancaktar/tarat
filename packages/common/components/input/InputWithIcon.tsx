@@ -1,17 +1,18 @@
 import React, { useMemo } from 'react'
 import { Input, XStackFullW } from '@packages/ui/src/components'
-import { Image, Stack, useTheme } from '@packages/ui'
-
-import AppleIcon from '../icons/AppleIcon'
+import { Stack, useTheme } from '@packages/ui'
+import { getAppIcon } from '../icons'
+import { IIcon } from '../icons/getAppIcon'
 
 interface IProps {
   placeholder: string
   error: boolean
   success: boolean
-  icon: 'mail'
+  icon: IIcon
   value: string
 }
 const InputWithIcon: React.FC<IProps> = ({ placeholder, error, success, icon, value }) => {
+  const theme = useTheme()
   const highlightColor = useMemo(() => {
     if (error) {
       return '$red'
@@ -39,7 +40,7 @@ const InputWithIcon: React.FC<IProps> = ({ placeholder, error, success, icon, va
         alignItems="center"
         style={{ height: '100%', color: '$red' }}
       >
-        <AppleIcon color={'white'} size={20} />
+        {getAppIcon({ icon, color: theme[highlightColor.slice(1)].val, size: 20 })}
       </Stack>
       <Input color={highlightColor} value={value} placeholder={placeholder} />
     </XStackFullW>
