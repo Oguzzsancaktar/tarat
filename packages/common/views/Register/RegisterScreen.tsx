@@ -13,12 +13,7 @@ export default function MailRegisterScreen() {
   const loginLinkProps = useLink({
     href: '/login',
   })
-  const registerLinkProps = useLink({
-    href: '/register',
-  })
-  const welcomeLinkProps = useLink({
-    href: '/',
-  })
+
   const successLinkProps = useLink({
     href: '/register/success',
   })
@@ -45,7 +40,7 @@ export default function MailRegisterScreen() {
         <Button {...successLinkProps} mb={'$4'}>
           Kaydol
         </Button>
-        <SocialSign type="signin" />
+        <SocialSign type="login" />
       </YStack>
     </ScreenContainer>
   )
