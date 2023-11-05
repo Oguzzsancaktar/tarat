@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, H1, Paragraph, View } from '@packages/ui'
+import { Avatar, H1, Paragraph, View, XStack, YStack } from '@packages/ui'
 import { SettingsIcon } from '@packages/common/components/icons'
 import { ScreenContainer } from '@packages/common/components'
 import { Button, Card, XStackFullW, YStackFullW } from '@packages/ui/src/components'
@@ -33,7 +33,7 @@ export default function ProfileMain() {
         </YStackFullW>
 
         <YStackFullW ai="center">
-          <Card backgroundColor={'$inputBackground'}>
+          <Card style={{ width: '100%' }} backgroundColor={'$cardBackground'} py={'$10'}>
             <XStackFullW jc={'space-between'} ai={'center'}>
               <Paragraph>Ad Soyad</Paragraph>
               <Paragraph>Mercedes</Paragraph>
@@ -72,6 +72,18 @@ export default function ProfileMain() {
             </XStackFullW>
           </Card>
         </YStackFullW>
+
+        <XStackFullW jc={'space-between'}>
+          <Paragraph color={'$orange'} ta={'left'}>
+            Geri
+          </Paragraph>
+          <Paragraph color={'$orange'} ta={'center'}>
+            Anasayfa
+          </Paragraph>
+          <Paragraph color={'$orange'} ta={'right'}>
+            İleri
+          </Paragraph>
+        </XStackFullW>
       </YStackFullW>
     </ScreenContainer>
   )
