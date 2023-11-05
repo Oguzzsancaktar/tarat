@@ -1,3 +1,4 @@
+
 export { default as LoginScreen } from './login/LoginScreen'
 export { default as ForgetPasswordScreen } from './login/ForgetPasswordScreen'
 export { default as VerifyMailScreen } from './login/VerifyMailScreen'
@@ -12,3 +13,6 @@ export { default as SettingsScreen } from './SettingsScreen'
 export { default as EditProfileScreen } from './EditProfileScreen'
 export { default as QrPageScreen } from './QrPageScreen'
 export { default as QrPageListScreen } from './QrPageListScreen'
+export { default as ProfileWizzard1 } from './profile/ProfileWizzard1'
+export { default as ProfileWizzard2 } from './profile/ProfileWizzard2'
+export { default as ProfileWizzard3 } from './profile/ProfileWizzard3'

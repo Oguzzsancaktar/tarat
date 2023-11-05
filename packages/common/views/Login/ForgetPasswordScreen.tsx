@@ -2,6 +2,7 @@ import React from 'react'
 import { H1, Paragraph, YStack } from '@packages/ui'
 import { RatioButton, ScreenContainer } from '@packages/common/components'
 import { Button, YStackFullW } from '@packages/ui/src/components'
+import { useLink } from 'solito/link'
 
 export default function ForgetPasswordScreen() {
   const [passwordResetType, setPasswordResetType] = React.useState<string>()
@@ -9,6 +10,10 @@ export default function ForgetPasswordScreen() {
   const handleRatioClick = (value: string) => {
     setPasswordResetType(value)
   }
+
+  const wizzardLinkProps = useLink({
+    href: '/wizzard/profileWizzard1',
+  })
 
   console.log('passwordResetType', passwordResetType)
   return (
@@ -38,7 +43,7 @@ export default function ForgetPasswordScreen() {
             description={'Kodu Gönder'}
           />
         </YStackFullW>
-        <Button>DEVAM ET</Button>
+        <Button {...wizzardLinkProps}>DEVAM ET</Button>
       </YStackFullW>
     </ScreenContainer>
   )
