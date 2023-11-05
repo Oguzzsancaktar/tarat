@@ -23,7 +23,7 @@ const RegisterPhoneOTP = () => {
         onChange={handleInputChange}
         error={validation.phone}
         value={registerState.phone}
-        icon="user"
+        icon="call"
         placeholder="Telefon Numarası"
       />
     </YStackFullW>

@@ -10,7 +10,7 @@ export default function ProfileWizzard2() {
     href: '/wizzard/profileWizzard1',
   })
   const nextLinkProps = useLink({
-    href: '/wizzard/profileWizzard3',
+    href: '/wizzard/profileMain',
   })
   return (
     <ScreenContainer showGoBackButton={true}>
@@ -30,61 +30,89 @@ export default function ProfileWizzard2() {
         {/* INPUTS */}
         <YStackFullW mt={'$2'}>
           <InputWithIcon
+            name="phone"
             error={false}
-            icon="key"
+            icon="call"
             placeholder="Cep Telefonu"
             success={false}
+            onChange={() => {}}
             value={''}
           />
           <View mt={'$2'}>
             <InputWithIcon
+              name="phone"
               error={false}
-              icon="key"
+              icon="call"
               placeholder="Sabit Hat"
               success={false}
               value={''}
+              onChange={() => {}}
             />
           </View>
           <View mt={'$2'}>
             <InputWithIcon
+              name="instagram"
               error={false}
               icon="key"
               placeholder="Instagram"
               success={false}
               value={''}
+              onChange={() => {}}
             />
           </View>
           <View mt={'$2'}>
             <InputWithIcon
+              name="facebook"
               error={false}
               icon="key"
               placeholder="Facebook"
               success={false}
               value={''}
+              onChange={() => {}}
             />
           </View>
           <View mt={'$2'}>
-            <InputWithIcon error={false} icon="key" placeholder="x" success={false} value={''} />
-          </View>
-          <View mt={'$2'}>
-            <InputWithIcon error={false} icon="key" placeholder="X" success={false} value={''} />
+            <InputWithIcon
+              name="x"
+              error={false}
+              icon="key"
+              placeholder="x"
+              success={false}
+              value={''}
+              onChange={() => {}}
+            />
           </View>
           <View mt={'$2'}>
             <InputWithIcon
+              name="x"
+              error={false}
+              icon="key"
+              placeholder="X"
+              success={false}
+              value={''}
+              onChange={() => {}}
+            />
+          </View>
+          <View mt={'$2'}>
+            <InputWithIcon
+              name="linkedin"
               error={false}
               icon="key"
               placeholder="LinkedIn"
               success={false}
               value={''}
+              onChange={() => {}}
             />
           </View>
           <View mt={'$2'}>
             <InputWithIcon
+              name="github"
               error={false}
               icon="key"
               placeholder="GitHub"
               success={false}
               value={''}
+              onChange={() => {}}
             />
           </View>
         </YStackFullW>

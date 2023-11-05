@@ -25,7 +25,7 @@ export default function LoginScreen() {
             name="email"
             error={false}
             success={true}
-            icon="apple"
+            icon="mail"
             value={''}
             placeholder="E-posta"
             onChange={() => {}}
@@ -35,7 +35,7 @@ export default function LoginScreen() {
               name="password"
               error={false}
               success={true}
-              icon="key"
+              icon="lock"
               value={''}
               placeholder="Şifre"
               onChange={() => {}}
