@@ -32,7 +32,9 @@ const register = async (req, res) => {
       return res.status(StatusCodes.BAD_REQUEST).send("User already exists.")
     }
 
-    const hashedPass = await bcrypt.hash(password, process.env.SALT_ROUNDS)
+    const salt = await bcrypt.genSalt(+(process.env.SALT_ROUNDS || 10))
+
+    const hashedPass = await bcrypt.hash(password, salt)
 
     const tempUser: IUserCreateDTO = {
       username,
