@@ -15,7 +15,7 @@ const inputMock = {
   },
   email: {
     placeholder: 'E-posta adresi',
-    icon: 'email',
+    icon: 'mail',
   },
   password: {
     placeholder: 'Şifre',

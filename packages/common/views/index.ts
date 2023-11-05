@@ -1,3 +1,4 @@
+import { ProfileMain } from '@packages/common/views';
 
 export { default as LoginScreen } from './login/LoginScreen'
 export { default as ForgetPasswordScreen } from './login/ForgetPasswordScreen'
@@ -16,3 +17,4 @@ export { default as QrPageListScreen } from './QrPageListScreen'
 export { default as ProfileWizzard1 } from './profile/ProfileWizzard1'
 export { default as ProfileWizzard2 } from './profile/ProfileWizzard2'
 export { default as ProfileWizzard3 } from './profile/ProfileWizzard3'
+export { default as ProfileMain } from './profile/ProfileMain'

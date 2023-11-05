@@ -32,20 +32,25 @@ export default function ProfileWizzard1() {
           </Avatar>
           {/* INPUTS */}
           <YStackFullW mt={'$10'}>
+            {/* @todo names */}
             <InputWithIcon
+              name="xxx"
               error={false}
-              icon="key"
+              icon="user"
               placeholder="Ad Soyad"
               success={false}
               value={''}
+              onChange={() => {}}
             />
             <View mt={'$3'}>
               <InputWithIcon
+                name="xxx"
                 error={false}
-                icon="key"
+                icon="cake"
                 placeholder="Doğum Tarihi"
                 success={false}
                 value={''}
+                onChange={() => {}}
               />
             </View>
           </YStackFullW>
