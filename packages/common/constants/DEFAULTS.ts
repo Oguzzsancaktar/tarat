@@ -16,6 +16,8 @@ const initialUserValidations: IUserValidation = {
   username: false,
   password: false,
   passwordConfirm: false,
+  phone: false,
+  errorMessage: ''
 }
 
 

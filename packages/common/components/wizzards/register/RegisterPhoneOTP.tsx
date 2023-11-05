@@ -7,7 +7,7 @@ import {
 } from '@packages/common/context/registerContext'
 
 const RegisterPhoneOTP = () => {
-  const { data: registerState } = useRegisterStateContext()
+  const { data: registerState, validation } = useRegisterStateContext()
   const { setData } = useRegisterApiContext()
 
   const handleInputChange = (val: string, key: string) => {
@@ -21,8 +21,7 @@ const RegisterPhoneOTP = () => {
       <InputWithIcon
         name="phone"
         onChange={handleInputChange}
-        error={false}
-        success={false}
+        error={validation.phone}
         value={registerState.phone}
         icon="user"
         placeholder="Telefon Numarası"

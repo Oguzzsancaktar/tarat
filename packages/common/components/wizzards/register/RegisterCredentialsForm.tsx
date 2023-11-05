@@ -28,7 +28,7 @@ const inputMock = {
 }
 
 const RegisterCredentialsForm = () => {
-  const { data: registerState } = useRegisterStateContext()
+  const { data: registerState, validation } = useRegisterStateContext()
   const { setData } = useRegisterApiContext()
 
   const handleInputChange = (val: string, key: string) => {
@@ -48,8 +48,7 @@ const RegisterCredentialsForm = () => {
             <InputWithIcon
               name={key}
               onChange={handleInputChange}
-              error={false}
-              success={false}
+              error={validation[key]}
               value={registerState[key]}
               icon={inputMock[key].icon}
               placeholder={inputMock[key].placeholder}

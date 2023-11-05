@@ -1,38 +1,30 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState } from 'react'
 import { Input, XStackFullW } from '@packages/ui/src/components'
 import { Stack, useTheme } from '@packages/ui'
 import { getAppIcon } from '../icons'
 import { IIcon } from '../icons/getAppIcon'
-import { NativeSyntheticEvent, TextInputKeyPressEventData } from 'react-native/types'
 
 interface IProps {
   placeholder: string
   error: boolean
-  success: boolean
   icon: IIcon
   value: string
   name: string
   onChange: (value: string, key: string) => void
 }
-const InputWithIcon: React.FC<IProps> = ({
-  placeholder,
-  error,
-  success,
-  icon,
-  value,
-  name,
-  onChange,
-}) => {
+const InputWithIcon: React.FC<IProps> = ({ placeholder, error, icon, value, name, onChange }) => {
   const theme = useTheme()
+
+  const [isFocused, setIsFocused] = useState(false)
   const highlightColor = useMemo(() => {
     if (error) {
       return '$red'
     }
-    if (success) {
-      return '$primary'
+    if (isFocused) {
+      return '$orange'
     }
     return '$inputColor'
-  }, [error, success])
+  }, [error, isFocused])
 
   return (
     <XStackFullW
@@ -41,19 +33,16 @@ const InputWithIcon: React.FC<IProps> = ({
       overflow={'hidden'}
       alignItems="center"
       height={'$10'}
+      borderColor={highlightColor === '$inputColor' ? '$inputBackground' : highlightColor}
       backgroundColor={'$inputBackground'}
-      borderColor={highlightColor !== '$inputColor' ? highlightColor : '$inputBackground'}
       borderWidth={'$px1'}
     >
-      <Stack
-        w={'$10'}
-        justifyContent="center"
-        alignItems="center"
-        style={{ height: '100%', color: '$red' }}
-      >
+      <Stack w={'$10'} justifyContent="center" alignItems="center" style={{ height: '100%' }}>
         {getAppIcon({ icon, color: theme[highlightColor.slice(1)].val, size: 20 })}
       </Stack>
       <Input
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
         nativeID={name}
         onChangeText={(e) => onChange(e, name)}
         color={highlightColor}

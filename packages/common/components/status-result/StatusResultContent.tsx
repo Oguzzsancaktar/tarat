@@ -1,18 +1,31 @@
 import { Check } from '@tamagui/lucide-icons'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Avatar, H4, Paragraph, YStack } from 'tamagui'
 
-const StatusResultContent = () => {
+interface IProps {
+  status: 'success' | 'error'
+  title: string
+  message: string
+}
+const StatusResultContent: React.FC<IProps> = ({ status, title, message }) => {
+  const color = useMemo(() => {
+    return status === 'success' ? '$orange' : '$red'
+  }, [status])
   return (
     <YStack jc={'center'} ai={'center'}>
-      <Avatar ml={15} h={115} w={115} borderRadius={100} size={150} backgroundColor="#F8B40120">
-        <Check color={'#F8B401'} size={70} />
+      <Avatar
+        h={115}
+        w={115}
+        mb="$space.2"
+        borderRadius={100}
+        size={150}
+        backgroundColor={color + 30}
+      >
+        <Check color={color} size={70} />
       </Avatar>
-      <H4 color={'$heading'} mt={35}>
-        İşlem Başarılı
-      </H4>
-      <Paragraph mb={80} color={'gray'} size={'$1'}>
-        Tebrikler, kaydınız başarıyla oluşturuldu.
+      <H4 color={'$heading'}>{title}</H4>
+      <Paragraph mb={'$space.3'} color={'gray'} size={'$1'}>
+        {message}
       </Paragraph>
     </YStack>
   )

@@ -4,7 +4,7 @@ const Input = styled(TamaguiInput, {
   width: '100%',
   height: '$10',
   backgroundColor: '$inputBackground',
-  paddingHorizontal: '$space.3',
+  paddingHorizontal: '$space.1',
   borderLeftWidth: 0,
   placeholderTextColor: '$inputPlaceholderColor',
 
@@ -39,19 +39,12 @@ const Input = styled(TamaguiInput, {
 
     background: {
       orange: {
-        backgroundColor: '$orange',
         borderColor: '$orange',
         color: 'white',
         shadowColor: '$orange',
 
         hoverStyle: {
           backgroundColor: '$orange',
-        },
-
-        focusStyle: {
-          backgroundColor: '$orange',
-          borderColor: '$orange',
-          outlineColor: '$orange',
         },
       },
       white: {

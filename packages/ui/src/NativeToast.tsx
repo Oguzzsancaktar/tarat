@@ -18,7 +18,7 @@ export const NativeToast = () => {
       y={0}
       opacity={1}
       scale={1}
-      animation="quick"
+      animation="bouncy"
     >
       <YStack py="$1.5" px="$2">
         <Toast.Title lh="$1">{currentToast.title}</Toast.Title>
