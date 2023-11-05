@@ -11,8 +11,8 @@ export default function ForgetPasswordScreen() {
     setPasswordResetType(value)
   }
 
-  const wizzardLinkProps = useLink({
-    href: '/wizzard/profileWizzard1',
+  const WizardLinkProps = useLink({
+    href: '/Wizard/profileWizard1',
   })
 
   console.log('passwordResetType', passwordResetType)
@@ -43,7 +43,7 @@ export default function ForgetPasswordScreen() {
             description={'Kodu Gönder'}
           />
         </YStackFullW>
-        <Button {...wizzardLinkProps}>DEVAM ET</Button>
+        <Button {...WizardLinkProps}>DEVAM ET</Button>
       </YStackFullW>
     </ScreenContainer>
   )

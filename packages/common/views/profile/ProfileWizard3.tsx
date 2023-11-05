@@ -5,9 +5,9 @@ import { InputWithIcon, ScreenContainer } from '@packages/common/components'
 import { XStackFullW, YStackFullW } from '@packages/ui/src/components'
 import { useLink } from 'solito/link'
 
-export default function ProfileWizzard3() {
+export default function ProfileWizard3() {
   const prevLinkProps = useLink({
-    href: '/wizzard/profileWizzard2',
+    href: '/Wizard/profileWizard2',
   })
   const nextLinkProps = useLink({
     href: '/register/success',

@@ -7,7 +7,7 @@ import {
   RegisterPhoneOTP,
   ScreenContainer,
   SocialSign,
-} from '../../../components'
+} from '../..'
 import {
   EReducerActionKind,
   useRegisterApiContext,
@@ -17,7 +17,7 @@ import StatusResultContent from '../../status-result/StatusResultContent'
 import { useRouter } from 'solito/router'
 import { validationUtils } from '@packages/common/utils'
 
-const RegisterWizzard = () => {
+const RegisterWizard = () => {
   const toast = useToastController()
   const { step: stepIndex, data: registerState } = useRegisterStateContext()
   const { changeStep, setValidation } = useRegisterApiContext()
@@ -79,6 +79,11 @@ const RegisterWizzard = () => {
             burntOptions: {
               haptic: 'error',
             },
+            style: {
+              background: 'red',
+              color: 'white',
+              border: '2px solid red',
+            },
           })
         }
       }
@@ -94,16 +99,16 @@ const RegisterWizzard = () => {
       )}
       <YStackFullW style={{ height: '100%' }} jc={'space-between'}>
         <YStackFullW alignItems="center" justifyContent="center">
-          {/* Wizzard Title */}
+          {/* Wizard Title */}
           {/* @todo */}
           <H1 color={'$heading'} mb={'$space.10'}>
             {step.title}
           </H1>
-          {/* Wizzard Content */}
+          {/* Wizard Content */}
           {step.component}
         </YStackFullW>
 
-        {/* Wizzard Bottom */}
+        {/* Wizard Bottom */}
 
         <YStack mt={'$space.3'}>
           <Button onPress={() => handleStepClick(EReducerActionKind.NEXT)} mb={'$4'}>
@@ -116,4 +121,4 @@ const RegisterWizzard = () => {
   )
 }
 
-export default RegisterWizzard
+export default RegisterWizard

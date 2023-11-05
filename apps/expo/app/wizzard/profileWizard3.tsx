@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProfileWizzard1 } from '@packages/common/views'
+import { ProfileWizard3 } from '@packages/common/views'
 import { Stack } from 'expo-router'
 
 export default function Screen() {
@@ -8,10 +8,10 @@ export default function Screen() {
       <Stack.Screen
         options={{
           headerShown: false,
-          title: 'Wizzard1',
+          title: 'Wizard3',
         }}
       />
-      <ProfileWizzard1 />
+      <ProfileWizard3 />
     </>
   )
 }
