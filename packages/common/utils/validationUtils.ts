@@ -17,7 +17,7 @@ const validateRegisterData = (data: IRegisterCredentials): IUserValidation => {
 
   if (!email || trim(email) === '') {
     validation.email = true;
-    validation.errorMessage = 'Email is required';
+    validation.errorMessage = VALIDATION_MESSAGES.emailRequired
     return validation;
   }
 
@@ -25,28 +25,28 @@ const validateRegisterData = (data: IRegisterCredentials): IUserValidation => {
   if (!password || trim(password) === '') {
     validation.password = true;
 
-    validation.errorMessage = 'Password is required';
+    validation.errorMessage = VALIDATION_MESSAGES.passwordRequired
     return validation;
   }
 
   if (!passwordConfirm || trim(passwordConfirm) === '') {
     validation.passwordConfirm = true;
 
-    validation.errorMessage = 'Password confirm is required';
+    validation.errorMessage = VALIDATION_MESSAGES.passwordConfirmRequired
     return validation;
   }
 
   if (trim(passwordConfirm) !== trim(password)) {
     validation.passwordConfirm = true;
     validation.password = true;
-    validation.errorMessage = 'Password confirm must match password';
+    validation.errorMessage = VALIDATION_MESSAGES.passwordMatchRequired
     return validation;
   }
 
 
   if (!phone || trim(phone) === '') {
     validation.phone = true;
-    validation.errorMessage = 'Phone is required';
+    validation.errorMessage = VALIDATION_MESSAGES.phoneRequired
     return validation;
   }
 

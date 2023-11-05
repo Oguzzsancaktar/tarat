@@ -1,7 +1,7 @@
 import React from 'react'
 import { YStackFullW } from '@packages/ui/src/components'
 import { View } from '@packages/ui'
-import { InputWithIcon } from '../../../components'
+import { InputWithIcon } from '../..'
 import {
   useRegisterApiContext,
   useRegisterStateContext,

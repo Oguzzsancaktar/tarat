@@ -5,12 +5,12 @@ import { InputWithIcon, ScreenContainer } from '@packages/common/components'
 import { XStackFullW, YStackFullW } from '@packages/ui/src/components'
 import { useLink } from 'solito/link'
 
-export default function ProfileWizzard2() {
+export default function ProfileWizard2() {
   const prevLinkProps = useLink({
-    href: '/wizzard/profileWizzard1',
+    href: '/Wizard/profileWizard1',
   })
   const nextLinkProps = useLink({
-    href: '/wizzard/profileMain',
+    href: '/Wizard/profileMain',
   })
   return (
     <ScreenContainer showGoBackButton={true}>

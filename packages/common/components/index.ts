@@ -5,6 +5,4 @@ export * from './sign'
 export * from './sign/login'
 export * from './sign/register'
 export * from './status-result'
-export * from './wizzards'
-
-
+export * from './wizards'

@@ -5,9 +5,9 @@ import { InputWithIcon, ScreenContainer } from '@packages/common/components'
 import { YStackFullW } from '@packages/ui/src/components'
 import { useLink } from 'solito/link'
 
-export default function ProfileWizzard1() {
+export default function ProfileWizard1() {
   const nextLinkProps = useLink({
-    href: '/wizzard/profileWizzard2',
+    href: '/Wizard/profileWizard2',
   })
   return (
     <ScreenContainer showGoBackButton={true}>
@@ -38,7 +38,6 @@ export default function ProfileWizzard1() {
               error={false}
               icon="user"
               placeholder="Ad Soyad"
-              success={false}
               value={''}
               onChange={() => {}}
             />
@@ -48,7 +47,6 @@ export default function ProfileWizzard1() {
                 error={false}
                 icon="cake"
                 placeholder="Doğum Tarihi"
-                success={false}
                 value={''}
                 onChange={() => {}}
               />
