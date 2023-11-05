@@ -29,10 +29,34 @@ export default function ProfileWizzard3() {
 
         {/* INPUTS */}
         <YStackFullW>
-          <InputWithIcon error={false} icon="key" placeholder="Ülke" success={false} value={''} />
+          <InputWithIcon
+            name="country"
+            error={false}
+            icon="key"
+            placeholder="Ülke"
+            success={false}
+            value={''}
+            onChange={() => {}}
+          />
           <XStackFullW>
-            <InputWithIcon error={false} icon="key" placeholder="Ülke" success={false} value={''} />
-            <InputWithIcon error={false} icon="key" placeholder="Ülke" success={false} value={''} />
+            <InputWithIcon
+              name="country"
+              error={false}
+              icon="key"
+              placeholder="Ülke"
+              success={false}
+              value={''}
+              onChange={() => {}}
+            />
+            <InputWithIcon
+              name="country"
+              error={false}
+              icon="key"
+              placeholder="Ülke"
+              success={false}
+              value={''}
+              onChange={() => {}}
+            />
           </XStackFullW>
         </YStackFullW>
 

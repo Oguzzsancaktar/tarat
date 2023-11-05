@@ -24,7 +24,7 @@ const RegisterPhoneOTP = () => {
         error={false}
         success={false}
         value={registerState.phone}
-        icon="user"
+        icon="call"
         placeholder="Telefon Numarası"
       />
     </YStackFullW>

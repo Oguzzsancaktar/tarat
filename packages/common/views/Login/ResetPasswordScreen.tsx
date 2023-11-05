@@ -17,14 +17,24 @@ export default function ResetPasswordScreen() {
             Şifrenizi {'\n'}Sıfırlayın
           </H1>
 
-          <InputWithIcon error={false} success={true} icon="mail" value={''} placeholder="Şifre" />
+          <InputWithIcon
+            name="password"
+            error={false}
+            success={true}
+            icon="mail"
+            value={''}
+            placeholder="Şifre"
+            onChange={() => {}}
+          />
           <View mt={'$space.3'}>
             <InputWithIcon
+              name="password"
               error={false}
               success={true}
               icon="mail"
               value={''}
               placeholder="Şifre Tekrar"
+              onChange={() => {}}
             />
           </View>
         </YStackFullW>
