@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
-import { PublicLayout } from 'app/components/layout'
 import dynamic from 'next/dynamic'
+import { PublicLayout } from 'app/components/layout'
 
 const WelcomeScreen = dynamic(() => import('@packages/common/views/WelcomeScreen'), {
   ssr: false,

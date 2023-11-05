@@ -38,6 +38,12 @@ const headingFont = createInterFont({
   },
 
   face: {
+    100: { normal: 'inter' },
+    200: { normal: 'InterBold' },
+    300: { normal: 'InterBold' },
+    400: { normal: 'InterBold' },
+    500: { normal: 'InterBold' },
+    600: { normal: 'InterBold' },
     700: { normal: 'InterBold' },
   },
 })
@@ -82,7 +88,7 @@ const size = {
   30: 150,
   35: 175,
   40: 200,
-
+  default: 16,
   true: 1,
 }
 

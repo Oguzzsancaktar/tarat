@@ -28,7 +28,7 @@ export default function WelcomeScreen() {
         {/*Slogan */}
         <YStack jc={'center'} ai={'center'}>
           <H3>TARAT</H3>
-          <Paragraph color={'$textGray'} textAlign="center">
+          <Paragraph color={'$textGray'} fontFamily="$body" textAlign="center">
             Hadi sen de TARAT ile ürünlerin
             {'\n'}
             hakkında bilgi ver.

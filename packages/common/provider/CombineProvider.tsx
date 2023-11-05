@@ -4,6 +4,7 @@ import { useColorScheme } from 'react-native'
 import { ToastViewport } from './ToastViewport'
 import config from '../tamagui.config'
 import { AuthSessionProvider } from '../hooks'
+import { RegisterContextProvider } from '../context/registerContext'
 
 function CombineProvider({ children, ...rest }: Omit<TamaguiProviderProps, 'config'>) {
   const scheme = useColorScheme()
@@ -25,9 +26,11 @@ function CombineProvider({ children, ...rest }: Omit<TamaguiProviderProps, 'conf
         }
       >
         <AuthSessionProvider>
-          <>{children}</>
-          <CustomToast />
-          <ToastViewport />
+          <RegisterContextProvider>
+            <>{children}</>
+            <CustomToast />
+            <ToastViewport />
+          </RegisterContextProvider>
         </AuthSessionProvider>
       </ToastProvider>
     </TamaguiProvider>
