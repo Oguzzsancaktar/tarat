@@ -1,9 +1,8 @@
 import React from 'react'
-import { H1, Paragraph, Separator, XStack, YStack, Anchor, View } from '@packages/ui'
-import { Facebook, MailPlus } from '@tamagui/lucide-icons'
+import { H1, Paragraph, View } from '@packages/ui'
 import { useLink } from 'solito/link'
-import { ButtonGoBack, InputWithIcon, ScreenContainer, SocialSign } from '../../components'
-import { Button, Input, YStackFullW } from '@packages/ui/src/components'
+import { InputWithIcon, ScreenContainer, SocialSign } from '../../components'
+import { Button, YStackFullW } from '@packages/ui/src/components'
 
 export default function LoginScreen() {
   const forgetLinkProps = useLink({
@@ -18,7 +17,7 @@ export default function LoginScreen() {
     <ScreenContainer showGoBackButton={true}>
       <YStackFullW style={{ height: '100%' }} jc={'space-between'}>
         <YStackFullW>
-          <H1 color={'$heading'} fontFamily={'$body'} fontSize={30}>
+          <H1 mb={'$space.10'} color={'$heading'}>
             Hesabınıza Giriş {'\n'}Yapın
           </H1>
 
@@ -29,7 +28,7 @@ export default function LoginScreen() {
             value={''}
             placeholder="E-posta"
           />
-          <View mt={'$space.2'}>
+          <View mt={'$space.3'}>
             <InputWithIcon error={false} success={true} icon="key" value={''} placeholder="Şifre" />
           </View>
           <Paragraph {...forgetLinkProps} textAlign="right" color={'gray'}>

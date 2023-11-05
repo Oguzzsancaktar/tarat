@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Paragraph, Stack, View, H3, YStack } from '@packages/ui'
+import { Image, Paragraph, View, H3, YStack } from '@packages/ui'
 import { useAppImages } from '@packages/common/hooks'
 import { useLink } from 'solito/link'
 import { Button, YStackFullW } from '@packages/ui/src/components'
@@ -38,7 +38,7 @@ export default function WelcomeScreen() {
         {/*Button */}
         <YStackFullW paddingHorizontal="$space.5" jc={'center'} ai={'center'}>
           <Button {...loginLinkProps}>Giriş Yap</Button>
-          <Button mt={'$space.2'} {...registerLimkProps} background="orange30">
+          <Button mt={'$space.3'} {...registerLimkProps} background="orange30">
             Kayıt Ol
           </Button>
         </YStackFullW>

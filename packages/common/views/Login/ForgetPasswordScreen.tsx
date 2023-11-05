@@ -8,13 +8,13 @@ export default function ForgetPasswordScreen() {
   return (
     <ScreenContainer showGoBackButton={true}>
       <YStackFullW jc="space-between" ai="center">
-        <YStack mb={'$space.5'}>
+        <YStack mb={'$space.10'}>
           <H1 color={'$heading'}> Şifremi Unuttum</H1>
           <Paragraph color={'$textGray'}>
             Şifrenizi sıfırlamak için hangi iletişim bilgilerini kullanmamız gerektiğini seçin.
           </Paragraph>
         </YStack>
-        <YStackFullW mb={'$space.2'}>
+        <YStackFullW mb={'$space.3'}>
           <RatioButton title={'E-posta'} description={'Kodu Gönder'} />
         </YStackFullW>
         <YStackFullW mb={'$space.10'}>

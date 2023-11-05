@@ -67,7 +67,7 @@ const VerifyCodeCard: React.FC<IProps> = ({ title, description, mail, counter })
 
       <YStackFullW>
         <Button {...successLinkProps}>Doğrula</Button>
-        <Button mb={'$space.10'} mt={'$space.2'} backgroundColor="$orange30">
+        <Button mb={'$space.10'} mt={'$space.3'} backgroundColor="$orange30">
           Tekrar Gönder
         </Button>
       </YStackFullW>
