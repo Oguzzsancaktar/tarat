@@ -1,61 +1,59 @@
-import express, { request } from 'express';
+import express from 'express';
 import { StatusCodes } from 'http-status-codes';
-import { body, validationResult } from 'express-validator';
+const joi = require('joi')
+
 
 const app = express();
 
 app.use(express.json());
 
-// COMMON_ERROR_HANDLING_FUNCTION
-const handleValidationErrors = (req, res, next) => {
-
-  const errors = validationResult(req);
-
-  if (!errors.isEmpty()) {
-    return res.status(StatusCodes.BAD_REQUEST).json({ errors: errors.array() });
-  }
-  next();
-};
 
 // REGISTER_MIDDLEWARE
 // @todo
-const registerMiddleware = (req, res, next) => [
-  body('username')
-    .notEmpty().withMessage('Email is required !!')
-    .trim().isLength({ min: 6, max: 16 }).withMessage('Please enter min 8 max 16'),
+const registerMiddleware = async (req, res, next) => {
+  const { body } = req
 
-  body('email')
-    .notEmpty().withMessage('Email is required')
-    .isEmail().withMessage('Invalid email format')
-    .normalizeEmail()
-    .trim(),
+  const schema = joi
+    .object({
+      username: joi.string().required(),
+      email: joi.string().email().required().email(),
+      password: joi.string().min(6).required(),
+      passwordConfirm: joi.string().min(6).required(),
+      phone: joi.string().required(),
+    })
+    .options({ abortEarly: false })
 
-  body('password')
-    .exists({ checkFalsy: true }).withMessage('You must type a password')
-    .isLength({ min: 8 }).withMessage('Password must be at least 8 characters')
-    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.* )(?=.*[^a-zA-Z0-9]).{8,}$/, 'i')
-    .withMessage('Password must include one lowercase character, one uppercase character, a number, and a special character.'),
-
-  body('passwordConfirm')
-    .exists({ checkFalsy: true }).withMessage('You must type a confirmation password')
-    .isLength({ min: 8 }).withMessage('Confirmed password must be at least 8 characters')
-    .equals(req.body.password),
-
-  handleValidationErrors(req, res, next)
-];
+  try {
+    await schema.validateAsync(body)
+    next()
+  } catch (error) {
+    res.status(400).json({ message: error.message, validationError: error.details })
+  }
+}
 
 // LOGIN_MIDDLEWARE
-const loginMiddleware = (req, res, next) => [
-  body('email')
-    .notEmpty().withMessage('Email is required')
-    .isEmail().withMessage('Invalid email format'),
-  body('password')
-    .notEmpty().withMessage('Password is required'),
+const loginMiddleware = async (req, res, next) => {
+  const { body } = req
 
-  handleValidationErrors(req, res, next)
-];
+  const schema = joi
+    .object({
+      email: joi.string().email().required().email(),
+      password: joi.string().min(6).required()
+    })
+    .options({ abortEarly: false })
+
+  try {
+    await schema.validateAsync(body)
+    next()
+  } catch (error) {
+    res.status(400).json({ message: error.message, validationError: error.details })
+  }
+}
 
 export default {
   registerMiddleware,
   loginMiddleware
 };
+
+
+
