@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Text, View, YStack } from '@packages/ui'
+import { Text, YStack } from '@packages/ui'
 import { Button } from '@packages/ui/src/components'
 import AppleIcon from '../icons/AppleIcon'
 
@@ -29,7 +29,7 @@ const RatioButton: React.FC<IProps> = ({
       borderColor={isSelected ? '$orange' : '$inputBackground'}
     >
       <Button
-        mr={'$space.2'}
+        mr={'$space.3'}
         ai={'center'}
         justifyContent="center"
         w="$10"
