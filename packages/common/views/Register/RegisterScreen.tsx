@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import { H1, Paragraph, Separator, XStack, YStack } from '@packages/ui'
-import { Button, Input, YStackFullW } from '@packages/ui/src/components'
-import { Dimensions } from 'react-native'
+import { H1, View, YStack } from '@packages/ui'
+import { Button, YStackFullW } from '@packages/ui/src/components'
 import { useLink } from 'solito/link'
 import { useAppImages } from '@packages/common/hooks'
 
 import { ArrowLeft, Facebook, MailPlus } from '@tamagui/lucide-icons'
-import { ScreenContainer, SocialSign } from '@packages/common/components'
+import { InputWithIcon, ScreenContainer, SocialSign } from '@packages/common/components'
 
 export default function MailRegisterScreen() {
   const appImages = useAppImages()
@@ -20,28 +19,47 @@ export default function MailRegisterScreen() {
 
   return (
     <ScreenContainer showGoBackButton={true}>
-      <YStack>
-        <YStack>
-          <YStack>
-            <H1 color={'$heading'}>Yeni Hesap {'\n'} Oluştur </H1>
-          </YStack>
-          <Input placeholder="Kullanıcı adı" w={358} h={66} backgroundColor={'#F5F5F5'} mb={'$4'} />
-          <Input placeholder="E-posta" w={358} h={66} backgroundColor={'#F5F5F5'} mb={'$4'} />
-        </YStack>
-        <YStack>
-          <Input placeholder="Şifre" w={358} h={66} backgroundColor={'#F5F5F5'} mb={'$4'} />
-        </YStack>
-        <YStack>
-          <Input placeholder="Şifre Tekrar" w={358} h={66} backgroundColor={'#F5F5F5'} mb={'$4'} />
-        </YStack>
-      </YStack>
+      <YStackFullW style={{ height: '100%' }} jc={'space-between'}>
+        <H1 color={'$heading'}>Yeni Hesap {'\n'} Oluştur </H1>
 
-      <YStack>
-        <Button {...successLinkProps} mb={'$4'}>
-          Kaydol
-        </Button>
-        <SocialSign type="login" />
-      </YStack>
+        <YStackFullW>
+          <InputWithIcon
+            error={false}
+            success={false}
+            value=""
+            icon="key"
+            placeholder="Kullanıcı adı"
+          />
+          <View mt={'$space.3'}>
+            <InputWithIcon
+              error={false}
+              success={false}
+              value=""
+              icon="key"
+              placeholder="E-Posta"
+            />
+          </View>
+          <View mt={'$space.3'}>
+            <InputWithIcon error={false} success={false} value="" icon="key" placeholder="Şifre" />
+          </View>
+          <View mt={'$space.3'}>
+            <InputWithIcon
+              error={false}
+              success={false}
+              value=""
+              icon="key"
+              placeholder="Şifre Tekrar"
+            />
+          </View>
+        </YStackFullW>
+
+        <YStack mt={'$space.3'}>
+          <Button mb={'$4'} {...successLinkProps}>
+            Kaydol
+          </Button>
+          <SocialSign type="login" />
+        </YStack>
+      </YStackFullW>
     </ScreenContainer>
   )
 }

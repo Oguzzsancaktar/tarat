@@ -1,8 +1,8 @@
 import React from 'react'
 import { H1, Paragraph, YStack } from '@packages/ui'
-
 import { RatioButton, ScreenContainer } from '@packages/common/components'
 import { Button, YStackFullW } from '@packages/ui/src/components'
+import { useLink } from 'solito/link'
 
 export default function ForgetPasswordScreen() {
   const [passwordResetType, setPasswordResetType] = React.useState<string>()
@@ -11,11 +11,15 @@ export default function ForgetPasswordScreen() {
     setPasswordResetType(value)
   }
 
+  const wizzardLinkProps = useLink({
+    href: '/wizzard/profileWizzard1',
+  })
+
   console.log('passwordResetType', passwordResetType)
   return (
     <ScreenContainer showGoBackButton={true}>
       <YStackFullW jc="space-between" ai="center">
-        <YStack mb={'$space.5'}>
+        <YStack mb={'$space.10'}>
           <H1 color={'$heading'}> Şifremi Unuttum</H1>
           <Paragraph color={'$textGray'}>
             Şifrenizi sıfırlamak için hangi iletişim bilgilerini kullanmamız gerektiğini seçin.
@@ -39,7 +43,7 @@ export default function ForgetPasswordScreen() {
             description={'Kodu Gönder'}
           />
         </YStackFullW>
-        <Button>DEVAM ET</Button>
+        <Button {...wizzardLinkProps}>DEVAM ET</Button>
       </YStackFullW>
     </ScreenContainer>
   )
