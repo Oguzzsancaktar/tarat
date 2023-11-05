@@ -1,8 +1,9 @@
-import { IUser, IRegisterCredentials, IUserValidation } from "@packages/interfaces";
-import { IRegisterState } from "../context/registerContext";
+import { IUser, IRegisterCredentials, IUserValidation, ILoginCredentials } from "@packages/interfaces";
+import { IRegisterState } from "../context";
 
 // AUTH
 
+// Register
 const initialRegisterUser: IRegisterCredentials = {
   username: '',
   email: '',
@@ -28,8 +29,25 @@ const initialRegisterState: IRegisterState = {
 }
 
 
+// Login
+const initialLoginUser: ILoginCredentials = {
+  username: '',
+  email: '',
+  phone: '',
+  password: '',
+}
+
+
+
+
+
+
 export default {
+  // Register
   initialRegisterUser,
   initialUserValidations,
   initialRegisterState,
+  // Login
+  initialLoginUser,
+
 }

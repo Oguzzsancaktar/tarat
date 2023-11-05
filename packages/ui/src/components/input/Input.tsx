@@ -41,7 +41,6 @@ const Input = styled(TamaguiInput, {
       orange: {
         borderColor: '$orange',
         color: 'white',
-        shadowColor: '$orange',
 
         hoverStyle: {
           backgroundColor: '$orange',
@@ -52,7 +51,6 @@ const Input = styled(TamaguiInput, {
         borderColor: '#FFFFFF',
         color: '#F8B401',
         elevation: 8,
-        shadowColor: '#FFFFFF',
 
         hoverStyle: {
           backgroundColor: '#FFFFFF',
@@ -68,7 +66,6 @@ const Input = styled(TamaguiInput, {
         backgroundColor: '$green10',
         borderColor: '$green5',
         color: 'white',
-        shadowColor: '$green11',
 
         hoverStyle: {
           backgroundColor: '$green11',
@@ -83,7 +80,6 @@ const Input = styled(TamaguiInput, {
         backgroundColor: '#000',
         borderColor: '#000',
         color: 'white',
-        shadowColor: '#000',
         hoverStyle: {
           backgroundColor: '#111',
         },

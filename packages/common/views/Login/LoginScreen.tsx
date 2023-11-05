@@ -24,7 +24,6 @@ export default function LoginScreen() {
           <InputWithIcon
             name="email"
             error={false}
-            success={true}
             icon="mail"
             value={''}
             placeholder="E-posta"
@@ -34,14 +33,13 @@ export default function LoginScreen() {
             <InputWithIcon
               name="password"
               error={false}
-              success={true}
               icon="lock"
               value={''}
               placeholder="Şifre"
               onChange={() => {}}
             />
           </View>
-          <Paragraph {...forgetLinkProps} textAlign="right" color={'gray'}>
+          <Paragraph {...forgetLinkProps} textAlign="right" fontSize={'$2'} color={'$textGray'}>
             Şifreni mi unuttun?
           </Paragraph>
         </YStackFullW>

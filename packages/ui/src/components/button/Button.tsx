@@ -43,7 +43,6 @@ const Button = styled(TamaguiButton, {
         backgroundColor: '$orange',
         borderColor: '$orange',
         color: 'white',
-        shadowColor: '$orange',
 
         hoverStyle: {
           backgroundColor: '$orange',
@@ -59,7 +58,6 @@ const Button = styled(TamaguiButton, {
         backgroundColor: '$orange30',
         borderColor: '$orange30',
         color: '$orange',
-        shadowColor: '$orange30',
 
         hoverStyle: {
           backgroundColor: '$orange30',
