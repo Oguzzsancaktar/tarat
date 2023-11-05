@@ -1,20 +1,52 @@
 import { StatusCodes } from "http-status-codes"
 import { IUser, IRegisterCredentials, ILoginCredentials, IUserCreateDTO, IUserQueryParams } from "@packages/interfaces"
 import dataAccess from "../data-access"
+import bcrypt from 'bcrypt'
+import utils from '../utils'
 
 
 //REGISTER_CONTROLLER
 const register = async (req, res) => {
   try {
-    const { username, email, password } = req.body as IRegisterCredentials
+    const { username, email, phone, password } = req.body as IRegisterCredentials
+
+    const userInfo: IUserQueryParams = {}
+
+    if (email) {
+      userInfo.email = email
+    }
+
+    if (username) {
+      userInfo.username = username
+    }
+
+    if (phone) {
+      userInfo.phone = phone
+    }
+
+    // @todo this files must to be unique  - check 
+
+    const existedUser = await dataAccess.userDataAccess.getUser(userInfo)
+
+    if (existedUser) {
+      return res.status(StatusCodes.BAD_REQUEST).send("User already exists.")
+    }
+
+    const hashedPass = await bcrypt.hash(password, process.env.SALT_ROUNDS)
 
     const tempUser: IUserCreateDTO = {
       username,
       email,
-      password
+      phone,
+      password: hashedPass
     }
 
     const createdUser = await dataAccess.userDataAccess.createUser(tempUser)
+    const accessToken = utils.authUtils.generateJWT(createdUser)
+
+    console.log("accessToken", accessToken);
+
+
     res.status(StatusCodes.CREATED).json(createdUser)
   } catch (error) {
     console.log("----- Error Cacthed When trying to create user -----", error);

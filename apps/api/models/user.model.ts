@@ -13,6 +13,14 @@ const userSchema = new Schema({
     trim: true,
     lowercase: true
   },
+  phone: {
+    // @todo check best practice
+    required: true,
+    type: String,
+    unique: true,
+    trim: true,
+    lowercase: true
+  },
   email: {
     required: true,
     type: String,
