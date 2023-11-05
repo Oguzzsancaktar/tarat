@@ -2,9 +2,15 @@ import React from 'react'
 import { H1, Paragraph, YStack } from '@packages/ui'
 import { RatioButton, ScreenContainer } from '@packages/common/components'
 import { Button, YStackFullW } from '@packages/ui/src/components'
-import { useLink } from 'solito/link'
 
 export default function ForgetPasswordScreen() {
+  const [passwordResetType, setPasswordResetType] = React.useState<string>()
+
+  const handleRatioClick = (value: string) => {
+    setPasswordResetType(value)
+  }
+
+  console.log('passwordResetType', passwordResetType)
   return (
     <ScreenContainer showGoBackButton={true}>
       <YStackFullW jc="space-between" ai="center">
@@ -14,11 +20,23 @@ export default function ForgetPasswordScreen() {
             Şifrenizi sıfırlamak için hangi iletişim bilgilerini kullanmamız gerektiğini seçin.
           </Paragraph>
         </YStack>
-        <YStackFullW mb={'$space.3'}>
-          <RatioButton title={'E-posta'} description={'Kodu Gönder'} />
+        <YStackFullW mb={'$space.2'}>
+          <RatioButton
+            isSelected={passwordResetType === 'email'}
+            handleClick={handleRatioClick}
+            value="email"
+            title={'E-posta'}
+            description={'Kodu Gönder'}
+          />
         </YStackFullW>
         <YStackFullW mb={'$space.10'}>
-          <RatioButton title={'Telefon'} description={'Kodu Gönder'} />
+          <RatioButton
+            isSelected={passwordResetType === 'phone'}
+            handleClick={handleRatioClick}
+            value="phone"
+            title={'Telefon'}
+            description={'Kodu Gönder'}
+          />
         </YStackFullW>
         <Button>DEVAM ET</Button>
       </YStackFullW>
