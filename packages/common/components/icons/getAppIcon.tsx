@@ -1,8 +1,14 @@
 import React from 'react'
-import { AppleIcon, KeyIcon, GoogleIcon, FacebookIcon } from '@packages/common/components/icons'
+import {
+  AppleIcon,
+  KeyIcon,
+  GoogleIcon,
+  FacebookIcon,
+  UserIcon,
+} from '@packages/common/components/icons'
 import { IIconProps } from '@packages/common/components/icons/IIconProps'
 
-export type IIcon = 'key' | 'apple' | 'google' | 'facebook'
+export type IIcon = 'key' | 'apple' | 'google' | 'facebook' | 'user'
 interface IProps extends IIconProps {
   icon: IIcon
 }
@@ -14,7 +20,8 @@ const getAppIcon: React.FC<IProps> = ({ icon, color, size }) => {
       return <GoogleIcon color={color} size={size} />
     case 'facebook':
       return <FacebookIcon color={color} size={size} />
-
+    case 'user':
+      return <UserIcon color={color} size={size} />
     case 'key':
       return <KeyIcon color={color} size={size} />
 
