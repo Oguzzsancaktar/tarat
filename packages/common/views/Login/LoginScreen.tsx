@@ -22,14 +22,24 @@ export default function LoginScreen() {
           </H1>
 
           <InputWithIcon
+            name="email"
             error={false}
             success={true}
             icon="apple"
             value={''}
             placeholder="E-posta"
+            onChange={() => {}}
           />
           <View mt={'$space.3'}>
-            <InputWithIcon error={false} success={true} icon="key" value={''} placeholder="Şifre" />
+            <InputWithIcon
+              name="password"
+              error={false}
+              success={true}
+              icon="key"
+              value={''}
+              placeholder="Şifre"
+              onChange={() => {}}
+            />
           </View>
           <Paragraph {...forgetLinkProps} textAlign="right" color={'gray'}>
             Şifreni mi unuttun?

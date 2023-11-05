@@ -2,7 +2,7 @@ import { Check } from '@tamagui/lucide-icons'
 import React from 'react'
 import { Avatar, H4, Paragraph, YStack } from 'tamagui'
 
-const StatusBox = () => {
+const StatusResultContent = () => {
   return (
     <YStack jc={'center'} ai={'center'}>
       <Avatar ml={15} h={115} w={115} borderRadius={100} size={150} backgroundColor="#F8B40120">
@@ -18,4 +18,4 @@ const StatusBox = () => {
   )
 }
 
-export default StatusBox
+export default StatusResultContent

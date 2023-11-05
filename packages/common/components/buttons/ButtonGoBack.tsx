@@ -1,14 +1,23 @@
 import React from 'react'
 import { ArrowLeft } from '@tamagui/lucide-icons'
 import { Button } from '@packages/ui/src/components'
-// import { router } from 'expo-router'
+import { useRouter } from 'solito/router'
 
-const ButtonGoBack = () => {
+interface IProps {
+  onClick?: () => void
+}
+const ButtonGoBack: React.FC<IProps> = ({ onClick }) => {
+  const router = useRouter()
+
   const handleBackClick = () => {
-    // router.back()
+    if (onClick) {
+      onClick()
+    } else {
+      router.back()
+    }
   }
 
-  return <Button type={'goBack'} icon={<ArrowLeft size={'$5'} />} />
+  return <Button onPress={handleBackClick} type={'goBack'} icon={<ArrowLeft size={'$5'} />} />
 }
 
 export default ButtonGoBack

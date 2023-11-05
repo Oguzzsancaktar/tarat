@@ -2,7 +2,7 @@ import { IRegisterCredentials, IUserValidation } from '@packages/interfaces'
 import { createContext, useContext, useMemo, useReducer } from 'react'
 import { DEFAULTS } from '../constants'
 
-enum EReducerActionKind {
+export enum EReducerActionKind {
   SET_DATA = 'SET_DATA',
   SET_VALIDATION = 'SET_VALIDATION',
   PREV = 'PREV',
@@ -65,12 +65,12 @@ const reducer = (state: IRegisterState, action: IReducerAction): IRegisterState 
     case EReducerActionKind.PREV:
       return {
         ...state,
-        step: state.step--,
+        step: state.step - 1,
       }
     case EReducerActionKind.NEXT:
       return {
         ...state,
-        step: state.step++,
+        step: state.step + 1,
       }
     case EReducerActionKind.SET_DATA:
       return {

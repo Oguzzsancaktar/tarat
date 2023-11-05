@@ -1,6 +1,6 @@
 import { IUser } from "..";
 
-interface IRegisterCredentials extends Pick<IUser, "username" | "email" | "password"> {
+interface IRegisterCredentials extends Pick<IUser, "username" | "email" | "password" | "phone"> {
   passwordConfirm: string;
 }
 

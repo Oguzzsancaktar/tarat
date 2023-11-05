@@ -6,6 +6,7 @@ import { IRegisterState } from "../context/registerContext";
 const initialRegisterUser: IRegisterCredentials = {
   username: '',
   email: '',
+  phone: '',
   password: '',
   passwordConfirm: '',
 }

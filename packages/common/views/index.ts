@@ -6,7 +6,7 @@ export { default as VerifyPhoneScreen } from './login/VerifyPhoneScreen'
 export { default as ResetPasswordScreen } from './login/ResetPasswordScreen'
 export { default as PasswordSuccessScreen } from './login/PasswordSuccessScreen'
 export { default as LoginSuccessScreen } from './login/LoginSuccessScreen'
-export { default as RegisterSuccessScreen } from './register/RegisterSuccessScreen'
+
 export { default as RegisterScreen } from './register/RegisterScreen'
 export { default as WelcomeScreen } from './WelcomeScreen'
 export { default as SettingsScreen } from './SettingsScreen'

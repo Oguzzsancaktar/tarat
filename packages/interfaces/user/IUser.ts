@@ -4,6 +4,7 @@ interface IUser {
   _id: mongoose.Types.ObjectId;
   username: string;
   email: string;
+  phone: string;
   password: string;
   createdAt: NativeDate;
   updatedAt: NativeDate;
