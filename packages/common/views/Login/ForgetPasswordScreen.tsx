@@ -12,7 +12,7 @@ export default function ForgetPasswordScreen() {
   }
 
   const WizardLinkProps = useLink({
-    href: '/Wizard/profileWizard1',
+    href: '/wizard/profileWizard1',
   })
 
   console.log('passwordResetType', passwordResetType)

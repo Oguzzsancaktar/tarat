@@ -7,7 +7,7 @@ import { useLink } from 'solito/link'
 
 export default function ProfileWizard3() {
   const prevLinkProps = useLink({
-    href: '/Wizard/profileWizard2',
+    href: '/wizard/profileWizard2',
   })
   const nextLinkProps = useLink({
     href: '/register/success',
