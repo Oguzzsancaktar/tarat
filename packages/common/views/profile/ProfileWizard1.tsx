@@ -7,7 +7,7 @@ import { useLink } from 'solito/link'
 
 export default function ProfileWizard1() {
   const nextLinkProps = useLink({
-    href: '/Wizard/profileWizard2',
+    href: '/wizard/profileWizard2',
   })
   return (
     <ScreenContainer showGoBackButton={true}>

@@ -2,8 +2,9 @@ import React from 'react'
 import { Image, Paragraph, View, H3, YStack } from '@packages/ui'
 import { useAppImages } from '@packages/common/hooks'
 import { useLink } from 'solito/link'
-import { Button, YStackFullW } from '@packages/ui/src/components'
+import { Button, XStackFullW, YStackFullW } from '@packages/ui/src/components'
 import { ScreenContainer } from '../components/containers'
+import { BottomTabNavigator } from '../components/sign/bottom/BottomBar'
 
 export default function WelcomeScreen() {
   const appImages = useAppImages()
@@ -42,6 +43,7 @@ export default function WelcomeScreen() {
             Kayıt Ol
           </Button>
         </YStackFullW>
+        <BottomTabNavigator />
       </YStack>
     </ScreenContainer>
   )
