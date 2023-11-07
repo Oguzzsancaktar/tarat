@@ -31,6 +31,7 @@ export default function SettingScreen() {
   }
 
   return (
+    // @todo oğuz iconlara background ekleyemedim
     <ScreenContainer horizontalPadding={true} verticalPadding={true} showGoBackButton={true}>
       <YStackFullW style={{ height: '100%' }}>
         <ListItem
