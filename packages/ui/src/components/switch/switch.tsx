@@ -1,63 +1,110 @@
-import { Switch as TamaguiSwitch, styled, Stack, SwitchContext } from 'tamagui'
+import { SizeTokens, getVariableValue, styled } from '@tamagui/core'
+import { getSize } from '@tamagui/get-token'
+import { ThemeableStack, YStack } from '@tamagui/stacks'
+import { SwitchContext } from 'tamagui'
 
-const Switch = styled(TamaguiSwitch, {
-  borderRadius: 16,
-  width: 50,
-  height: 30,
-  outlineWidth: 0,
-
-  variants: {
-    checked: {
-      true: {
-        backgroundColor: '$blue11',
-      },
-      false: {
-        backgroundColor: 'gray',
-      },
-    },
-
-    size: {
-      xsmall: {
-        width: '$2',
-      },
-      small: {
-        width: '$3',
-      },
-      medium: {
-        width: '$4',
-      },
-      large: {
-        width: '$5',
-      },
-    },
-    background: {
-      orange: {
-        backgroundColor: '$orange',
-      },
-    },
-  },
-
-  defaultVariants: {
-    size: 'small',
-    background: 'orange',
-    checked: true,
-  },
-})
-const Thumb = styled(Stack, {
+const SwitchThumb = styled(ThemeableStack, {
+  name: 'SwitchThumb',
   context: SwitchContext,
 
   variants: {
-    checked: {
-      true: {
-        opacity: 1,
-      },
+    unstyled: {
       false: {
-        opacity: 0.5,
+        size: '$true',
+        backgroundColor: '$background',
+        borderRadius: 1000,
+      },
+    },
+
+    checked: {
+      true: {},
+    },
+
+    size: {
+      '...size': (val) => {
+        const size = 20
+        return {
+          height: size,
+          width: size,
+        }
       },
     },
   } as const,
+
   defaultVariants: {
-    checked: true,
+    unstyled: process.env.TAMAGUI_HEADLESS === '1' ? true : false,
   },
 })
-export default Switch
+
+const SwitchFrame = styled(YStack, {
+  name: 'Switch',
+  context: SwitchContext,
+
+  variants: {
+    unstyled: {
+      false: {
+        size: '$true',
+        borderRadius: '$borderRadius.20',
+        backgroundColor: '$orange',
+        borderWidth: 2,
+        borderColor: '$orange',
+
+        focusStyle: {
+          outlineColor: '$orange',
+          outlineStyle: 'solid',
+          outlineWidth: 2,
+        },
+      },
+    },
+
+    checked: {
+      true: {
+        size: '$true',
+        borderRadius: '$borderRadius.20',
+        backgroundColor: '$orange',
+        borderWidth: 2,
+        borderColor: '$orange',
+
+        focusStyle: {
+          outlineColor: '$orange',
+          outlineStyle: 'solid',
+          outlineWidth: 2,
+        },
+      },
+      false: {
+        size: '$true',
+        borderRadius: '$borderRadius.20',
+        backgroundColor: '$inputBackground',
+        borderWidth: 2,
+        borderColor: '$orange',
+
+        focusStyle: {
+          outlineColor: '$orange',
+          outlineStyle: 'solid',
+          outlineWidth: 2,
+        },
+      },
+    },
+
+    frameWidth: {
+      ':number': () => null,
+    },
+
+    size: {
+      '...size': (val) => {
+        const height = 25
+        const width = 40
+        return {
+          height,
+          minHeight: height,
+          width,
+        }
+      },
+    },
+  } as const,
+})
+
+export default {
+  SwitchThumb,
+  SwitchFrame,
+}

@@ -80,6 +80,8 @@ const size = {
   4: 20,
   5: 25,
   7: 35,
+  8: 40,
+  9: 45,
   10: 50,
   15: 75,
   16: 80,
@@ -122,6 +124,7 @@ export const config = createTamagui({
 
   themes: {
     light: {
+      orange: APP_COLORS.orange,
       background: APP_COLORS.white,
       heading: APP_COLORS.nero,
       textGray: APP_COLORS.gray,
@@ -133,6 +136,7 @@ export const config = createTamagui({
     },
 
     dark: {
+      orange: APP_COLORS.orange,
       background: APP_COLORS.black,
       heading: APP_COLORS.mystic,
       textGray: APP_COLORS.gray,
