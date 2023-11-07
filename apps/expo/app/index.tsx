@@ -1,5 +1,6 @@
-import { useSession } from '@packages/common/hooks'
 import { WelcomeScreen } from '@packages/common/views'
+import EditProfileScreen from '@packages/common/views/EditProfileScreen'
+import SettingScreen from '@packages/common/views/settings/SettingsScreen'
 import { Stack } from 'expo-router'
 
 export default function Screen() {
@@ -11,7 +12,7 @@ export default function Screen() {
           title: 'Home',
         }}
       />
-      <WelcomeScreen />
+      <SettingScreen />
     </>
   )
 }

@@ -10,7 +10,7 @@ export { default as LoginSuccessScreen } from './login/LoginSuccessScreen'
 
 export { default as RegisterScreen } from './register/RegisterScreen'
 export { default as WelcomeScreen } from './WelcomeScreen'
-export { default as SettingsScreen } from './SettingsScreen'
+export { default as SettingsScreen } from './settings/SettingsScreen'
 export { default as EditProfileScreen } from './EditProfileScreen'
 export { default as QrPageScreen } from './QrPageScreen'
 export { default as QrPageListScreen } from './QrPageListScreen'
