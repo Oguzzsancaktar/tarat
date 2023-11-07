@@ -1,7 +1,7 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
 import CombineProvider from '@packages/common/provider/CombineProvider'
 import { useFonts } from 'expo-font'
-import { Slot } from 'expo-router'
+import { Slot, Stack } from 'expo-router'
 import { useColorScheme } from 'react-native'
 
 export default function HomeLayout() {
@@ -17,7 +17,7 @@ export default function HomeLayout() {
   return (
     <CombineProvider>
       <ThemeProvider value={scheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Slot />
+        <Stack />
         {/* <Stack
             screenOptions={{
               headerShown: false,

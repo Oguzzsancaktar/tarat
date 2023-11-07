@@ -20,7 +20,6 @@ export default function ResetPasswordScreen() {
           <InputWithIcon
             name="password"
             error={false}
-            success={true}
             icon="mail"
             value={''}
             placeholder="Şifre"
@@ -30,7 +29,6 @@ export default function ResetPasswordScreen() {
             <InputWithIcon
               name="password"
               error={false}
-              success={true}
               icon="mail"
               value={''}
               placeholder="Şifre Tekrar"

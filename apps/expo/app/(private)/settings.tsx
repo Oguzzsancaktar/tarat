@@ -1,13 +1,12 @@
 import { SettingsScreen } from '@packages/common/views'
-import { Stack } from 'expo-router'
+import { Tabs } from 'expo-router'
 
 export default function Screen() {
   return (
     <>
-      <Stack.Screen
+      <Tabs.Screen
         options={{
           headerShown: false,
-          title: 'Settings',
         }}
       />
       <SettingsScreen />

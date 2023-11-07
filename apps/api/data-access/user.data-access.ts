@@ -14,8 +14,9 @@ const getUser = async (userInfo: IUserQueryParams): Promise<IUser | null> => {
   if (!userInfo._id && !userInfo.email && !userInfo.username) {
     return null
   }
-  return await UserModel.aggregate(pipeline)
+  return await UserModel.aggregate(pipeline).exec()
 }
+
 // Update
 // Delete
 
