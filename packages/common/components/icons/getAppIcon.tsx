@@ -17,6 +17,7 @@ import {
   DarkModeIcon,
   LockIcon,
   SearchIcon,
+  ArrowRightIcon,
 } from '@packages/common/components/icons'
 import { IIconProps } from '@packages/common/components/icons/IIconProps'
 
@@ -38,13 +39,18 @@ export type IIcon =
   | 'question'
   | 'dark-mode'
   | 'search'
+  | 'arrow-right'
+
 interface IProps extends IIconProps {
   icon: IIcon
 }
+
 const getAppIcon: React.FC<IProps> = ({ icon, color, size }) => {
   switch (icon) {
     case 'apple':
       return <AppleIcon color={color} size={size} />
+    case 'arrow-right':
+      return <ArrowRightIcon color={color} size={size} />
     case 'google':
       return <GoogleIcon color={color} size={size} />
     case 'facebook':
@@ -53,10 +59,8 @@ const getAppIcon: React.FC<IProps> = ({ icon, color, size }) => {
       return <UserIcon color={color} size={size} />
     case 'key':
       return <KeyIcon color={color} size={size} />
-
     case 'mail':
       return <MailIcon color={color} size={size} />
-
     case 'lock':
       return <LockIcon color={color} size={size} />
     case 'call':
