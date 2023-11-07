@@ -16,8 +16,8 @@ import {
   QuestionIcon,
   DarkModeIcon,
   LockIcon,
-  SearchIcon,
   ArrowRightIcon,
+  SearchIcon,
 } from '@packages/common/components/icons'
 import { IIconProps } from '@packages/common/components/icons/IIconProps'
 
@@ -38,8 +38,8 @@ export type IIcon =
   | 'add'
   | 'question'
   | 'dark-mode'
-  | 'search'
   | 'arrow-right'
+  | 'search'
 
 interface IProps extends IIconProps {
   icon: IIcon
