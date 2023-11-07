@@ -5,7 +5,7 @@ const Input = styled(TamaguiInput, {
   height: '$10',
   backgroundColor: '$inputBackground',
   paddingHorizontal: '$space.1',
-  borderLeftWidth: 0,
+
   placeholderTextColor: '$inputPlaceholderColor',
 
   variants: {
