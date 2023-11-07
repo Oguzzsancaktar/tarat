@@ -11,9 +11,13 @@ import {
   CakeIcon,
   LocationIcon,
   SettingsIcon,
+  HomeIcon,
+  AddIcon,
+  QuestionIcon,
+  DarkModeIcon,
+  LockIcon,
 } from '@packages/common/components/icons'
 import { IIconProps } from '@packages/common/components/icons/IIconProps'
-import LockIcon from './LockIcon'
 
 export type IIcon =
   | 'key'
@@ -28,6 +32,10 @@ export type IIcon =
   | 'cake'
   | 'location'
   | 'settings'
+  | 'home'
+  | 'add'
+  | 'question'
+  | 'dark-mode'
 interface IProps extends IIconProps {
   icon: IIcon
 }
@@ -59,6 +67,14 @@ const getAppIcon: React.FC<IProps> = ({ icon, color, size }) => {
       return <LocationIcon color={color} size={size} />
     case 'settings':
       return <SettingsIcon color={color} size={size} />
+    case 'home':
+      return <HomeIcon color={color} size={size} />
+    case 'add':
+      return <AddIcon color={color} size={size} />
+    case 'question':
+      return <QuestionIcon color={color} size={size} />
+    case 'dark-mode':
+      return <DarkModeIcon color={color} size={size} />
     default:
       return <AppleIcon color={color} size={size} />
   }

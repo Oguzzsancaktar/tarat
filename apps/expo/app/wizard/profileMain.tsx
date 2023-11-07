@@ -1,4 +1,5 @@
-import { ContactInformationScreen, WelcomeScreen } from '@packages/common/views'
+import React from 'react'
+import { ProfileMain } from '@packages/common/views'
 import { Stack } from 'expo-router'
 
 export default function Screen() {
@@ -7,10 +8,10 @@ export default function Screen() {
       <Stack.Screen
         options={{
           headerShown: false,
-          title: 'Home',
+          title: 'Profile Main',
         }}
       />
-      <ContactInformationScreen />
+      <ProfileMain />
     </>
   )
 }

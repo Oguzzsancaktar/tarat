@@ -2965,6 +2965,7 @@ __metadata:
     "@tamagui/core": ^1.76.0
     "@tamagui/font-inter": latest
     "@tamagui/image": latest
+    "@tamagui/linear-gradient": ^1.76.0
     "@tamagui/lucide-icons": latest
     "@tamagui/popover": ^1.76.0
     "@tamagui/shorthands": latest
@@ -4106,7 +4107,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/linear-gradient@npm:1.76.0":
+"@tamagui/linear-gradient@npm:1.76.0, @tamagui/linear-gradient@npm:^1.76.0":
   version: 1.76.0
   resolution: "@tamagui/linear-gradient@npm:1.76.0"
   dependencies:
@@ -4545,7 +4546,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/switch@npm:1.76.0":
+"@tamagui/switch@npm:1.76.0, @tamagui/switch@npm:^1.76.0":
   version: 1.76.0
   resolution: "@tamagui/switch@npm:1.76.0"
   dependencies:
@@ -14556,6 +14557,7 @@ __metadata:
   dependencies:
     "@babel/runtime": ^7.18.9
     "@manypkg/cli": ^0.19.1
+    "@tamagui/switch": ^1.76.0
     "@tamagui/timer": latest
     "@types/lodash": ^4.14.200
     check-dependency-version-consistency: ^3.0.3

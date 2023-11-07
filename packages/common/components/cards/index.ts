@@ -1,1 +1,1 @@
-export { default as VerifyCodeCard } from './VerifyCodeCard';
+export { default as VerifyCodeCard } from './VerifyCodeCard'

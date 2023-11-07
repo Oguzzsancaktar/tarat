@@ -7,10 +7,10 @@ import { useLink } from 'solito/link'
 
 export default function ProfileWizard2() {
   const prevLinkProps = useLink({
-    href: '/Wizard/profileWizard1',
+    href: '/wizard/profileWizard1',
   })
   const nextLinkProps = useLink({
-    href: '/Wizard/profileMain',
+    href: '/wizard/profileMain',
   })
   return (
     <ScreenContainer showGoBackButton={true}>
@@ -110,7 +110,7 @@ export default function ProfileWizard2() {
               error={false}
               icon="key"
               placeholder="GitHub"
-              success={false}
+              success={true}
               value={''}
               onChange={() => {}}
             />
