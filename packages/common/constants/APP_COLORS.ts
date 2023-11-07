@@ -7,6 +7,7 @@ const APP_COLORS = {
   silver: "#C9C5C4",
   gray: "#9D9693",
 
+
   shark: "#1C1C1E",
   nero: "#1A0700",
   black: '#000000',

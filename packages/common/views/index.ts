@@ -1,3 +1,4 @@
+import { DefaultTheme } from '@react-navigation/native';
 import { ProfileMain } from '@packages/common/views';
 
 export { default as LoginScreen } from './login/LoginScreen'
@@ -19,3 +20,4 @@ export { default as ProfileWizard2 } from './profile/ProfileWizard2'
 export { default as ProfileWizard3 } from './profile/ProfileWizard3'
 export { default as ProfileMain } from './profile/ProfileMain'
 export { default as ContactInformationScreen } from './settings/ContactInformationScreen'
+export { default as FAQ } from './settings/FAQScreen'
