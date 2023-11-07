@@ -10,7 +10,7 @@ export default function ProfileWizard1() {
     href: '/wizard/profileWizard2',
   })
   return (
-    <ScreenContainer showGoBackButton={true}>
+    <ScreenContainer horizontalPadding={true} verticalPadding={true} showGoBackButton={true}>
       <YStackFullW style={{ height: '100%' }} jc={'space-between'}>
         <YStackFullW>
           {/* HEADER */}

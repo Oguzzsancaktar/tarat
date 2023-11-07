@@ -13,18 +13,16 @@ export default function ProfileWizard3() {
     href: '/register/success',
   })
   return (
-    <ScreenContainer showGoBackButton={true}>
+    <ScreenContainer horizontalPadding={true} verticalPadding={true} showGoBackButton={true}>
       <YStack style={{ height: '100%' }} jc={'space-between'}>
         <YStackFullW>
-          <YStackFullW>
-            {/* HEADER */}
-            <H1 ta={'center'} color={'$heading'}>
-              Adres Bilgisi
-            </H1>
-            <Paragraph ta={'center'} color={'$textGray'}>
-              Adres bilginiz paylaşılmayacaktır hızlı sipariş için saklanacaktır.{' '}
-            </Paragraph>
-          </YStackFullW>
+          {/* HEADER */}
+          <H1 ta={'center'} color={'$heading'}>
+            Adres Bilgisi
+          </H1>
+          <Paragraph ta={'center'} color={'$textGray'}>
+            Adres bilginiz paylaşılmayacaktır hızlı sipariş için saklanacaktır.{' '}
+          </Paragraph>
         </YStackFullW>
 
         {/* INPUTS */}
@@ -46,6 +44,7 @@ export default function ProfileWizard3() {
               value={''}
               onChange={() => {}}
             />
+            {/* @todo oğuz width almıyor */}
             <InputWithIcon
               name="country"
               error={false}

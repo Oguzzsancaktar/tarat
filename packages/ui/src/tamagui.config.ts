@@ -126,7 +126,7 @@ export const config = createTamagui({
       background: APP_COLORS.white,
       heading: APP_COLORS.nero,
       textGray: APP_COLORS.gray,
-      white: APP_COLORS.white,
+      white: APP_COLORS.shark,
       inputBackground: APP_COLORS.wildSand,
       cardBackground: APP_COLORS.wildSand,
       inputColor: APP_COLORS.black,

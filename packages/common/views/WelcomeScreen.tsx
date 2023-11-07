@@ -37,7 +37,7 @@ export default function WelcomeScreen() {
         </YStack>
 
         {/*Button */}
-        <YStackFullW paddingHorizontal="$space.5">
+        <YStackFullW paddingVertical="$space.3" paddingHorizontal="$space.5">
           <YStackFullW mb={'$space.3'}>
             <LoginButton />
           </YStackFullW>

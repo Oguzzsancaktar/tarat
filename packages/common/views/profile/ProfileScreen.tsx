@@ -37,7 +37,7 @@ export default function ProfileScreen() {
               width={428}
               height={252}
               flex-shrink={0}
-              colors={['$white', '$orange30']}
+              colors={['#ffff', '$orange30']}
               start={[0, 1]}
               end={[0, 0]}
             />
@@ -47,51 +47,51 @@ export default function ProfileScreen() {
             Gökhan Doğulu
           </H1>
           {/* E-MAIL */}
-          <Paragraph ta={'center'} color={'$textGray'}>
+          <Paragraph ta={'center'} color={'$white'}>
             gokhandogulu@gmail.com
           </Paragraph>
-          <Button w={'$25'} h={'$7'}>
+          <Button w={'$25'} h={'$7'} color="$white">
             Profili Düzenle
           </Button>
         </YStackFullW>
 
         <YStackFullW ai="center" px={'$space.4'}>
-          <Card style={{ width: '100%' }} backgroundColor={'$cardBackground'} py={'$10'}>
+          <Card style={{ width: '100%' }} backgroundColor={'$inputBackground'} py={'$10'}>
             <XStackFullW jc={'space-between'} ai={'center'}>
-              <Paragraph>Ad Soyad</Paragraph>
-              <Paragraph>Mercedes</Paragraph>
+              <Paragraph color={'$white'}>Ad Soyad</Paragraph>
+              <Paragraph color={'$white'}>Mercedes</Paragraph>
             </XStackFullW>
             <XStackFullW jc={'space-between'} ai={'center'}>
-              <Paragraph>Doğum Tarihi</Paragraph>
-              <Paragraph>13.02.1999</Paragraph>
+              <Paragraph color={'$white'}>Doğum Tarihi</Paragraph>
+              <Paragraph color={'$white'}>13.02.1999</Paragraph>
             </XStackFullW>
             <XStackFullW jc={'space-between'} ai={'center'}>
-              <Paragraph>Adres</Paragraph>
-              <Paragraph>Ataşehir/İstanbul</Paragraph>
+              <Paragraph color={'$white'}>Adres</Paragraph>
+              <Paragraph color={'$white'}>Ataşehir/İstanbul</Paragraph>
             </XStackFullW>
             <XStackFullW jc={'space-between'} ai={'center'}>
-              <Paragraph>Posta Kodu</Paragraph>
-              <Paragraph>34184</Paragraph>
+              <Paragraph color={'$white'}>Posta Kodu</Paragraph>
+              <Paragraph color={'$white'}>34184</Paragraph>
             </XStackFullW>
             <XStackFullW jc={'space-between'} ai={'center'}>
-              <Paragraph>Telefon</Paragraph>
-              <Paragraph>+90(555)-555-55-55</Paragraph>
+              <Paragraph color={'$white'}>Telefon</Paragraph>
+              <Paragraph color={'$white'}>+90(555)-555-55-55</Paragraph>
             </XStackFullW>
             <XStackFullW jc={'space-between'} ai={'center'}>
-              <Paragraph>Instagram</Paragraph>
-              <Paragraph>@gokhandogulu</Paragraph>
+              <Paragraph color={'$white'}>Instagram</Paragraph>
+              <Paragraph color={'$white'}>@gokhandogulu</Paragraph>
             </XStackFullW>
             <XStackFullW jc={'space-between'} ai={'center'}>
-              <Paragraph>X</Paragraph>
-              <Paragraph>@gokhandogulu</Paragraph>
+              <Paragraph color={'$white'}>X</Paragraph>
+              <Paragraph color={'$white'}>@gokhandogulu</Paragraph>
             </XStackFullW>
             <XStackFullW jc={'space-between'} ai={'center'}>
-              <Paragraph>LinkedIn</Paragraph>
-              <Paragraph>@gokhandogulu</Paragraph>
+              <Paragraph color={'$white'}>LinkedIn</Paragraph>
+              <Paragraph color={'$white'}>@gokhandogulu</Paragraph>
             </XStackFullW>
             <XStackFullW jc={'space-between'} ai={'center'}>
-              <Paragraph>GitHub</Paragraph>
-              <Paragraph>@gokhandogulu</Paragraph>
+              <Paragraph color={'$white'}>GitHub</Paragraph>
+              <Paragraph color={'$white'}>@gokhandogulu</Paragraph>
             </XStackFullW>
           </Card>
         </YStackFullW>
