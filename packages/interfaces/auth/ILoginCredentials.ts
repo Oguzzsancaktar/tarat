@@ -1,9 +1,8 @@
 import { IUser } from "../../interfaces";
 
 interface ILoginCredentials extends Pick<IUser, "password"> {
-  email?: IUser["email"]
-  username?: IUser["username"]
-  phone?: IUser["phone"]
+  identifier?: IUser["email"] | IUser["username"] | IUser["phone"]
+
 }
 
 export default ILoginCredentials;

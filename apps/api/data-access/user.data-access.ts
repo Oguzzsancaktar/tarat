@@ -9,10 +9,12 @@ const createUser = async (user: IUserCreateDTO): Promise<IUser> => {
 
 // Read
 const getUser = async (userInfo: IUserQueryParams): Promise<IUser | null> => {
+  const pipeline = []
+
   if (!userInfo._id && !userInfo.email && !userInfo.username) {
     return null
   }
-  return await UserModel.findOne(userInfo)
+  return await UserModel.aggregate(pipeline)
 }
 // Update
 // Delete
