@@ -1,6 +1,4 @@
-import { WelcomeScreen } from '@packages/common/views'
-import EditProfileScreen from '@packages/common/views/EditProfileScreen'
-import SettingScreen from '@packages/common/views/settings/SettingsScreen'
+import { ContactInformationScreen, WelcomeScreen } from '@packages/common/views'
 import { Stack } from 'expo-router'
 
 export default function Screen() {
@@ -12,7 +10,7 @@ export default function Screen() {
           title: 'Home',
         }}
       />
-      <SettingScreen />
+      <ContactInformationScreen />
     </>
   )
 }

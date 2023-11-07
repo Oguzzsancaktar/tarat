@@ -1,4 +1,4 @@
-import { EditProfileScreen } from '@packages/common/views'
+import { ContactInformationScreen } from '@packages/common/views'
 import { Stack } from 'expo-router'
 
 export default function Screen() {
@@ -7,10 +7,10 @@ export default function Screen() {
       <Stack.Screen
         options={{
           headerShown: false,
-          title: 'Edit Profile',
+          title: 'İletişim Bilgileri',
         }}
       />
-      <EditProfileScreen />
+      <ContactInformationScreen />
     </>
   )
 }

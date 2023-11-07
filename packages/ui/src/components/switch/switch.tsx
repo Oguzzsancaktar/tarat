@@ -1,4 +1,4 @@
-import { Switch as TamaguiSwitch, styled } from 'tamagui'
+import { Switch as TamaguiSwitch, styled, Stack, SwitchContext } from 'tamagui'
 
 const Switch = styled(TamaguiSwitch, {
   borderRadius: 16,
@@ -15,6 +15,7 @@ const Switch = styled(TamaguiSwitch, {
         backgroundColor: 'gray',
       },
     },
+
     size: {
       xsmall: {
         width: '$2',
@@ -30,17 +31,33 @@ const Switch = styled(TamaguiSwitch, {
       },
     },
     background: {
-      blue: {
-        backgroundColor: '$blue3',
+      orange: {
+        backgroundColor: '$orange',
       },
     },
   },
 
   defaultVariants: {
     size: 'small',
-    background: 'blue',
+    background: 'orange',
     checked: true,
   },
 })
+const Thumb = styled(Stack, {
+  context: SwitchContext,
 
+  variants: {
+    checked: {
+      true: {
+        opacity: 1,
+      },
+      false: {
+        opacity: 0.5,
+      },
+    },
+  } as const,
+  defaultVariants: {
+    checked: true,
+  },
+})
 export default Switch
