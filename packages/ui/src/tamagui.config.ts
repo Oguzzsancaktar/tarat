@@ -106,6 +106,7 @@ export const tokens = createTokens({
     textGray: APP_COLORS.silver,
     orange: APP_COLORS.orange,
     orange30: APP_COLORS.orange30,
+    orange80: APP_COLORS.orange80,
     red: APP_COLORS.red,
   },
 })
@@ -128,7 +129,7 @@ export const config = createTamagui({
       background: APP_COLORS.white,
       heading: APP_COLORS.nero,
       textGray: APP_COLORS.gray,
-      white: APP_COLORS.white,
+      white: APP_COLORS.shark,
       inputBackground: APP_COLORS.wildSand,
       cardBackground: APP_COLORS.wildSand,
       inputColor: APP_COLORS.black,

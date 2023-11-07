@@ -27,6 +27,7 @@ const VerifyCodeCard: React.FC<IProps> = ({ title, description, mail, counter })
         </Paragraph>
 
         {/* SQUARE */}
+        {/* @todo oğuz square yerine input kullanılacak */}
         <XStack mb={50}>
           <Square
             borderRadius={15}

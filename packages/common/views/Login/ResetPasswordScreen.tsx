@@ -20,7 +20,8 @@ export default function ResetPasswordScreen() {
           <InputWithIcon
             name="password"
             error={false}
-            icon="mail"
+            success={true}
+            icon="lock"
             value={''}
             placeholder="Şifre"
             onChange={() => {}}
@@ -29,7 +30,8 @@ export default function ResetPasswordScreen() {
             <InputWithIcon
               name="password"
               error={false}
-              icon="mail"
+              success={true}
+              icon="lock"
               value={''}
               placeholder="Şifre Tekrar"
               onChange={() => {}}
