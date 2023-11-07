@@ -15,8 +15,7 @@ export { default as RegisterScreen } from './register/RegisterScreen'
 export { default as WelcomeScreen } from './WelcomeScreen'
 export { default as SettingsScreen } from './settings/SettingsScreen'
 export { default as EditProfileScreen } from './settings/ContactInformationScreen'
-export { default as QrPageScreen } from './QrPageScreen'
-export { default as QrPageListScreen } from './QrPageListScreen'
+
 // Profile
 export { default as ProfileScreen } from './profile/ProfileScreen'
 export { default as ProfileWizard1 } from './profile/ProfileWizard1'
@@ -31,3 +30,9 @@ export { default as UpdateAddress } from './settings/UpdateAddress'
 export { default as ProfileMain } from './profile/ProfileScreen'
 // Settings
 export { default as ContactInformationScreen } from './settings/ContactInformationScreen'
+//Qr
+export { default as QrList } from './qr/QrList'
+export { default as QrListEdit } from './qr/QrListEdit'
+//YAĞIZ QR
+export { default as QrPageScreen } from './QrPageScreen'
+export { default as QrPageListScreen } from './QrPageListScreen'

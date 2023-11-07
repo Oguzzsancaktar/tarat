@@ -104,6 +104,7 @@ export const tokens = createTokens({
     textGray: APP_COLORS.silver,
     orange: APP_COLORS.orange,
     orange30: APP_COLORS.orange30,
+    orange80: APP_COLORS.orange80,
     red: APP_COLORS.red,
   },
 })

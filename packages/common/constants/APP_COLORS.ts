@@ -14,6 +14,7 @@ const APP_COLORS = {
 
   orange: "#F8B401",
   orange30: "#F8B40130",
+  orange80: "#F8B40180",
 
   red: "#ff4201",
 }
