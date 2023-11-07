@@ -34,7 +34,6 @@ export default function ProfileWizard2() {
             error={false}
             icon="call"
             placeholder="Cep Telefonu"
-            success={false}
             onChange={() => {}}
             value={''}
           />
@@ -44,7 +43,6 @@ export default function ProfileWizard2() {
               error={false}
               icon="call"
               placeholder="Sabit Hat"
-              success={false}
               value={''}
               onChange={() => {}}
             />
@@ -55,7 +53,6 @@ export default function ProfileWizard2() {
               error={false}
               icon="key"
               placeholder="Instagram"
-              success={false}
               value={''}
               onChange={() => {}}
             />
@@ -66,7 +63,6 @@ export default function ProfileWizard2() {
               error={false}
               icon="key"
               placeholder="Facebook"
-              success={false}
               value={''}
               onChange={() => {}}
             />
@@ -77,7 +73,6 @@ export default function ProfileWizard2() {
               error={false}
               icon="key"
               placeholder="x"
-              success={false}
               value={''}
               onChange={() => {}}
             />
@@ -88,7 +83,6 @@ export default function ProfileWizard2() {
               error={false}
               icon="key"
               placeholder="X"
-              success={false}
               value={''}
               onChange={() => {}}
             />
@@ -99,7 +93,6 @@ export default function ProfileWizard2() {
               error={false}
               icon="key"
               placeholder="LinkedIn"
-              success={false}
               value={''}
               onChange={() => {}}
             />
@@ -110,7 +103,6 @@ export default function ProfileWizard2() {
               error={false}
               icon="key"
               placeholder="GitHub"
-              success={true}
               value={''}
               onChange={() => {}}
             />

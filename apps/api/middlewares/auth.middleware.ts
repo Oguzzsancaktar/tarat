@@ -2,6 +2,8 @@ import express from 'express';
 import { StatusCodes } from 'http-status-codes';
 const joi = require('joi')
 
+// @todo -> implement more with joi
+
 
 const app = express();
 
@@ -18,7 +20,7 @@ const registerMiddleware = async (req, res, next) => {
       username: joi.string().required(),
       email: joi.string().email().required().email(),
       password: joi.string().min(6).required(),
-      passwordConfirm: joi.string().min(6).required(),
+      passwordConfirm: joi.any().valid(joi.ref('password')).required(),
       phone: joi.string().required(),
     })
     .options({ abortEarly: false })
@@ -37,7 +39,9 @@ const loginMiddleware = async (req, res, next) => {
 
   const schema = joi
     .object({
-      email: joi.string().email().required().email(),
+      username: joi.string(),
+      phone: joi.string(),
+      email: joi.string().email().email(),
       password: joi.string().min(6).required()
     })
     .options({ abortEarly: false })

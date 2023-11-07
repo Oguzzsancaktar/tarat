@@ -5,7 +5,7 @@ import { Button, Card, XStackFullW, YStackFullW } from '@packages/ui/src/compone
 import { ScreenContainer } from '@packages/common/components'
 import { LinearGradient } from '@tamagui/linear-gradient'
 
-export default function ProfileMain() {
+export default function ProfileScreen() {
   const appImages = useAppImages()
 
   return (

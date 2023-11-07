@@ -1,20 +1,14 @@
-import { Button } from '@packages/ui/src/components'
 import React from 'react'
-import { useLink } from 'solito/link'
+import { useAppRoutes } from '@packages/common/hooks'
+import { Button } from '@packages/ui/src/components'
 
 interface IProps {
   size?: 'small' | 'medium' | 'large'
 }
-const LoginButton: React.FC<IProps> = ({ size = 'large' }) => {
-  const loginLinkProps = useLink({
-    href: '/login',
-  })
+const LoginButton: React.FC<IProps> = () => {
+  const { loginLinkProps } = useAppRoutes()
 
-  return (
-    <Button {...loginLinkProps} size={size} background="gray">
-      Giriş Yap
-    </Button>
-  )
+  return <Button {...loginLinkProps}>Giriş Yap</Button>
 }
 
 export default LoginButton

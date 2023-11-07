@@ -1,17 +1,14 @@
-import { Button } from '@packages/ui/src/components'
 import React from 'react'
-import { useLink } from 'solito/link'
+import { useAppRoutes } from '@packages/common/hooks'
+import { Button } from '@packages/ui/src/components'
 
 interface IProps {
   size?: 'small' | 'medium' | 'large'
 }
-const RegisterButton: React.FC<IProps> = ({ size = 'large' }) => {
-  const registerLinkProps = useLink({
-    href: '/register',
-  })
-
+const RegisterButton: React.FC<IProps> = () => {
+  const { registerLinkProps } = useAppRoutes()
   return (
-    <Button {...registerLinkProps} size={size} background="red">
+    <Button {...registerLinkProps} background="orange30">
       Kayıt Ol
     </Button>
   )

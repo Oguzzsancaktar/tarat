@@ -24,16 +24,7 @@ const register = async (req, res) => {
       userInfo.phone = phone
     }
 
-    // @todo this files must to be unique  - check 
-
-    const existedUser = await dataAccess.userDataAccess.getUser(userInfo)
-
-    if (existedUser) {
-      return res.status(StatusCodes.BAD_REQUEST).send("User already exists.")
-    }
-
     const salt = await bcrypt.genSalt(+(process.env.SALT_ROUNDS || 10))
-
     const hashedPass = await bcrypt.hash(password, salt)
 
     const tempUser: IUserCreateDTO = {
@@ -46,13 +37,10 @@ const register = async (req, res) => {
     const createdUser = await dataAccess.userDataAccess.createUser(tempUser)
     const accessToken = utils.authUtils.generateJWT(createdUser)
 
-    console.log("accessToken", accessToken);
-
-
-    res.status(StatusCodes.CREATED).json(createdUser)
+    res.status(StatusCodes.CREATED).json(accessToken)
   } catch (error) {
     console.log("----- Error Cacthed When trying to create user -----", error);
-    res.status(StatusCodes.INTERNAL_SERVER_ERROR).send(error.message)
+    res.status(StatusCodes.BAD_REQUEST).json(error.message)
   }
 }
 
@@ -61,19 +49,12 @@ const register = async (req, res) => {
 //LOGIN_CONTROLLER
 const login = async (req, res) => {
   try {
-    const { email, password, username } = req.body as ILoginCredentials
+    const { identifier, password } = req.body as ILoginCredentials
 
     const userInfo: IUserQueryParams = {}
 
-    if (email) {
-      userInfo.email = email
-    }
 
-    if (username) {
-      userInfo.username = username
-    }
-
-    const existingUser = await dataAccess.userDataAccess.getUser(userInfo)
+    const existingUser = await dataAccess.userDataAccess.getUser(identifier)
     if (existingUser && password === existingUser.password) {
       return res.status(StatusCodes.OK).json(existingUser)
     }

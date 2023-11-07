@@ -34,7 +34,6 @@ export default function ProfileWizard3() {
             error={false}
             icon="key"
             placeholder="Ülke"
-            success={false}
             value={''}
             onChange={() => {}}
           />
@@ -44,7 +43,6 @@ export default function ProfileWizard3() {
               error={false}
               icon="key"
               placeholder="Ülke"
-              success={false}
               value={''}
               onChange={() => {}}
             />
@@ -53,7 +51,6 @@ export default function ProfileWizard3() {
               error={false}
               icon="key"
               placeholder="Ülke"
-              success={false}
               value={''}
               onChange={() => {}}
             />

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Stack, View } from '@packages/ui'
+import { Stack } from '@packages/ui'
 import { ButtonGoBack } from '../buttons'
-import { Dimensions, useWindowDimensions } from 'react-native'
+import { useWindowDimensions } from 'react-native'
 
 interface IProps {
   children: React.ReactNode
@@ -18,9 +18,10 @@ const ScreenContainer: React.FC<IProps> = ({
   const { width, height } = useWindowDimensions()
   return (
     <Stack
+      height={height}
+      width={width}
       position="relative"
       backgroundColor={'$background'}
-      height={height}
       paddingVertical={'$7'}
       paddingTop={verticalPadding ? '$30' : '$7'}
       paddingHorizontal={horizontalPadding ? '$7' : '$0'}
