@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 
-const SettingsScreen = dynamic(() => import('@packages/common/views/SettingsScreen'), {
+const SettingsScreen = dynamic(() => import('@packages/common/views/settings/SettingsScreen'), {
   ssr: false,
 })
 

@@ -7,11 +7,13 @@ interface IProps {
   children: React.ReactNode
   showGoBackButton?: boolean
   verticalPadding?: boolean
+  horizontalPadding?: boolean
 }
 const ScreenContainer: React.FC<IProps> = ({
   children,
   showGoBackButton = false,
   verticalPadding = true,
+  horizontalPadding = true,
 }) => {
   const { width, height } = useWindowDimensions()
   return (
@@ -21,7 +23,7 @@ const ScreenContainer: React.FC<IProps> = ({
       height={height}
       paddingVertical={'$7'}
       paddingTop={verticalPadding ? '$30' : '$7'}
-      paddingHorizontal={verticalPadding ? '$7' : '$0'}
+      paddingHorizontal={horizontalPadding ? '$7' : '$0'}
     >
       {showGoBackButton && (
         // @tamabug: tamagui type bug

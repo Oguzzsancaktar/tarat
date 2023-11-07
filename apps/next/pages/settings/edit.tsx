@@ -1,9 +1,12 @@
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
-const EditProfileScreen = dynamic(() => import('@packages/common/views/EditProfileScreen'), {
-  ssr: false,
-})
+const EditProfileScreen = dynamic(
+  () => import('@packages/common/views/settings/ContactInformationScreen'),
+  {
+    ssr: false,
+  }
+)
 
 export default function Page() {
   return (

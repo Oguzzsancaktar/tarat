@@ -1,4 +1,4 @@
-import SettingScreen from '@packages/common/views/SettingsScreen'
+import SettingScreen from '@packages/common/views/settings/SettingsScreen'
 import { Home, LogIn, FileKey, Mail, KeyRound, QrCode, LayoutList } from '@tamagui/lucide-icons'
 import { Tabs } from 'expo-router'
 import { View, Text } from 'react-native'

@@ -20,7 +20,7 @@ export default function ForgetPasswordScreen() {
     <ScreenContainer showGoBackButton={true}>
       <YStackFullW jc="space-between" ai="center">
         <YStack mb={'$space.10'}>
-          <H1 color={'$heading'}> Şifremi Unuttum</H1>
+          <H1 color={'black'}> Şifremi Unuttum</H1>
           <Paragraph color={'$textGray'}>
             Şifrenizi sıfırlamak için hangi iletişim bilgilerini kullanmamız gerektiğini seçin.
           </Paragraph>
