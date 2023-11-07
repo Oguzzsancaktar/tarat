@@ -1,4 +1,4 @@
-import { ContactForm, WelcomeScreen } from '@packages/common/views'
+import { WelcomeScreen } from '@packages/common/views'
 
 import { Stack } from 'expo-router'
 
@@ -11,7 +11,7 @@ export default function Screen() {
           title: 'Home',
         }}
       />
-      <ContactForm />
+      <WelcomeScreen />
     </>
   )
 }

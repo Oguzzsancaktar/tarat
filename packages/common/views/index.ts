@@ -23,3 +23,4 @@ export { default as ContactInformationScreen } from './settings/ContactInformati
 export { default as FAQ } from './settings/FAQScreen'
 export { default as PrivacyAgreement } from './settings/PrivacyAgreement'
 export { default as ContactForm } from './settings/ContactForm'
+export { default as AccountSettings } from './settings/AccountSettings'

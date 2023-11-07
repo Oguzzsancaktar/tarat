@@ -21,7 +21,7 @@ export default function ResetPasswordScreen() {
             name="password"
             error={false}
             success={true}
-            icon="mail"
+            icon="lock"
             value={''}
             placeholder="Şifre"
             onChange={() => {}}
@@ -31,7 +31,7 @@ export default function ResetPasswordScreen() {
               name="password"
               error={false}
               success={true}
-              icon="mail"
+              icon="lock"
               value={''}
               placeholder="Şifre Tekrar"
               onChange={() => {}}
