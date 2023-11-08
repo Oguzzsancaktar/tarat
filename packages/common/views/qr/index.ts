@@ -1,2 +1,5 @@
 export { default as QrList } from './QrList'
 export { default as QrListEdit } from './QrListEdit'
+export { default as QrWizard } from './QrWizard'
+export { default as QrWizard1 } from './QrWizard1'
+export { default as QrWizard2 } from './QrWizard2'

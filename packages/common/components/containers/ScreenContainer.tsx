@@ -26,8 +26,8 @@ const ScreenContainer: React.FC<IProps> = ({
       position="relative"
       backgroundColor={'$background'}
       paddingVertical={'$7'}
-      paddingTop={verticalPadding ? '$25' : '$7'}
-      paddingHorizontal={horizontalPadding ? '$space.5' : '$0'}
+      paddingTop={verticalPadding ? '$20' : '$7'}
+      paddingHorizontal={horizontalPadding ? '$space.3' : '$0'}
     >
       {showGoBackButton && (
         // @tamabug: tamagui type bug

@@ -17,6 +17,14 @@ const APP_COLORS = {
   orange80: "#F8B40180",
 
   red: "#ff4201",
+  pink: '#E77D7D',
+  pink30: '#E77D7D30',
+  purple: '#858FE9',
+  purple30: '#858FE930',
+  blue: '#7FC9E7',
+  blue30: '#7FC9E730',
+  green: '#81E89E',
+  green30: '#81E89E30',
 }
 
 
