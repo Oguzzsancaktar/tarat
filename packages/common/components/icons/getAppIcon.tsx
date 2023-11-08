@@ -17,7 +17,7 @@ import {
   DarkModeIcon,
   LockIcon,
   ArrowRightIcon,
-  SearchIcon
+  SearchIcon,
 } from '@packages/common/components/icons'
 import { IIconProps } from '@packages/common/components/icons/IIconProps'
 

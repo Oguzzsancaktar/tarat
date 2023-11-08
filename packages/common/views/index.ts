@@ -33,6 +33,9 @@ export { default as ContactInformationScreen } from './settings/ContactInformati
 //Qr
 export { default as QrList } from './qr/QrList'
 export { default as QrListEdit } from './qr/QrListEdit'
+export { default as QrWizard } from './qr/QrWizard'
+export { default as QrWizard1 } from './qr/QrWizard1'
+export { default as QrWizard2 } from './qr/QrWizard2'
 //YAĞIZ QR
 export { default as QrPageScreen } from './QrPageScreen'
 export { default as QrPageListScreen } from './QrPageListScreen'

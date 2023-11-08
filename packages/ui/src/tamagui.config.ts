@@ -1,3 +1,4 @@
+import { graphql } from 'react-apollo';
 import { APP_COLORS } from '@packages/common/constants';
 import { createInterFont } from '@tamagui/font-inter'
 import { shorthands } from '@tamagui/shorthands'
@@ -108,6 +109,14 @@ export const tokens = createTokens({
     orange30: APP_COLORS.orange30,
     orange80: APP_COLORS.orange80,
     red: APP_COLORS.red,
+    pink: APP_COLORS.pink,
+    pink30: APP_COLORS.pink30,
+    purple: APP_COLORS.purple,
+    purple30: APP_COLORS.purple30,
+    blue: APP_COLORS.blue,
+    blue30: APP_COLORS.blue30,
+    green: APP_COLORS.green,
+    green30: APP_COLORS.green30,
   },
 })
 
@@ -134,6 +143,14 @@ export const config = createTamagui({
       cardBackground: APP_COLORS.wildSand,
       inputColor: APP_COLORS.black,
       inputPlaceholderColor: APP_COLORS.silver,
+      purple: APP_COLORS.purple,
+      purple30: APP_COLORS.purple30,
+      blue: APP_COLORS.blue,
+      blue30: APP_COLORS.blue30,
+      green: APP_COLORS.green,
+      green30: APP_COLORS.green30,
+      pink: APP_COLORS.pink,
+      pink30: APP_COLORS.pink30,
     },
 
     dark: {
@@ -146,6 +163,14 @@ export const config = createTamagui({
       cardBackGround: APP_COLORS.shark,
       inputColor: APP_COLORS.silver,
       inputPlaceholderColor: APP_COLORS.gray,
+      purple: APP_COLORS.purple,
+      purple30: APP_COLORS.purple30,
+      blue: APP_COLORS.blue,
+      blue30: APP_COLORS.blue30,
+      green: APP_COLORS.green,
+      green30: APP_COLORS.green30,
+      pink: APP_COLORS.pink,
+      pink30: APP_COLORS.pink30,
     },
   },
 
