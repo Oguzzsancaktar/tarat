@@ -1,4 +1,6 @@
+import { APP_COLORS } from '@packages/common/constants'
 import CombineProvider from '@packages/common/provider/CombineProvider'
+import { View } from '@packages/ui'
 import { ThemeProvider, DarkTheme, DefaultTheme } from '@react-navigation/native'
 import { useFonts } from 'expo-font'
 import { Tabs } from 'expo-router'
@@ -28,10 +30,8 @@ const TabsLayout = () => {
               backgroundColor: '#2a2aba',
             },
             //
-            tabBarShowLabel: false,
-            headerShown: false,
-            headerTintColor: '#fa0000',
-            tabBarActiveTintColor: '#015006',
+            tabBarActiveTintColor: APP_COLORS.orange,
+
             tabBarStyle: {
               height: 60,
               width: width - 60,
@@ -39,7 +39,7 @@ const TabsLayout = () => {
               borderRadius: 20,
               position: 'absolute',
               left: 30,
-              backgroundColor: '#4E4E61',
+              backgroundColor: APP_COLORS.silver,
             },
           }}
         />
