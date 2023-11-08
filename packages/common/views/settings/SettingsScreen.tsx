@@ -1,4 +1,4 @@
-import { H1, H2, H3, Label, ListItem, ScrollView, Text, useTheme, View, XStack } from '@packages/ui'
+import { ListItem, ScrollView, Text, useTheme, View, XStack } from '@packages/ui'
 import React, { useState } from 'react'
 import { XStackFullW, YStackFullW } from '@packages/ui/src/components'
 import { getAppIcon, ScreenContainer } from '@packages/common/components'
