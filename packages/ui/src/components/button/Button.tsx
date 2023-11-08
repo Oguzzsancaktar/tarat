@@ -33,6 +33,14 @@ const Button = styled(TamaguiButton, {
         height: '$10',
       },
 
+      next: {
+        borderWith: 0,
+        color: '$white',
+        backgroundColor: '$orange',
+        width: '$10',
+        height: '$10',
+      },
+
       circle: {
         borderRadius: 100,
       },

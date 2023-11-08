@@ -1,15 +1,55 @@
 import React, { useState } from 'react'
-import { Accordion, H1, H2, H3, H4, ListItem, Paragraph, Square } from '@packages/ui'
-import { useLink } from 'solito/link'
+import { Accordion, H2, ListItem, Paragraph, Square } from '@packages/ui'
 import { InputWithIcon, ScreenContainer } from '../../components'
 import { Card, YStackFullW } from '@packages/ui/src/components'
-import { ChevronDown, Phone } from '@tamagui/lucide-icons'
-import { Switch } from '@packages/ui/src/components/switch'
+import { ChevronDown } from '@tamagui/lucide-icons'
 import { ScrollView } from 'react-native'
-import { CallIcon } from '@packages/common/components/icons'
-import { View } from '@tamagui/web'
+import { map } from 'lodash'
+
+interface IFaqItem {
+  title: string
+  description: string
+}
+
+const FAQ_ITEMS: IFaqItem[] = [
+  {
+    title: 'Kimin Fikri?',
+    description: 'Gökhan.',
+  },
+  {
+    title: 'Bu bir soru mu?',
+    description: 'Evet bu bir soru.',
+  },
+  {
+    title: 'Bu bir soru mu?',
+    description: 'Evet bu bir soru.',
+  },
+  {
+    title: 'Bu bir soru mu?',
+    description: 'Evet bu bir soru.',
+  },
+  {
+    title: 'Bu bir soru mu?',
+    description: 'Evet bu bir soru.',
+  },
+]
 
 export default function FAQScreen() {
+  const [faqData, setFaqData] = useState(FAQ_ITEMS)
+  const [searchFilter, setSearchFilter] = useState('')
+  const handleFaq = (text) => {
+    console.log('INPUT_VALUE', text)
+    setSearchFilter(text)
+    filterFaqData(text)
+  }
+  const filterFaqData = (filter) => {
+    const filteredData = FAQ_ITEMS.filter((item) => {
+      const title = item.title.toLowerCase()
+      const description = item.description.toLowerCase()
+      return title.includes(filter.toLowerCase()) || description.includes(filter.toLowerCase())
+    })
+    setFaqData(filteredData)
+  }
   return (
     <ScrollView>
       <ScreenContainer horizontalPadding={true} verticalPadding={true} showGoBackButton={true}>
@@ -24,8 +64,8 @@ export default function FAQScreen() {
                 placeholder="Ne arıyorsun?"
                 error={false}
                 name="filter"
-                onChange={() => {}}
-                value={''}
+                onChange={(text) => handleFaq(text)}
+                value={searchFilter}
               />
             </ListItem>
           </Card>
@@ -34,112 +74,30 @@ export default function FAQScreen() {
           <YStackFullW ai={'center'}>
             <Card mt={'$3'} backgroundColor={'$inputBackground'}>
               <Accordion backgroundColor={'transparent'} w={'100%'} type="multiple">
-                {/* SORU 1 */}
-                <Accordion.Item value="q1">
-                  <Accordion.Trigger
-                    borderColor={'transparent'}
-                    backgroundColor={'transparent'}
-                    flexDirection="row"
-                    justifyContent="space-between"
-                  >
-                    {({ open }) => (
-                      <>
-                        <Paragraph color={'$textGray'}>Bu sık sorulan bir soru mu?</Paragraph>
-                        <Square animation="quick" rotate={open ? '180deg' : '0deg'}>
-                          <ChevronDown color={'$orange'} size="$4" />
-                        </Square>
-                      </>
-                    )}
-                  </Accordion.Trigger>
-                  <Accordion.Content pl={'$3'} borderRadius={'$2'} backgroundColor={'$orange30'}>
-                    <Paragraph color={'$textGray'}>Evet bu sık sorulan bir soru.</Paragraph>
-                  </Accordion.Content>
-                </Accordion.Item>
-                {/* SORU 2 */}
-                <Accordion.Item value="q2">
-                  <Accordion.Trigger
-                    borderColor={'transparent'}
-                    backgroundColor={'transparent'}
-                    flexDirection="row"
-                    justifyContent="space-between"
-                  >
-                    {({ open }) => (
-                      <>
-                        <Paragraph color={'$textGray'}>Bu sık sorulan bir soru mu?</Paragraph>
-                        <Square animation="quick" rotate={open ? '180deg' : '0deg'}>
-                          <ChevronDown color={'$orange'} size="$4" />
-                        </Square>
-                      </>
-                    )}
-                  </Accordion.Trigger>
-                  <Accordion.Content pl={'$3'} borderRadius={'$2'} backgroundColor={'$orange30'}>
-                    <Paragraph color={'$textGray'}>Evet bu sık sorulan bir soru.</Paragraph>
-                  </Accordion.Content>
-                </Accordion.Item>
-
-                {/* SORU 3 */}
-                <Accordion.Item value="q3">
-                  <Accordion.Trigger
-                    borderColor={'transparent'}
-                    backgroundColor={'transparent'}
-                    flexDirection="row"
-                    justifyContent="space-between"
-                  >
-                    {({ open }) => (
-                      <>
-                        <Paragraph color={'$textGray'}>Bu sık sorulan bir soru mu?</Paragraph>
-                        <Square animation="quick" rotate={open ? '180deg' : '0deg'}>
-                          <ChevronDown color={'$orange'} size="$4" />
-                        </Square>
-                      </>
-                    )}
-                  </Accordion.Trigger>
-                  <Accordion.Content pl={'$3'} borderRadius={'$2'} backgroundColor={'$orange30'}>
-                    <Paragraph color={'$textGray'}>Evet bu sık sorulan bir soru.</Paragraph>
-                  </Accordion.Content>
-                </Accordion.Item>
-                {/* SORU 4 */}
-                <Accordion.Item value="q4">
-                  <Accordion.Trigger
-                    borderColor={'transparent'}
-                    backgroundColor={'transparent'}
-                    flexDirection="row"
-                    justifyContent="space-between"
-                  >
-                    {({ open }) => (
-                      <>
-                        <Paragraph color={'$textGray'}>Bu sık sorulan bir soru mu?</Paragraph>
-                        <Square animation="quick" rotate={open ? '180deg' : '0deg'}>
-                          <ChevronDown color={'$orange'} size="$4" />
-                        </Square>
-                      </>
-                    )}
-                  </Accordion.Trigger>
-                  <Accordion.Content pl={'$3'} borderRadius={'$2'} backgroundColor={'$orange30'}>
-                    <Paragraph color={'$textGray'}>Evet bu sık sorulan bir soru.</Paragraph>
-                  </Accordion.Content>
-                </Accordion.Item>
-                {/* SORU 5 */}
-                <Accordion.Item value="q5">
-                  <Accordion.Trigger
-                    borderColor={'transparent'}
-                    backgroundColor={'transparent'}
-                    flexDirection="row"
-                    justifyContent="space-between"
-                  >
-                    {({ open }) => (
-                      <>
-                        <Paragraph color={'$textGray'}>Bu sık sorulan bir soru mu?</Paragraph>
-                        <Square animation="quick" rotate={open ? '180deg' : '0deg'}>
-                          <ChevronDown color={'$orange'} size="$4" />
-                        </Square>
-                      </>
-                    )}
-                  </Accordion.Trigger>
-                  <Accordion.Content pl={'$3'} borderRadius={'$2'} backgroundColor={'$orange30'}>
-                    <Paragraph color={'$textGray'}>Evet bu sık sorulan bir soru.</Paragraph>
-                  </Accordion.Content>
-                </Accordion.Item>
+                {map(faqData, (item, index) => {
+                  return (
+                    <Accordion.Item key={index} value={`q${index}`}>
+                      <Accordion.Trigger
+                        borderColor={'transparent'}
+                        backgroundColor={'transparent'}
+                        flexDirection="row"
+                        justifyContent="space-between"
+                      >
+                        {({ open }) => (
+                          <>
+                            <Paragraph color={'$textGray'}>{item.title}</Paragraph>
+                            <Square animation="quick" rotate={open ? '180deg' : '0deg'}>
+                              <ChevronDown color={'$orange'} size="$4" />
+                            </Square>
+                          </>
+                        )}
+                      </Accordion.Trigger>
+                      <Accordion.Content pl={'$3'} borderRadius={20} backgroundColor={'$orange30'}>
+                        <Paragraph color={'$textGray'}>{item.description}</Paragraph>
+                      </Accordion.Content>
+                    </Accordion.Item>
+                  )
+                })}
               </Accordion>
             </Card>
           </YStackFullW>
