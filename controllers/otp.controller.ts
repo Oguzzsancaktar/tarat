@@ -5,6 +5,8 @@ import { OTPModel, UserModel } from '../models'
 const sendEmailVerifyOTP = async (req, res) => {
   try {
     const { email } = req.body;
+    console.log(" req.body;", req.body);
+
     // Check if user is already present
     const checkUserPresent = await UserModel.findOne({ email });
     // If user found with provided email
