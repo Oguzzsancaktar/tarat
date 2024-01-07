@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "useUnknownInCatchVariables": false,
+    "noEmit": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "baseUrl": ".",
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "es6"
+    ],
+    "allowJs": true,
+    "outDir": "build",
+    "rootDir": ".",
+    "strict": true,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@utils/*": [
+        "utils/*"
+      ],
+    }
+  },
+  "exclude": [
+    "**/node_modules/*",
+    "**/dist/*",
+    ".github/actions/**/index.js",
+    "**/docs/*"
+  ],
+  "baseUrl": ".",
+  "paths": {
+    "@interfaces/*": [
+      "interfaces/*"
+    ],
+  },
+}
