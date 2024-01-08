@@ -43,6 +43,12 @@
   },
   "_moduleAliases": {
     "@root": ".",
-    "@interfaces": "./interfaces"
+    "@controllers": "./controllers",
+    "@data-access": "./data-access",
+    "@interfaces": "./interfaces",
+    "@middlewares": "./middlewares",
+    "@models": "./models",
+    "@routes": "./routes",
+    "@utils": "./utils"
   }
 }

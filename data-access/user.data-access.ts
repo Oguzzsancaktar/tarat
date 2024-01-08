@@ -24,6 +24,22 @@ const getUser = async (userInfo: IUserQueryParams): Promise<IUser[] | null> => {
     })
   }
 
+  if (userInfo?.email) {
+    pipeline.push({
+      $match: {
+        email: userInfo.email
+      }
+    })
+  }
+
+  if (userInfo?.username) {
+    pipeline.push({
+      $match: {
+        username: userInfo.username
+      }
+    })
+  }
+
   if (userInfo?.identifier) {
     pipeline.push({
       $match: {

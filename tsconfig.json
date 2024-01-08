@@ -21,6 +21,27 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "paths": {
+      "@root/*": [
+        "./*"
+      ],
+      "@controllers/*": [
+        "controllers/*"
+      ],
+      "@data-access/*": [
+        "data-access/*"
+      ],
+      "@interfaces/*": [
+        "interfaces/*"
+      ],
+      "@middlewares/*": [
+        "middlewares/*"
+      ],
+      "@models/*": [
+        "models/*"
+      ],
+      "@routes/*": [
+        "routes/*"
+      ],
       "@utils/*": [
         "utils/*"
       ],
