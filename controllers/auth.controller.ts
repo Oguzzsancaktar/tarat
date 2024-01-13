@@ -91,7 +91,9 @@ const register = async (req, res) => {
 const login = async (req, res) => {
   try {
     const { identifier, password } = req.body as ILoginCredentials
+
     const existingUsers = await dataAccess.userDataAccess.getUser({ identifier: identifier?.toLowerCase() })
+    console.log(" identifier, password ", existingUsers, identifier, password)
     if (existingUsers) {
 
       const existingUser = existingUsers.pop()

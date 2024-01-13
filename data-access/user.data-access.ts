@@ -10,11 +10,12 @@ const createUser = async (user: IUserCreateDTO): Promise<IUser> => {
 
 // Read
 const getUser = async (userInfo: IUserQueryParams): Promise<IUser[] | null> => {
-  const pipeline: PipelineStage[] = [{ $limit: 1 }]
+  const pipeline: PipelineStage[] = []
 
   if (!userInfo?._id && !userInfo?.identifier) {
     return null
   }
+
 
   if (userInfo?._id) {
     pipeline.push({
@@ -41,6 +42,7 @@ const getUser = async (userInfo: IUserQueryParams): Promise<IUser[] | null> => {
   }
 
   if (userInfo?.identifier) {
+    console.log("xxxx")
     pipeline.push({
       $match: {
         $or: [
@@ -50,8 +52,13 @@ const getUser = async (userInfo: IUserQueryParams): Promise<IUser[] | null> => {
         ]
       }
     })
+
+
   }
-  return UserModel.aggregate(pipeline).exec()
+
+
+
+  return await UserModel.aggregate(pipeline).exec()
 }
 
 // Update
