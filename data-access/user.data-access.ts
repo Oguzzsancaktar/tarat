@@ -42,7 +42,6 @@ const getUser = async (userInfo: IUserQueryParams): Promise<IUser[] | null> => {
   }
 
   if (userInfo?.identifier) {
-    console.log("xxxx")
     pipeline.push({
       $match: {
         $or: [
@@ -52,8 +51,6 @@ const getUser = async (userInfo: IUserQueryParams): Promise<IUser[] | null> => {
         ]
       }
     })
-
-
   }
 
 
