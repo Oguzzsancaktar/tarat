@@ -1,5 +1,5 @@
 // Crud Create - Read - Update - Delete
-import { PipelineStage } from "mongoose";
+import mongoose, { PipelineStage } from "mongoose";
 import { UserModel } from "../models";
 import { IUserQueryParams, IUser, IUserCreateDTO } from "interfaces";
 
@@ -20,7 +20,7 @@ const getUser = async (userInfo: IUserQueryParams): Promise<IUser[] | null> => {
   if (userInfo?._id) {
     pipeline.push({
       $match: {
-        _id: userInfo._id
+        _id: new mongoose.Types.ObjectId(userInfo._id)
       }
     })
   }

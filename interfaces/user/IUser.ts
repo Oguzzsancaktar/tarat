@@ -5,7 +5,7 @@ interface IUser {
   username: string;
   email: string;
   phone?: string | undefined | null;
-  password: string;
+  password?: string;
   createdAt: NativeDate;
   updatedAt: NativeDate;
   __v?: number;

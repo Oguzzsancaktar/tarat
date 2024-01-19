@@ -2,7 +2,8 @@ import express from 'express'
 import { StatusCodes } from 'http-status-codes'
 const router = express.Router()
 
-import dataAccess from '../data-access'
+import middlewares from '@root/middlewares'
+import controllers from '@root/controllers'
 
 // CRUD 
 // get post patch put delete 
@@ -10,6 +11,7 @@ import dataAccess from '../data-access'
 
 // Create User - Register
 // Get User - Get Single User - Get User By ID - User 
+router.get("/:userId", controllers.userController.getUserDetails)
 // Get All Users - Get All Users - User[]
 
 // Update User - Edit Profile || Change Password 
