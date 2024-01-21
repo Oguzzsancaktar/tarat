@@ -1,4 +1,7 @@
 import mongoose from "mongoose";
+import IContactInformations from "./IContactInformations";
+import IPersonalInformations from "./IPersonalInformations";
+import IAddressInformations from "./IAddressInformations";
 
 interface IUser {
   _id: mongoose.Types.ObjectId;
@@ -8,6 +11,9 @@ interface IUser {
   password?: string;
   createdAt: NativeDate;
   updatedAt: NativeDate;
+  contactInformations?: IContactInformations;
+  personalInformations?: IPersonalInformations;
+  addressInformations?: IAddressInformations;
   __v?: number;
 }
 

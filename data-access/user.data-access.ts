@@ -60,33 +60,8 @@ const getUser = async (userInfo: IUserQueryParams): Promise<IUser[] | null> => {
 
 // Update
 
-const updateUser = async (user: IUser): Promise<IUser | undefined | null> => {
-  // const pipeline: PipelineStage[] = []
-
-  // if (!userInfo?._id && !userInfo?.identifier) {
-  //   return null
-  // }
-
-  // if (userInfo?._id) {
-  //   pipeline.push({
-  //     $match: {
-  //       _id: userInfo._id
-  //     }
-  //   })
-  // }
-
-  // if (userInfo?.identifier) {
-  //   pipeline.push({
-  //     $match: {
-  //       $or: [
-  //         { username: userInfo.identifier },
-  //         { email: userInfo.identifier },
-  //         { phone: userInfo.identifier }
-  //       ]
-  //     }
-  //   })
-  // }
-  return UserModel.findOneAndUpdate(user?._id, user, { new: true }).exec()
+const updateUser = async (userId: IUser["_id"], updatedUserDTO: IUser): Promise<IUser | undefined | null> => {
+  return await UserModel.findByIdAndUpdate(userId, updatedUserDTO, { new: true }).exec()
 }
 
 // Delete

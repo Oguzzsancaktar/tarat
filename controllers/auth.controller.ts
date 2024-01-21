@@ -37,7 +37,7 @@ const resetPassword = async (req, res) => {
       }
 
       user.password = hashedPass
-      const updatedUser = await dataAccess.userDataAccess.updateUser(user)
+      const updatedUser = await dataAccess.userDataAccess.updateUser(user._id, user)
 
       console.log("updatedUser", updatedUser);
       res.status(200).json({

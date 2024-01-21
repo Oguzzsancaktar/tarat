@@ -34,6 +34,18 @@ const userSchema = new Schema({
     type: String,
     trim: true,
   },
+  contactInformations: {
+    type: Object,
+    default: {}
+  },
+  personalInformations: {
+    type: Object,
+    default: {}
+  },
+  addressInformations: {
+    type: Object,
+    default: {}
+  }
 }, {
   timestamps: true
 })
