@@ -8,16 +8,7 @@ const APP_IMAGES = {
   {
     src: require('../assets/images/app-store-button.png'),
     alt: 'Tarat App - Aratma Tarat, Apple Store\'dan indir'
-  },
-
-
-  // Background
-  bg: {
-    src: require('../assets/images/background.png'),
-    alt: 'Tarat App- Aratma Tarat, Background'
-  },
-
-
+  }
 }
 
 export default { APP_IMAGES }

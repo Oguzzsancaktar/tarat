@@ -1,12 +1,12 @@
+import React from "react";
 import { LogoTarat, TaratTextLogo } from "@/assets/svg";
 import { APP_ASSETS } from "@/constants";
 import Image from "next/image";
-import React from "react";
 import { LoginButton, RegisterButton } from "../buttons";
 
 const Navbar = () => {
   return (
-    <div className="justify-between z-[1] w-full max-w-[1440px] px-16 py-8 rounded-3xl max-md:max-w-full max-md:px-5  ">
+    <header className="max-w-[1440px]  max-md:max-w-full mx-auto justify-between z-[1] w-full px-16 py-8 l max-md:px-5  fixed left-1/2 -translate-x-1/2">
       <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
         <div className="flex flex-col items-stretch w-[31%] max-md:w-full max-md:ml-0">
           <div className="items-stretch flex grow justify-between gap-4 max-md:mt-10">
@@ -48,7 +48,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

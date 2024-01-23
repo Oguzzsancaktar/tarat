@@ -1,4 +1,4 @@
 export * from './wrapper'
-export * from './navbar'
+export * from './widgets'
 export * from './buttons'
 

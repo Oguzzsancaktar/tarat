@@ -42,6 +42,11 @@ const config: Config = {
         // Blue
         matisse: '#216AA9',
       },
+      backgroundImage: theme => ({
+        'hero-background': "url('/hero-background.png')",
+        'footer-texture': "url('/img/footer-texture.png')",
+        'gradient-vertical-primary': 'linear-gradient(180deg, rgba(255, 184, 0, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%)',
+      })
     },
     animation: {
       'cursor-move': 'move 4s linear 1',
@@ -49,6 +54,7 @@ const config: Config = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) ',
       'grow-large': 'growLarge 2s cubic-bezier(0, 0, 0.2, 1) ',
       'grow-small': 'growSmall 2s cubic-bezier(0, 0, 0.2, 1) ',
+
     },
   },
   plugins: [],

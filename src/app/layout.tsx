@@ -19,16 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div
-          className=" ml-36 mr-36 mt-8 border border-[color:var(--Brand-Primary,#FF0000)] rounded-3xl"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(255, 184, 0, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%)",
-          }}
-        >
-          <Navbar />
+        <Navbar />
+        <main className="relative max-w-[1440px]  max-md:max-w-full mx-auto  mt-8  w-full">
           {children}
-        </div>
+        </main>
       </body>
     </html>
   );
