@@ -5,7 +5,7 @@ import React from "react";
 
 const HeroSession = () => {
   return (
-    <section className="bg-hero-background bg-cover flex flex-col items-center justify-center h-screen   bg-gradient-vertical-primary border border-[color:var(--Brand-Primary,#FF0000)] rounded-3xl">
+    <section className="bg-hero-background bg-cover flex flex-col items-center justify-center h-screen   bg-gradient-vertical-primary border border-[color:var(--Brand-Primary,#FFB80015)] rounded-3xl">
       <div className="flex items-center justify-center">
         <Barcode />
       </div>
