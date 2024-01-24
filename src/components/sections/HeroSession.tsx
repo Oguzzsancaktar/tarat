@@ -2,6 +2,8 @@ import { Barcode } from "@/assets/svg";
 import { APP_ASSETS } from "@/constants";
 import Image from "next/image";
 import React from "react";
+import PlayStoreButton from "../buttons/PlayStoreButton";
+import AppStoreButton from "../buttons/AppStoreButton";
 
 const HeroSession = () => {
   return (
@@ -37,12 +39,8 @@ const HeroSession = () => {
 
       {/* STORE BUTTONS */}
       <div className="flex items-center justify-center gap-6 mt-24">
-        <button className="max-w-64">
-          <Image {...APP_ASSETS.APP_IMAGES.playStore} />
-        </button>
-        <button className="max-w-64">
-          <Image {...APP_ASSETS.APP_IMAGES.appleStore} />
-        </button>
+        <PlayStoreButton />
+        <AppStoreButton />
       </div>
     </section>
   );

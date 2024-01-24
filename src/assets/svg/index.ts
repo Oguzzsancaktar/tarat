@@ -1,3 +1,14 @@
+import { TaratTextLogo } from '@/assets/svg';
 export { default as LogoTarat } from './LogoTarat';
 export { default as TaratTextLogo } from './TaratTextLogo';
+export { default as TaratTextLogo1 } from './TaratTextLogo1';
 export { default as Barcode } from './Barcode';
+export { default as Scan } from './Scan';
+export { default as Qr } from './Qr';
+export { default as Community } from './Community';
+export { default as Ad } from './Ad';
+export { default as X } from './X';
+export { default as Instagram } from './Instagram';
+export { default as Linkedin } from './Linkedin';
+export { default as Apple } from './Apple';
+export { default as Google } from './Google';

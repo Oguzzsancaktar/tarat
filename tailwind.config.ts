@@ -44,6 +44,7 @@ const config: Config = {
       },
       backgroundImage: theme => ({
         'hero-background': "url('/hero-background.png')",
+        'banner-background': "url('/banner-background.png')",
         'footer-texture': "url('/img/footer-texture.png')",
         'gradient-vertical-primary': 'linear-gradient(180deg, rgba(255, 184, 0, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%)',
       })
