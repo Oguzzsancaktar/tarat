@@ -2,14 +2,12 @@ import React from "react";
 
 const LoginButton = () => {
   return (
-    <button
-      className="text-white text-base font-medium whitespace-nowrap justify-center items-stretch shadow-md grow px-7 py-3.5 rounded-2xl max-md:px-5"
-      style={{
-        backgroundColor: "#FFB800",
-      }}
+    <a
+      href="/"
+      className="relative inline-flex items-center justify-center px-8 py-2 overflow-hidden font-medium text-white bg-[#FFB800] rounded-2xl shadow-2xl group  text-base  whitespace-nowrap  border border-[color:var(--Brand-Primary,#FFB800)] grow"
     >
-      <text>Giriş Yap</text>
-    </button>
+      Giriş Yap
+    </a>
   );
 };
 

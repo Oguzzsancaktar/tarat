@@ -7,6 +7,27 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+@font-face {
+  font-family: "BR_Shape_Regular";
+  src: url(../assets/fonts/BR_Shape_Regular.otf) format("opentype");
+
+}
+
+@font-face {
+  font-family: "BR_Shape_Bold";
+  src: url(../assets/fonts/BR_Shape_Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "BR_Shape_Medium";
+  src: url(../assets/fonts/BR_Shape_Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "BR_Shape_Semi_Bold";
+
+  src: url(../assets/fonts/BR_Shape_Semi_Bold.otf) format("opentype");
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

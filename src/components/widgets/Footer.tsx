@@ -14,7 +14,7 @@ import AppStoreButton from "../buttons/AppStoreButton";
 
 const Footer = () => {
   return (
-    <div className="w-[1922px] h-[467px] pt-16 pb-8 bg-yellow-500 bg-opacity-0 border-t border-yellow-500 border-opacity-25 flex-col justify-center items-center gap-16 inline-flex">
+    <div className="flex h-[467px] pt-16 pb-8 bg-yellow-500 bg-opacity-0 border-t border-yellow-500 border-opacity-25 flex-col justify-center items-center gap-16 inline-flex">
       <div className="w-[1440px] py-12 justify-center items-start gap-36 inline-flex">
         <div className="flex-col justify-start items-center gap-[49px] inline-flex">
           <div className="flex-col justify-center items-start gap-4 flex">

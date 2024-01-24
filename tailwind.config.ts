@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: { 
+        BR_Regular: "BR_Shape_Regular",
+        BR_Bold: "BR_Shape_Bold",
+        BR_Medium: "BR_Shape_Medium",
+        BR_SemiBold: "BR_Shape_SemiBold",
+      },
       colors: {
         // Look for constants/colors.ts
         white: '#FFFFFF',

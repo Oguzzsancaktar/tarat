@@ -10,25 +10,25 @@ import React from "react";
 
 export default function Home() {
   return (
-    <section className=" h-full justify-around ">
-      <section className="mb-24">
+    <>
+      <section className="h-screen">
         <HeroSession />
       </section>
-      <section className="mb-44">
+      <section>
         <FeatureSession />
       </section>
-      <section className="mb-44">
+      <section>
         <ImageSession />
       </section>
-      <section className="mb-44">
+      <section>
         <InfoSession />
       </section>
-      <section className="mb-44">
+      <section>
         <FAQSession />
       </section>
       <section>
         <BannerSession />
       </section>
-    </section>
+    </>
   );
 }

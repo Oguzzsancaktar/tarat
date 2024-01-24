@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components";
-import Footer from "@/components/widgets/Footer";
+import { Footer, Navbar } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} grid grid-rows-[auto_1fr_auto] min-h-screen py-8 px-[140px] relative`}
+      >
         <Navbar />
-        <main className="relative max-w-[1440px]  max-md:max-w-full mx-auto  mt-8  w-full">
-          {children}
-        </main>
+        <main className="flex flex-col gap-11">{children}</main>
         <Footer />
       </body>
     </html>
