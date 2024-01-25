@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import APP_COLORS from "./src/constants/APP_COLORS";
 
 const config: Config = {
   content: [
@@ -8,7 +9,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily: { 
+      fontFamily: {
         BR_Regular: "BR_Shape_Regular",
         BR_Bold: "BR_Shape_Bold",
         BR_Medium: "BR_Shape_Medium",
@@ -16,6 +17,7 @@ const config: Config = {
       },
       colors: {
         // Look for constants/colors.ts
+
         white: '#FFFFFF',
         alabaster: '#FAFAFA',
         baliHai: '#8698AD',
@@ -47,12 +49,14 @@ const config: Config = {
         aquaForest: '#6EA675',
         // Blue
         matisse: '#216AA9',
+        ...APP_COLORS,
       },
       backgroundImage: theme => ({
         'hero-background': "url('/hero-background.png')",
         'banner-background': "url('/banner-background.png')",
         'footer-texture': "url('/img/footer-texture.png')",
         'gradient-vertical-primary': 'linear-gradient(180deg, rgba(255, 184, 0, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%)',
+        'ellipse-background': "url('/ellipse-background.png')",
       })
     },
     animation: {

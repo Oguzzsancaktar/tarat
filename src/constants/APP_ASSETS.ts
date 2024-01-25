@@ -25,7 +25,12 @@ const APP_IMAGES = {
   faqBackground: {
     src: require('../assets/images/faq-background.png'),
     alt: 'Tarat App - Aratma Tarat, Tarat mobil telefonunuzda kullanın'
+  },
+  bannerLogo: {
+    src: require('../assets/images/banner-logo.png'),
+    alt: 'Tarat App - Aratma Tarat, Tarat mobil telefonunuzda kullanın'
   }
+
 }
 
 export default { APP_IMAGES }

@@ -11,22 +11,22 @@ import React from "react";
 export default function Home() {
   return (
     <>
-      <section className="h-screen">
+      <section id="hero-session" className="px-[7.29%]">
         <HeroSession />
       </section>
-      <section>
+      <section id="feature-session">
         <FeatureSession />
       </section>
-      <section>
+      <section id="image-session">
         <ImageSession />
       </section>
-      <section>
+      <section id="info-session" className="flex w-full h-screen px-[3%]">
         <InfoSession />
       </section>
-      <section>
+      <section id="faq-session" className="flex h-screen w-full px-[3%]">
         <FAQSession />
       </section>
-      <section>
+      <section id="banner-session" className="flex h-screen w-ful px-[7.29%]">
         <BannerSession />
       </section>
     </>

@@ -17,13 +17,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="tr" className="scroll-smooth">
       <body
-        className={`${inter.className} grid grid-rows-[auto_1fr_auto] min-h-screen py-8 px-[140px] relative`}
+        className={
+          "font-BR_Regular grid min-h-screen py-8 mx-auto overflow-visible"
+        }
       >
-        <Navbar />
-        <main className="flex flex-col gap-11">{children}</main>
-        <Footer />
+        <main className="flex flex-col items-center justify-center mx-auto">
+          <Navbar />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );

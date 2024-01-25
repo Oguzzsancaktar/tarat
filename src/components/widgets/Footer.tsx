@@ -1,20 +1,11 @@
-import {
-  Apple,
-  Google,
-  Instagram,
-  Linkedin,
-  TaratTextLogo1,
-  X,
-} from "@/assets/svg";
-import { APP_ASSETS } from "@/constants";
-import Image from "next/image";
-import React from "react";
+import { Instagram, Linkedin, TaratTextLogo1, X } from "@/assets/svg";
 import PlayStoreButton from "../buttons/PlayStoreButton";
 import AppStoreButton from "../buttons/AppStoreButton";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
-    <div className="flex h-[467px] pt-16 pb-8 bg-yellow-500 bg-opacity-0 border-t border-yellow-500 border-opacity-25 flex-col justify-center items-center gap-16 inline-flex">
+    <div className="flex w-full h-[467px] pt-16 pb-8 bg-yellow-500 bg-opacity-0 border-t border-yellow-500 border-opacity-25 flex-col justify-center items-center gap-16 ">
       <div className="w-[1440px] py-12 justify-center items-start gap-36 inline-flex">
         <div className="flex-col justify-start items-center gap-[49px] inline-flex">
           <div className="flex-col justify-center items-start gap-4 flex">
@@ -105,7 +96,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-neutral-400 text-sm font-normal font-['BR Shape']">
-        © 2024 Tarat. All rights reserved
+        © {currentYear} Tarat. All rights reserved
       </div>
     </div>
   );

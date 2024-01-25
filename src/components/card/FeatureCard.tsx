@@ -1,85 +1,22 @@
-import { Ad, Community, Qr, Scan } from "@/assets/svg";
-import React from "react";
+interface Feature {
+  title: string;
+  description: string;
+  icon: JSX.Element;
+}
 
-const backgroundColor = "#FFB80003";
-
-const FeatureCard = () => {
+const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => {
   return (
-    <div className="flex space-x-4">
-      {/* Kart 1 */}
-      <div
-        className={`p-6 border border-[color:var(--Brand-Primary,#FFB80025)] rounded-3xl w-1/4`}
-        style={{ backgroundColor }}
-      >
-        <div className="border border-[color:var(--Brand-Primary,#FFB80025)] bg-white rounded-3xl p-1 items-center">
-          <div className="items-stretch flex justify-center">
-            <Scan />
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <text>QR Kodlarını Tarayın</text>
-          <text className="text-center w-3/4">
-            Tarat'ın sezgisel kamera işlevini kullanarak arabanın ön
-            camlarındaki QR kodlarını zahmetsizce tarayın.
-          </text>
+    <div className="flex flex-col h-full flex-1 p-6 items-center gap-6 rounded-[32px] border border-primary025 bg-primary002 box-shadow-feature-card">
+      <div className="flex h-[124px] self-stretch justify-center rounded-3xl border border-primary025 bg-white">
+        <div className="flex flex-col self-center dot-background-feature-card items-center gap-3 flex-shrink-0 h-18 w-[226px]">
+          {feature.icon}
         </div>
       </div>
-
-      {/* Kart 2 */}
-      <div
-        className={`p-6 border border-[color:var(--Brand-Primary,#FFB80025)] rounded-3xl w-1/4`}
-        style={{ backgroundColor }}
-      >
-        <div className="border border-[color:var(--Brand-Primary,#FFB80025)] bg-white rounded-3xl p-1 items-center">
-          <div className="items-stretch flex justify-center">
-            <Qr />
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <text>QR Kodlarını Tarayın</text>
-          <text className="text-center">
-            Tarat'ın sezgisel kamera işlevini kullanarak arabanın ön
-            camlarındaki QR kodlarını zahmetsizce tarayın.
-          </text>
-        </div>
-      </div>
-
-      {/* Kart 3 */}
-      <div
-        className={`p-6 border border-[color:var(--Brand-Primary,#FFB80025)] rounded-3xl w-1/4`}
-        style={{ backgroundColor }}
-      >
-        <div className="border border-[color:var(--Brand-Primary,#FFB80025)] bg-white rounded-3xl p-1 items-center">
-          <div className="items-stretch flex justify-center">
-            <Community />
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <text>QR Kodlarını Tarayın</text>
-          <text className="text-center">
-            Tarat'ın sezgisel kamera işlevini kullanarak arabanın ön
-            camlarındaki QR kodlarını zahmetsizce tarayın.
-          </text>
-        </div>
-      </div>
-
-      {/* Kart 4 */}
-      <div
-        className={`p-6 border border-[color:var(--Brand-Primary,#FFB80025)] rounded-3xl w-1/4`}
-        style={{ backgroundColor }}
-      >
-        <div className="border border-[color:var(--Brand-Primary,#FFB80025)] bg-white rounded-3xl p-1 items-center">
-          <div className="items-stretch flex justify-center">
-            <Ad />
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <text>QR Kodlarını Tarayın</text>
-          <text className="text-center">
-            Tarat'ın sezgisel kamera işlevini kullanarak arabanın ön
-            camlarındaki QR kodlarını zahmetsizce tarayın.
-          </text>
-        </div>
+      <div className="flex flex-col w-[253px] items-center gap-2">
+        <span className="text-grayscale900 text-xl">{feature.title}</span>
+        <span className="text-grayscale700 text-base text-center">
+          {feature.description}
+        </span>
       </div>
     </div>
   );

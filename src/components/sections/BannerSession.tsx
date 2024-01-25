@@ -1,35 +1,30 @@
 import React from "react";
+import Image from "next/image";
+import { APP_ASSETS } from "@/constants";
+import { PurchaseButton } from "..";
 
 const BannerSession = () => {
   return (
-    <div className="bg-banner-background bg-contain flex  items-center justify-center h-screen bg-no-repeat">
-      <div className="flex flex-col items-center justify-center">
-        <div
-          className=" text-center  text-4xl font-medium font-['BR Shape']  -mt-96 mb-6"
-          style={{ color: "#45360D" }}
-        >
-          Güvenliğinizi Sergileyin, Bağlantınızı Geliştirin
+    <div className="flex h-[412px] p-10 w-full bg-banner-background self-center bg-no-repeat bg-cover items-center relative">
+      <Image
+        {...APP_ASSETS.APP_IMAGES.bannerLogo}
+        className="absolute -top-16 left-[46%]"
+      />
+      <div className="inline-flex flex-col items-center gap-12">
+        <div className="flex flex-col gap-6">
+          <span className="text-4xl text-center text-textSecondary">
+            Araçlarına Kimlik Oluştur, Hızlı ve Kolay İletişim Kur
+          </span>
+          <span className="text-lg text-center text-textSecondary">
+            Tarat, kullanıcılara tam kontrol sağlar. Paylaşmak istedikleri
+            bilgileri belirlemelerine ve gizliliklerini korumalarına olanak
+            tanır.<br/>Hemen bir TARAT etiketi satın alarak aracınız ile bir adım
+            öne geçin, kişisel bir profil oluşturun ve araç sahibi topluluğuna
+            katılın.<br/>Kimliğinizi öne çıkarın, iletişim kurun, sosyalleşin! Tarat
+            ile araç sahibi olmak daha anlamlı ve etkileşimli hale geliyor.
+          </span>
         </div>
-
-        <div
-          className="w-[785px] text-center  text-lg font-normal font-['BR Shape'] leading-[27px]  mb-12 items-center flex justify-center"
-          style={{ color: "#45360D" }}
-        >
-          Arabanıza özel QR kod etiketinizi alarak Tarat'ın tüm potansiyelini
-          ortaya çıkarın. Güvenlik, bağlantı ve reklam gibi ek avantajlardan
-          yararlanırken arabanızın öne çıkmasını sağlayın. Tarat etiketinizi
-          şimdi sipariş edin ve yolda yeni bir rahatlık düzeyini deneyimleyin.
-        </div>
-        <div
-          className="w-[124px] h-12 px-8 py-2  rounded-2xl  shadow-inner justify-center items-center gap-2 inline-flex "
-          style={{ backgroundColor: "#FFB800" }}
-        >
-          <div>
-            <button className="text-white text-base font-medium font-['BR Shape'] self-center ">
-              Satın Al
-            </button>
-          </div>
-        </div>
+        <PurchaseButton />
       </div>
     </div>
   );
