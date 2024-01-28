@@ -12,6 +12,8 @@ import controllers from '@root/controllers'
 // Create User - Register
 // Get User - Get Single User - Get User By ID - User 
 router.get("/:userId", controllers.userController.getUserDetails)
+router.get("/", controllers.userController.getUserDetailsWithToken)
+
 // Get All Users - Get All Users - User[]
 
 // Update User - Edit Profile || Change Password 

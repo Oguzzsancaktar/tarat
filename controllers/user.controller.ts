@@ -20,6 +20,39 @@ const getUserDetails = async (req: Request, res: Response) => {
 }
 
 
+const getUserDetailsWithToken = async (req: Request, res: Response) => {
+
+  const tokenInfo = utils.authUtils.getJWTInfo(req.headers.authorization?.split(" ")[1] || "")
+
+
+  if (tokenInfo) {
+    const { _id: userId } = tokenInfo
+    const users = await dataAccess.userDataAccess.getUser({ _id: userId })
+
+    if (users?.length) {
+      const user = users?.pop()
+      delete user?.password
+
+      if (user) {
+        return res.status(StatusCodes.OK).json(user)
+      }
+    }
+
+    return res.status(StatusCodes.NOT_FOUND).json({
+      success: false,
+      message: "User not found"
+    })
+  } else {
+    return res.status(StatusCodes.NOT_FOUND).json({
+      success: false,
+      message: "User not found"
+    })
+  }
+}
+
+
+
+
 const updateContactInformations = async (req: Request, res: Response) => {
 
   const tokenInfo = utils.authUtils.getJWTInfo(req.headers.authorization?.split(" ")[1] || "")
@@ -57,7 +90,6 @@ const updateContactInformations = async (req: Request, res: Response) => {
 
 
 const updatePersonalInformations = async (req: Request, res: Response) => {
-
   const tokenInfo = utils.authUtils.getJWTInfo(req.headers.authorization?.split(" ")[1] || "")
 
   if (tokenInfo) {
@@ -135,6 +167,7 @@ const updateAddressInformations = async (req: Request, res: Response) => {
 
 export default {
   getUserDetails,
+  getUserDetailsWithToken,
   updateContactInformations,
   updatePersonalInformations,
   updateAddressInformations,
