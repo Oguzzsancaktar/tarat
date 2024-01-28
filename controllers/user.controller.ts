@@ -1,7 +1,9 @@
 import { Request, Response } from "express"
-import dataAccess from "@root/data-access"
 import { StatusCodes } from "http-status-codes"
-import utils from "@root/utils"
+
+import dataAccess from "../data-access/"
+import utils from "../utils"
+
 
 const getUserDetails = async (req: Request, res: Response) => {
   const { userId } = req.params

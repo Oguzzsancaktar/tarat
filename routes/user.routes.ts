@@ -2,8 +2,10 @@ import express from 'express'
 import { StatusCodes } from 'http-status-codes'
 const router = express.Router()
 
-import middlewares from '@root/middlewares'
-import controllers from '@root/controllers'
+import controllers from '../controllers'
+
+
+
 
 // CRUD 
 // get post patch put delete 

@@ -1,7 +1,8 @@
 import otpGenerator from 'otp-generator'
-import { OTPModel, UserModel } from '../models'
-import dataAccess from '@data-access/index';
 import STATUS_CODES from 'http-status-codes';
+
+import { OTPModel, UserModel } from '../models'
+import dataAccess from '../data-access';
 
 
 const sendEmailVerifyOTP = async (req, res) => {

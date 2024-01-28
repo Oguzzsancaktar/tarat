@@ -1,8 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
     "useUnknownInCatchVariables": false,
-    "noEmit": true,
+    // "noEmit": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
@@ -14,49 +15,11 @@
       "es6"
     ],
     "allowJs": true,
-    "outDir": "build",
+    "outDir": "./dist",
     "rootDir": ".",
     "strict": true,
     "noImplicitAny": false,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "paths": {
-      "@root/*": [
-        "./*"
-      ],
-      "@controllers/*": [
-        "controllers/*"
-      ],
-      "@data-access/*": [
-        "data-access/*"
-      ],
-      "@interfaces/*": [
-        "interfaces/*"
-      ],
-      "@middlewares/*": [
-        "middlewares/*"
-      ],
-      "@models/*": [
-        "models/*"
-      ],
-      "@routes/*": [
-        "routes/*"
-      ],
-      "@utils/*": [
-        "utils/*"
-      ],
-    }
-  },
-  "exclude": [
-    "**/node_modules/*",
-    "**/dist/*",
-    ".github/actions/**/index.js",
-    "**/docs/*"
-  ],
-  "baseUrl": ".",
-  "paths": {
-    "@interfaces/*": [
-      "interfaces/*"
-    ],
   },
 }

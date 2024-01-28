@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 import bcyrpt from 'bcrypt'
-import { IUser } from '@root/interfaces'
+import { IUser } from 'interfaces'
 
 const generateJWT = user => {
   return jwt.sign(
