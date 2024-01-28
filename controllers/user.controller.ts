@@ -142,6 +142,8 @@ const updateAddressInformations = async (req: Request, res: Response) => {
       if (user) {
         const addressInformations = req.body
 
+        console.log("addressInformations", addressInformations)
+
         const tempUser = { ...user, addressInformations }
         const updatedUser = await dataAccess.userDataAccess.updateUser(user._id, tempUser)
         return res.status(StatusCodes.OK).json(updatedUser)
