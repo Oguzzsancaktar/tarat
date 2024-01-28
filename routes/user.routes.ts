@@ -15,9 +15,9 @@ router.get("/:userId", controllers.userController.getUserDetails)
 // Get All Users - Get All Users - User[]
 
 // Update User - Edit Profile || Change Password 
-router.patch("/update/contactInformations/:userId", controllers.userController.updateContactInformations)
-router.patch("/update/personalInformations/:userId", controllers.userController.updatePersonalInformations)
-router.patch("/update/addressInformations/:userId", controllers.userController.updateAddressInformations)
+router.patch("/update/contactInformations", controllers.userController.updateContactInformations)
+router.patch("/update/personalInformations", controllers.userController.updatePersonalInformations)
+router.patch("/update/addressInformations", controllers.userController.updateAddressInformations)
 
 
 // Delete User 

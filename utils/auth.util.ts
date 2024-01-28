@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken'
 import bcyrpt from 'bcrypt'
+import { IUser } from '@root/interfaces'
 
 const generateJWT = user => {
   return jwt.sign(
@@ -15,6 +16,15 @@ const generateJWT = user => {
     },
     process.env.JWT_SECRET
   )
+}
+const getJWTInfo = (token: string): IUser | null => {
+  try {
+    const response = jwt.verify(token, process.env.JWT_SECRET)
+    return response.sub as IUser | null
+  } catch (error) {
+    console.log("Token error utils", error)
+    return null
+  }
 }
 
 const validateUsername = username => {
@@ -62,6 +72,7 @@ const validatePublicAddress = publicAddress => {
 
 export default {
   generateJWT,
+  getJWTInfo,
   validatePassword,
   validateUsername,
   validatePasswordMatch,
