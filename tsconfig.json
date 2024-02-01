@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "incremental": true,
     "baseUrl": ".",
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "lib": [
       "es6"
