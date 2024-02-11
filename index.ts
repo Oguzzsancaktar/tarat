@@ -1,4 +1,4 @@
-
+const path = require('path')
 import dotenv from 'dotenv'
 import { createServer } from 'http'
 import express from 'express'
@@ -17,7 +17,7 @@ import routes from './routes'
 
 const envPath = process.env.NODE_ENV === "dev" ? ".env.dev" : ".env.prod"
 console.log("__dirname", __dirname, envPath)
-dotenv.config({ path: envPath })
+dotenv.config({ path: path.resolve(__dirname, envPath) })
 
 const URI = process.env.MONGO_URI || ""
 
