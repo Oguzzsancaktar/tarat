@@ -15,9 +15,9 @@ import cors from 'cors'
 
 import routes from './routes'
 
-console.log("__dirname", __dirname)
 const envPath = process.env.NODE_ENV === "dev" ? ".env.dev" : ".env.prod"
-dotenv.config({ path: __dirname + "../" + envPath })
+console.log("__dirname", __dirname, envPath)
+dotenv.config({ path: envPath })
 
 const URI = process.env.MONGO_URI || ""
 
