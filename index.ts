@@ -19,12 +19,13 @@ require('dotenv').config()
 
 const URI = process.env.MONGO_URI || ""
 
+console.log("URI", URI)
+
 const PORT = process.env.PORT || 8000
 
 const main = async () => {
   try {
     // Mongo Connection
-    console.log("URI*--", URI, "---", process.env.MONGO_URI)
     await mongoose.connect(URI, {})
     console.log('Connected to MongoDB')
   } catch (err) {
