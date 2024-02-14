@@ -4,7 +4,7 @@
   "description": "This is backend RestfullAPI",
   "main": "dist/index.js",
   "scripts": {
-    "start": "npm run build && dotenvx run --env-file=.env.prod -- node dist/index.js",
+    "start": "dotenvx run --env-file=.env.prod -- node dist/index.js",
     "dev": "tsc && dotenvx run --env-file=.env.dev --  nodemon index.ts",
     "build": "npx tsc --build"
   },
