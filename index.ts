@@ -17,7 +17,7 @@ import routes from './routes'
 
 require('dotenv').config()
 
-const URI = process.env.MONGO_URI || ""
+const URI = process.env.MONGO_URI || "mongodb+srv://sancaktar:Tarat2023.@taratcluster.8onqhh1.mongodb.net/tarat-prod?retryWrites=true&w=majority"
 
 console.log("URI", URI)
 
