@@ -100,7 +100,7 @@ const login = async (req, res) => {
 
 
       if (!existingUser || !await bcrypt.compare(password, existingUser.password)) {
-        return res.status(StatusCodes.BAD_REQUEST).send("Invalid username or password!")
+        return res.status(StatusCodes.FORBIDDEN).send("Invalid username or password!")
       }
 
       existingUser.password = ""
