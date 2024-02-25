@@ -67,7 +67,8 @@ const register = async (req, res) => {
     }
 
     // Find the most recent OTP for the email
-    const response = await OTPModel.find({ email }).sort({ createdAt: -1 }).limit(1);
+    const response = await OTPModel.find({ email: email.toLowerCase() }).sort({ createdAt: -1 }).limit(1);
+
     if (response.length === 0 || otp !== response[0]?.otp) {
       return res.status(400).json({
         success: false,
