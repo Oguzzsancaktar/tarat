@@ -45,6 +45,10 @@ const userSchema = new Schema({
   addressInformations: {
     type: Object,
     default: {}
+  },
+  qrCodes: {
+    type: Array,
+    default: []
   }
 }, {
   timestamps: true

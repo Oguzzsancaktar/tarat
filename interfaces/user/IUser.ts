@@ -14,6 +14,7 @@ interface IUser {
   contactInformations?: IContactInformations;
   personalInformations?: IPersonalInformations;
   addressInformations?: IAddressInformations;
+  qrCodes?: Array<mongoose.Types.ObjectId>;
   __v?: number;
 }
 
