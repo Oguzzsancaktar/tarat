@@ -89,7 +89,7 @@ const register = async (req, res) => {
     res.status(StatusCodes.CREATED).json(accessToken)
   } catch (error) {
     console.log("----- Error Cacthed When trying to create user -----", error);
-    res.status(StatusCodes.BAD_REQUEST).json(error.message)
+    return res.status(StatusCodes.BAD_REQUEST).json(error.message)
   }
 }
 
@@ -108,6 +108,7 @@ const login = async (req, res) => {
     }
 
     if (existingUsers && existingUsers.length > 0) {
+      console.log("----existingUsers && existingUsers.length > 0-----")
       const existingUser = existingUsers.pop()
 
 
@@ -122,13 +123,14 @@ const login = async (req, res) => {
 
       existingUser.password = ""
       const accessToken = utils.authUtils.generateJWT(existingUser)
+      console.log("----END_____accessToken-----", accessToken)
 
       return res.status(StatusCodes.OK).json(accessToken)
     }
 
   } catch (error) {
     console.log("----- Error Caught when user tries to log in -----", error);
-    res.status(StatusCodes.INTERNAL_SERVER_ERROR).send(error.message)
+    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).send(error.message)
   }
 }
 
@@ -144,14 +146,16 @@ const isAuth = (req, res) => {
   let decodedToken;
   try {
     decodedToken = jwt.verify(token, 'secret');
+    if (!decodedToken) {
+      return res.status(StatusCodes.UNAUTHORIZED).json({ message: 'unauthorized' });
+    } else {
+      return res.status(StatusCodes.OK).json({ message: 'here is your resource' });
+    };
+
   } catch (err) {
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: err.message || 'could not decode the token' });
   };
-  if (!decodedToken) {
-    res.status(StatusCodes.UNAUTHORIZED).json({ message: 'unauthorized' });
-  } else {
-    res.status(StatusCodes.OK).json({ message: 'here is your resource' });
-  };
+
 };
 
 
