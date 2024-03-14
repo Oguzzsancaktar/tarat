@@ -56,7 +56,8 @@ const register = async (req, res) => {
   try {
     const { username, email, phone, password, otp } = req.body as IRegisterCredentials
 
-    const salt = await bcrypt.genSalt(+(process.env.SALT_ROUNDS || 10))
+    const salt = await bcrypt.genSalt(+(process.env.SALT_ROUNDS || 12))
+    console.log("-----salt-----", salt)
     const hashedPass = await bcrypt.hash(password, salt)
 
     const tempUser: IUserCreateDTO = {
