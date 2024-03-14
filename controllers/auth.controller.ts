@@ -102,14 +102,23 @@ const login = async (req, res) => {
 
     const existingUsers = await dataAccess.userDataAccess.getUser({ identifier: identifier?.toLowerCase() })
     console.log(" identifier, password ", existingUsers, identifier, password)
-    if (existingUsers) {
 
+    if (!existingUsers || !(existingUsers?.length > 0)) {
+      return res.status(StatusCodes.FORBIDDEN).send("Users not found!")
+    }
+
+    if (existingUsers && existingUsers.length > 0) {
       const existingUser = existingUsers.pop()
 
 
-      if (!existingUser || !await bcrypt.compare(password, existingUser.password)) {
+      if (!existingUser) {
+        return res.status(StatusCodes.FORBIDDEN).send("User not found!")
+      }
+
+      if (!await bcrypt.compare(password, existingUser.password)) {
         return res.status(StatusCodes.FORBIDDEN).send("Invalid username or password!")
       }
+
 
       existingUser.password = ""
       const accessToken = utils.authUtils.generateJWT(existingUser)
