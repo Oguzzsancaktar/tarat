@@ -103,4 +103,7 @@ const main = async () => {
 
 main().then(() => {
   console.log('SUCCESS STARTING SERVER')
+  console.log('-----------------------')
+  console.log('env=>', process.env)
+  console.log('-----------------------')
 })
