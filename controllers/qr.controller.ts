@@ -27,7 +27,10 @@ const getQr = async (req, res) => {
   const { qrId } = req.params;
   try {
     const qr = await dataAccess.qrDataAccess.getQr(qrId);
-    return res.status(STATUS_CODES.OK).json(qr);
+    if (qr && qr?.length > 0) {
+      return res.status(STATUS_CODES.OK).json(qr[0]);
+    }
+    return res.status(STATUS_CODES.NOT_FOUND).json({ message: "QR code not found" });
   } catch (error) {
     console.log("error", error)
     return res.status(STATUS_CODES.INTERNAL_SERVER_ERROR).json({ message: "Error getting QR code" });

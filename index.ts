@@ -67,7 +67,11 @@ const main = async () => {
   app.use(cors())
   app.use(morgan('dev'))
 
-  app.use(bodyParser.urlencoded({ extended: false }))
+  app.use(bodyParser.urlencoded({
+    limit: '50mb',
+    parameterLimit: 100000,
+    extended: true
+  }))
   app.use(bodyParser.json())
 
   app.use('/api', routes)

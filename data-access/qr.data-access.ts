@@ -21,8 +21,10 @@ const getQr = async (qrId?: IQrCode["_id"]): Promise<IQrCode[] | null> => {
     pipeline.push({
       $match: {
         _id: new mongoose.Types.ObjectId(qrId)
-      }
+      },
+
     })
+
   } else {
     pipeline.push({
       $match: {}
