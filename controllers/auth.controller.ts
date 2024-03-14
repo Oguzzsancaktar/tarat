@@ -108,14 +108,15 @@ const login = async (req, res) => {
     }
 
     if (existingUsers && existingUsers.length > 0) {
-      console.log("----existingUsers && existingUsers.length > 0-----")
       const existingUser = existingUsers.pop()
+      console.log("----existingUsers && existingUsers.length > 0-----", existingUser)
 
 
       if (!existingUser) {
         return res.status(StatusCodes.FORBIDDEN).send("User not found!")
       }
 
+      console.log("bcrypt.compare(password, existingUser.password)", await bcrypt.compare(password, existingUser.password))
       if (!await bcrypt.compare(password, existingUser.password)) {
         return res.status(StatusCodes.FORBIDDEN).send("Invalid username or password!")
       }
